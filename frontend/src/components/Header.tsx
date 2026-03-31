@@ -1,9 +1,9 @@
 import { useTranslation } from 'react-i18next';
 
 const LANGUAGES = [
-  { code: 'it', flag: '🇮🇹' },
-  { code: 'en', flag: '🇬🇧' },
-  { code: 'es', flag: '🇪🇸' },
+  { code: 'it', label: 'IT' },
+  { code: 'en', label: 'EN' },
+  { code: 'es', label: 'ES' },
 ];
 
 interface HeaderProps {
@@ -15,35 +15,34 @@ export default function Header({ currentSection, onNavigate }: HeaderProps) {
   const { t, i18n } = useTranslation();
 
   return (
-    <header className="border-b border-gray-200 bg-white sticky top-0 z-50">
-      <div className="max-w-5xl mx-auto px-4">
+    <header className="border-b border-slate-200 bg-white/90 backdrop-blur-md sticky top-0 z-50">
+      <div className="max-w-5xl mx-auto px-5">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center gap-2 cursor-pointer" onClick={() => onNavigate('tool')}>
-            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">T</span>
-            </div>
-            <span className="text-lg font-medium text-gray-800">{t('app_name')}</span>
-          </div>
+          <a href="/" className="flex items-center gap-0 text-xl font-heading font-extrabold tracking-tight">
+            <span className="text-slate-900">Real</span>
+            <span className="text-accent">Text</span>
+            <span className="cursor-blink text-accent">_</span>
+          </a>
 
           {/* Nav */}
           <nav className="flex items-center gap-1">
             <button
               onClick={() => onNavigate('tool')}
-              className={`px-4 py-2 text-sm font-medium rounded-full transition-colors ${
+              className={`px-4 py-2 text-sm font-medium transition-colors border-b-2 ${
                 currentSection === 'tool'
-                  ? 'bg-blue-50 text-blue-700'
-                  : 'text-gray-600 hover:bg-gray-100'
+                  ? 'border-accent text-slate-900'
+                  : 'border-transparent text-slate-400 hover:text-slate-600'
               }`}
             >
               {t('nav_tool')}
             </button>
             <button
               onClick={() => onNavigate('pricing')}
-              className={`px-4 py-2 text-sm font-medium rounded-full transition-colors ${
+              className={`px-4 py-2 text-sm font-medium transition-colors border-b-2 ${
                 currentSection === 'pricing'
-                  ? 'bg-blue-50 text-blue-700'
-                  : 'text-gray-600 hover:bg-gray-100'
+                  ? 'border-accent text-slate-900'
+                  : 'border-transparent text-slate-400 hover:text-slate-600'
               }`}
             >
               {t('nav_pricing')}
@@ -56,13 +55,13 @@ export default function Header({ currentSection, onNavigate }: HeaderProps) {
               <button
                 key={lang.code}
                 onClick={() => i18n.changeLanguage(lang.code)}
-                className={`w-8 h-8 rounded-full text-base flex items-center justify-center transition-all ${
+                className={`px-2.5 py-1 text-xs font-medium rounded-md transition-colors ${
                   i18n.language?.startsWith(lang.code)
-                    ? 'bg-gray-100 ring-2 ring-blue-500'
-                    : 'hover:bg-gray-100'
+                    ? 'bg-accent text-white'
+                    : 'text-slate-500 hover:bg-slate-100'
                 }`}
               >
-                {lang.flag}
+                {lang.label}
               </button>
             ))}
           </div>

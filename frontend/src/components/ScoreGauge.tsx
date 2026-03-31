@@ -6,10 +6,10 @@ interface ScoreGaugeProps {
 }
 
 function getColor(score: number): string {
-  if (score <= 30) return '#ea4335';
-  if (score <= 50) return '#fa7b17';
-  if (score <= 70) return '#f9ab00';
-  return '#34a853';
+  if (score <= 30) return '#DC2626';
+  if (score <= 50) return '#D97706';
+  if (score <= 70) return '#D97706';
+  return '#059669';
 }
 
 function getLabel(score: number, t: (key: string) => string): string {
@@ -37,8 +37,8 @@ export default function ScoreGauge({ score }: ScoreGaugeProps) {
     return () => cancelAnimationFrame(frame);
   }, [score]);
 
-  const r = 54;
-  const stroke = 8;
+  const r = 64;
+  const stroke = 10;
   const nr = r - stroke / 2;
   const circ = Math.PI * nr;
   const offset = circ - (animated / 100) * circ;
@@ -46,11 +46,11 @@ export default function ScoreGauge({ score }: ScoreGaugeProps) {
   const size = r * 2;
 
   return (
-    <div className="flex flex-col items-center gap-2">
-      <svg width={size} height={r + 12} viewBox={`0 0 ${size} ${r + 12}`}>
+    <div className="flex flex-col items-center gap-3 py-4">
+      <svg width={size} height={r + 16} viewBox={`0 0 ${size} ${r + 16}`}>
         <path
           d={`M ${stroke / 2} ${r} A ${nr} ${nr} 0 0 1 ${size - stroke / 2} ${r}`}
-          fill="none" stroke="#f1f3f4" strokeWidth={stroke} strokeLinecap="round"
+          fill="none" stroke="#F1F5F9" strokeWidth={stroke} strokeLinecap="round"
         />
         <path
           d={`M ${stroke / 2} ${r} A ${nr} ${nr} 0 0 1 ${size - stroke / 2} ${r}`}
@@ -58,11 +58,11 @@ export default function ScoreGauge({ score }: ScoreGaugeProps) {
           strokeDasharray={circ} strokeDashoffset={offset}
           style={{ transition: 'stroke 0.2s' }}
         />
-        <text x={r} y={r - 6} textAnchor="middle" fill="#202124" fontSize="28" fontWeight="500">
+        <text x={r} y={r - 4} textAnchor="middle" fill="#0F172A" fontSize="32" fontWeight="700" fontFamily="'Plus Jakarta Sans', sans-serif">
           {animated}
         </text>
       </svg>
-      <span className="text-sm font-medium" style={{ color }}>{getLabel(animated, t)}</span>
+      <span className="text-sm font-semibold font-heading" style={{ color }}>{getLabel(animated, t)}</span>
     </div>
   );
 }

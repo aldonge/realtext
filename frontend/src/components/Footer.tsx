@@ -1,21 +1,23 @@
-import { useTranslation } from 'react-i18next';
-
 export default function Footer() {
-  const { t } = useTranslation();
-
   return (
-    <footer className="border-t border-gray-200 bg-gray-50 mt-auto">
-      <div className="max-w-5xl mx-auto px-4 py-5 flex flex-col sm:flex-row items-center justify-between gap-2">
-        <div className="text-sm text-gray-500">
-          <span className="font-medium text-gray-700">{t('footer_text')}</span>
-          <span className="mx-1.5 text-gray-300">·</span>
-          <span>{t('footer_sub')}</span>
+    <footer className="bg-slate-900 text-slate-400 mt-auto">
+      <div className="max-w-5xl mx-auto px-5 py-10 flex flex-col md:flex-row items-center md:items-start justify-between gap-6">
+        <div>
+          <a href="/" className="text-lg font-heading font-extrabold tracking-tight">
+            <span className="text-white">Real</span>
+            <span className="text-blue-400">Text</span>
+          </a>
+          <p className="text-sm mt-1 text-slate-500">Free AI text detector and humanizer.</p>
         </div>
-        <div className="flex items-center gap-4 text-xs text-gray-400">
-          <span className="hover:text-gray-600 cursor-pointer">{t('privacy')}</span>
-          <span className="hover:text-gray-600 cursor-pointer">{t('terms')}</span>
-          <span className="hover:text-gray-600 cursor-pointer">{t('about')}</span>
+        <div className="flex items-center gap-6 text-sm">
+          <a href="/app" className="hover:text-white transition-colors">Tool</a>
+          <a href="/privacy" className="hover:text-white transition-colors">Privacy</a>
+          <a href="/terms" className="hover:text-white transition-colors">Terms</a>
+          <a href="/blog/come-capire-testo-ai.html" className="hover:text-white transition-colors">Blog</a>
         </div>
+      </div>
+      <div className="max-w-5xl mx-auto px-5 pb-6 pt-4 border-t border-slate-800 text-center text-xs text-slate-500">
+        &copy; 2026 RealText
       </div>
     </footer>
   );
