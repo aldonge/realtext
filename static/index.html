@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Primary -->
+    <title>RealText — Free AI Detector & Text Humanizer | Detect ChatGPT, GPT-5, Gemini, Claude</title>
+    <meta name="description" content="Free AI text detector and humanizer. Analyze your text for AI patterns, get a detailed score, and receive paragraph-by-paragraph suggestions to make AI-generated text sound naturally human. Works in 20+ languages.">
+    <meta name="keywords" content="AI detector, AI text detector, ChatGPT detector, AI content checker, humanize AI text, free AI detector, detector AI italiano, AI writing detector">
+    <link rel="canonical" href="https://realtext.org/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="RealText — Free AI Detector & Text Humanizer">
+    <meta property="og:description" content="Detect AI-generated text and get actionable suggestions to make it sound human. Free, multilingual, no signup required.">
+    <meta property="og:url" content="https://realtext.org/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="RealText">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="RealText — Free AI Detector & Text Humanizer">
+    <meta name="twitter:description" content="Free AI text detection with actionable humanization suggestions. 20+ languages supported.">
+
+    <!-- hreflang for future localization -->
+    <link rel="alternate" hreflang="en" href="https://realtext.org/">
+    <link rel="alternate" hreflang="it" href="https://realtext.org/">
+    <link rel="alternate" hreflang="x-default" href="https://realtext.org/">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "RealText",
+        "url": "https://realtext.org",
+        "description": "Free AI text detector and humanizer. Analyzes text for AI patterns and provides suggestions to make it sound more naturally human-written.",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Web",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "EUR"
+        },
+        "featureList": [
+            "AI text detection",
+            "Text humanization suggestions",
+            "Multilingual support (20+ languages)",
+            "Paragraph-by-paragraph analysis",
+            "Burstiness and lexical diversity metrics"
+        ],
+        "inLanguage": ["en", "it", "de", "fr", "es"]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How does RealText detect AI-generated text?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "RealText uses algorithmic stylistic analysis including burstiness (sentence length variation), lexical diversity (vocabulary richness), repetition patterns, and AI-typical connector detection. These metrics are combined into a composite score from 0-100."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is RealText free?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, RealText is completely free. You can analyze up to 5 texts per day without registration. No credit card required."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What languages does RealText support?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "RealText supports 20+ languages including English, Italian, German, French, Spanish, Portuguese, Dutch, and more. The analysis and suggestions are provided in the language of the analyzed text."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can RealText help me humanize AI text?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Unlike most AI detectors that only give you a score, RealText provides specific, actionable suggestions for each paragraph on how to make the text sound more naturally human-written."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6; color: #1a1a2e; background: #fafbfc;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: white; padding: 60px 20px; text-align: center;
+        }
+        header h1 { font-size: 2.5rem; margin-bottom: 12px; font-weight: 800; }
+        header h1 span { color: #6ee7b7; }
+        header p.tagline { font-size: 1.25rem; opacity: 0.9; max-width: 600px; margin: 0 auto 30px; }
+
+        .cta-button {
+            display: inline-block; padding: 16px 40px;
+            background: #6ee7b7; color: #0f0c29; font-size: 1.1rem; font-weight: 700;
+            border-radius: 8px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .cta-button:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(110,231,183,0.4); }
+
+        /* Sections */
+        section { padding: 60px 20px; }
+        section h2 { font-size: 1.8rem; margin-bottom: 20px; color: #1a1a2e; }
+        section p { margin-bottom: 16px; font-size: 1.05rem; color: #374151; }
+
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-top: 30px; }
+        .feature-card {
+            background: white; border-radius: 12px; padding: 28px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06); border: 1px solid #e5e7eb;
+        }
+        .feature-card h3 { font-size: 1.15rem; margin-bottom: 8px; color: #1a1a2e; }
+        .feature-card p { font-size: 0.95rem; color: #6b7280; margin-bottom: 0; }
+
+        /* How it works */
+        .steps { counter-reset: step; list-style: none; margin-top: 24px; }
+        .steps li {
+            counter-increment: step; padding: 16px 16px 16px 60px; position: relative;
+            margin-bottom: 12px; background: white; border-radius: 8px;
+            border: 1px solid #e5e7eb;
+        }
+        .steps li::before {
+            content: counter(step); position: absolute; left: 16px; top: 50%; transform: translateY(-50%);
+            background: #6ee7b7; color: #0f0c29; width: 32px; height: 32px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; font-weight: 700;
+        }
+
+        /* FAQ */
+        details {
+            background: white; border: 1px solid #e5e7eb; border-radius: 8px;
+            padding: 20px; margin-bottom: 12px;
+        }
+        details summary {
+            font-weight: 600; cursor: pointer; font-size: 1.05rem; color: #1a1a2e;
+        }
+        details p { margin-top: 12px; }
+
+        /* Footer */
+        footer {
+            background: #1a1a2e; color: #9ca3af; padding: 40px 20px; text-align: center;
+            font-size: 0.9rem;
+        }
+        footer a { color: #6ee7b7; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        .footer-links { margin-bottom: 16px; }
+        .footer-links a { margin: 0 12px; }
+
+        /* Blog links section */
+        .blog-links { list-style: none; margin-top: 20px; }
+        .blog-links li { margin-bottom: 10px; }
+        .blog-links a { color: #4f46e5; font-weight: 500; text-decoration: none; font-size: 1.05rem; }
+        .blog-links a:hover { text-decoration: underline; }
+
+        @media (max-width: 640px) {
+            header h1 { font-size: 1.8rem; }
+            header p.tagline { font-size: 1rem; }
+            section { padding: 40px 16px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>Real<span>Text</span></h1>
+        <p class="tagline">Free AI text detector & humanizer. Analyze your text, get a score, and receive actionable suggestions to make it sound naturally human.</p>
+        <a href="/app" class="cta-button">Analyze Your Text — Free</a>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <h2>Why RealText?</h2>
+        <p>Most AI detectors give you a number and nothing else. RealText goes further: it tells you <strong>exactly what to fix</strong> and <strong>how to fix it</strong>, paragraph by paragraph. Whether you're a student polishing an essay, a copywriter refining AI-assisted content, or an educator checking submissions — RealText gives you actionable insight, not just a score.</p>
+
+        <div class="features">
+            <div class="feature-card">
+                <h3>Actionable Suggestions</h3>
+                <p>Get paragraph-by-paragraph advice on how to make your text sound more natural. Not just "this is AI" — but "here's what to change and why."</p>
+            </div>
+            <div class="feature-card">
+                <h3>20+ Languages</h3>
+                <p>Works with English, Italian, German, French, Spanish, Portuguese, and many more. Analysis and suggestions adapt to the language of your text.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Privacy First</h3>
+                <p>Your text is never stored. It's analyzed in memory and discarded immediately. No accounts required, no data collection.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Transparent Metrics</h3>
+                <p>See exactly why text is flagged: burstiness, lexical diversity, sentence variance, repetition patterns. No black-box magic.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Completely Free</h3>
+                <p>5 analyses per day, no signup, no credit card. Enough for regular use by students, writers, and professionals.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Visual Score</h3>
+                <p>A clear 0-100 gauge shows how "AI-like" your text is. Apply the suggestions, re-analyze, and watch your score improve.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="background: #f3f4f6;">
+    <div class="container">
+        <h2>How It Works</h2>
+        <ol class="steps">
+            <li><strong>Paste your text</strong> into the analyzer — any language, up to 10,000 characters.</li>
+            <li><strong>Get your AI score</strong> — a visual gauge from 0 (likely AI) to 100 (likely human), with a breakdown of individual metrics.</li>
+            <li><strong>Read the suggestions</strong> — specific, actionable advice tied to exact paragraphs and sentences in your text.</li>
+            <li><strong>Apply and re-analyze</strong> — edit your text following the suggestions, then run it again to see your improved score.</li>
+        </ol>
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="/app" class="cta-button">Try It Now — Free</a>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>How RealText Detects AI Text</h2>
+        <p>RealText uses <strong>algorithmic stylistic analysis</strong> — not a black-box AI model. It measures specific, interpretable characteristics of your writing:</p>
+        <p><strong>Burstiness:</strong> Human writing naturally alternates between long and short sentences. AI tends to produce sentences of uniform length. RealText measures this variance.</p>
+        <p><strong>Lexical Diversity (TTR):</strong> The ratio of unique words to total words. AI text often reuses the same vocabulary, while humans draw from a richer word pool.</p>
+        <p><strong>Repetition Patterns:</strong> AI frequently repeats structural patterns ("Furthermore,... Furthermore,... Furthermore,..."). RealText detects these n-gram repetitions.</p>
+        <p><strong>AI-Typical Connectors:</strong> Phrases like "It is important to note that," "In conclusion," or "Moreover" appear at unusually high rates in AI-generated text. RealText counts these per language.</p>
+        <p>These metrics are combined into a composite score. Then, an LLM generates human-readable suggestions in the language of your text, specifically targeting the weak areas identified by the metrics.</p>
+    </div>
+</section>
+
+<section style="background: #f3f4f6;">
+    <div class="container">
+        <h2>Frequently Asked Questions</h2>
+
+        <details>
+            <summary>Is RealText really free?</summary>
+            <p>Yes. You get 5 free analyses per day without creating an account. There's no trial period, no hidden costs, and no credit card required.</p>
+        </details>
+
+        <details>
+            <summary>What AI models can RealText detect?</summary>
+            <p>RealText detects stylistic patterns common to all major AI models including ChatGPT (GPT-3.5, GPT-4, GPT-5), Google Gemini, Anthropic Claude, Meta LLaMA, and Mistral. Since it analyzes writing style rather than model-specific signatures, it works across all text-generating AI.</p>
+        </details>
+
+        <details>
+            <summary>How accurate is the detection?</summary>
+            <p>RealText uses algorithmic metrics, not a proprietary ML model. It's most reliable for detecting unedited AI text and less reliable for heavily human-edited AI content. We're transparent about this: the real value is in the actionable suggestions, not just the score.</p>
+        </details>
+
+        <details>
+            <summary>Is my text stored or shared?</summary>
+            <p>No. Your text is analyzed in server memory and immediately discarded. We never save, log, or share the content you submit. Only anonymous usage counters are stored.</p>
+        </details>
+
+        <details>
+            <summary>What languages are supported?</summary>
+            <p>RealText supports 20+ languages. The interface follows your browser language, and the analysis results and suggestions are always provided in the language of the text you submit.</p>
+        </details>
+
+        <details>
+            <summary>Can I use RealText to "beat" AI detectors?</summary>
+            <p>RealText helps you improve writing quality by addressing patterns that make text sound robotic. The suggestions make your writing more natural regardless of whether it started as AI-generated or not. Better writing is the goal, not gaming detectors.</p>
+        </details>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>From the Blog</h2>
+        <ul class="blog-links">
+            <li><a href="/blog/come-capire-testo-ai.html">Come capire se un testo è scritto da AI: guida completa</a></li>
+            <li><a href="/blog/segnali-testo-chatgpt.html">5 segnali che un testo è stato generato da ChatGPT</a></li>
+            <li><a href="/blog/rendere-testo-ai-naturale.html">Come rendere un testo AI più naturale</a></li>
+            <li><a href="/blog/free-ai-detection-reliable.html">Free AI Detection: How Reliable Is It Really?</a></li>
+            <li><a href="/blog/ai-vs-human-writing.html">AI Writing vs Human Writing: The Key Differences</a></li>
+            <li><a href="/blog/make-ai-text-natural.html">How to Make AI Text Sound Natural: A Practical Guide</a></li>
+        </ul>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-links">
+            <a href="/app">Analyze Text</a>
+            <a href="/blog/come-capire-testo-ai.html">Blog</a>
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms of Service</a>
+        </div>
+        <p>&copy; 2025 RealText. Free AI text detector and humanizer.</p>
+    </div>
+</footer>
+
+</body>
+</html>

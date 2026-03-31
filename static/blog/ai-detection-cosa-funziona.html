@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI detection: cosa funziona davvero e cosa no — RealText Blog</title>
+    <meta name="description" content="Analisi onesta dei tool di AI detection: cosa funziona, cosa no, e come usarli correttamente. Limiti e aspettative realistiche.">
+    <link rel="canonical" href="https://realtext.org/blog/ai-detection-cosa-funziona.html">
+    <meta property="og:title" content="AI detection: cosa funziona davvero e cosa no">
+    <meta property="og:description" content="Analisi onesta dei tool di AI detection: cosa funziona, cosa no, e come usarli correttamente. Limiti e aspettative realistiche.">
+    <meta property="og:url" content="https://realtext.org/blog/ai-detection-cosa-funziona.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="RealText">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "AI detection: cosa funziona davvero e cosa no",
+        "description": "Analisi onesta dei tool di AI detection: cosa funziona, cosa no, e come usarli correttamente. Limiti e aspettative realistiche.",
+        "url": "https://realtext.org/blog/ai-detection-cosa-funziona.html",
+        "publisher": {
+            "@type": "Organization",
+            "name": "RealText",
+            "url": "https://realtext.org"
+        },
+        "datePublished": "2025-07-01",
+        "inLanguage": "it"
+    }
+    </script>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            line-height: 1.7; color: #1a1a2e; background: #fafbfc;
+        }
+        .nav { background: #1a1a2e; padding: 16px 20px; }
+        .nav a { color: #6ee7b7; text-decoration: none; font-weight: 700; font-size: 1.1rem; }
+        .container { max-width: 720px; margin: 0 auto; padding: 40px 20px 60px; }
+        h1 { font-size: 2rem; margin-bottom: 16px; line-height: 1.3; }
+        h2 { font-size: 1.4rem; margin: 32px 0 12px; color: #1a1a2e; }
+        h3 { font-size: 1.15rem; margin: 24px 0 8px; }
+        p { margin-bottom: 16px; font-size: 1.05rem; color: #374151; }
+        ul, ol { margin: 0 0 16px 24px; color: #374151; }
+        li { margin-bottom: 8px; }
+        strong { color: #1a1a2e; }
+        .cta-box {
+            background: linear-gradient(135deg, #0f0c29, #302b63);
+            color: white; border-radius: 12px; padding: 28px; margin: 40px 0; text-align: center;
+        }
+        .cta-box a {
+            display: inline-block; margin-top: 12px; padding: 12px 32px;
+            background: #6ee7b7; color: #0f0c29; font-weight: 700; border-radius: 8px; text-decoration: none;
+        }
+        .meta { color: #6b7280; font-size: 0.9rem; margin-bottom: 32px; }
+        footer { background: #1a1a2e; color: #9ca3af; padding: 30px 20px; text-align: center; font-size: 0.85rem; }
+        footer a { color: #6ee7b7; text-decoration: none; margin: 0 10px; }
+        @media (max-width: 640px) { h1 { font-size: 1.5rem; } .container { padding: 24px 16px 40px; } }
+    </style>
+</head>
+<body>
+    <div class="nav"><a href="/">← RealText</a></div>
+    <article class="container">
+        <h1>AI detection: cosa funziona davvero e cosa no</h1>
+        <p class="meta">Aggiornato a luglio 2025 · 7 min di lettura</p>
+
+        <p>Il mercato dei "detector AI" è esploso. GPTZero, Originality.ai, Copyleaks, ZeroGPT e decine di altri tool promettono di identificare il testo generato da AI con accuratezze del "99%." Ma quanto sono affidabili davvero? La risposta onesta è: dipende.</p>
+
+        <h2>Come funzionano i detector AI</h2>
+
+        <p>Esistono due approcci principali. Il primo usa <strong>modelli di machine learning</strong> addestrati su migliaia di testi umani e AI per riconoscere pattern statistici. Il secondo (usato da <a href="/app">RealText</a>) si basa su <strong>metriche stilistiche algoritmiche</strong> — burstiness, varietà lessicale, pattern ripetitivi — che non richiedono un modello proprietario.</p>
+
+        <p>Il primo approccio è generalmente più accurato ma è una scatola nera: non puoi sapere <em>perché</em> un testo è stato flaggato. Il secondo è più trasparente e interpretabile, ma meno preciso sui casi limite.</p>
+
+        <h2>Cosa funziona</h2>
+
+        <p><strong>Testo AI puro e non editato:</strong> quasi tutti i detector sono ragionevolmente accurati (85-95%) su testo generato direttamente da ChatGPT o simili senza nessun editing umano. I pattern sono forti e riconoscibili.</p>
+
+        <p><strong>Testi lunghi:</strong> più testo c'è, più i pattern sono evidenti. Un articolo di 1000 parole è molto più facile da analizzare di un paragrafo di 100.</p>
+
+        <p><strong>Metriche stilistiche specifiche:</strong> la burstiness (varianza nella lunghezza delle frasi) è probabilmente la metrica singola più affidabile. L'AI produce frasi di lunghezza straordinariamente uniforme, e questo è difficile da mascherare anche con editing leggero.</p>
+
+        <h2>Cosa NON funziona</h2>
+
+        <p><strong>Testo AI editato da un umano:</strong> se qualcuno usa ChatGPT come bozza e poi riscrive sostanzialmente il testo, la detection diventa inaffidabile (50-70% di accuratezza). E questo è il caso d'uso più comune.</p>
+
+        <p><strong>Scrittori non-madrelingua:</strong> chi scrive in una seconda lingua produce spesso testo "regolare" e prevedibile — proprio come l'AI. I falsi positivi su non-madrelingua sono un problema noto e grave.</p>
+
+        <p><strong>Testi molto tecnici o accademici:</strong> la prosa scientifica ha naturalmente bassa burstiness e vocabolario ripetitivo. Molti detector flaggano testi accademici umani come "AI-generated."</p>
+
+        <p><strong>Il "99% di accuratezza":</strong> questa cifra, usata nel marketing di molti tool, è misurata su dataset ottimali. Nel mondo reale, con testi misti e editati, le performance calano significativamente.</p>
+
+        <h2>Come usare i detector in modo intelligente</h2>
+
+        <p>Mai come unica prova. Un detector dovrebbe essere uno strumento informativo tra molti — come un correttore ortografico, non come un giudice. Guarda le metriche individuali (burstiness, TTR, pattern) più che lo score aggregato. E soprattutto: usa i <strong>suggerimenti</strong> per migliorare il testo, indipendentemente dallo score.</p>
+
+        <div class="cta-box">
+            <p>RealText mostra le metriche individuali e dà consigli concreti. Provalo.</p>
+            <a href="/app">Prova gratis →</a>
+        </div>
+    </article>
+    <footer>
+        <a href="/">Home</a> <a href="/app">Analyze Text</a> <a href="/privacy">Privacy</a>
+        <p style="margin-top:12px;">&copy; 2025 RealText</p>
+    </footer>
+</body>
+</html>
