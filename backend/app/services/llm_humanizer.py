@@ -1,3 +1,4 @@
+import asyncio
 import os
 import json
 import re
@@ -112,7 +113,12 @@ async def humanize_text(text: str, language: str) -> tuple[dict | None, bool]:
             async with httpx.AsyncClient(timeout=45.0) as client:
                 response = await client.post(OPENROUTER_URL, json=payload, headers=headers)
 
-            if response.status_code in (429, 500, 502, 503):
+            if response.status_code == 429:
+                logger.warning("Rate limited on model %s, waiting 3s", model)
+                await asyncio.sleep(3)
+                continue
+
+            if response.status_code in (500, 502, 503):
                 logger.warning("Error %d on model %s", response.status_code, model)
                 continue
 

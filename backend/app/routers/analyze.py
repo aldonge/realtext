@@ -108,7 +108,7 @@ def _get_fallback_suggestions(metrics: dict, language: str, score: int) -> list[
     suggestions: list[dict] = []
     idx = 0
 
-    if metrics.get("burstiness_score", 50) < 40:
+    if metrics.get("burstiness_score", 50) < 55:
         fb = FALLBACK_SUGGESTIONS["burstiness"][lang]
         suggestions.append({
             "paragraph_index": idx,
@@ -119,7 +119,7 @@ def _get_fallback_suggestions(metrics: dict, language: str, score: int) -> list[
         })
         idx += 1
 
-    if metrics.get("repetition_score", 50) < 40:
+    if metrics.get("repetition_score", 50) < 55:
         fb = FALLBACK_SUGGESTIONS["repetition"][lang]
         suggestions.append({
             "paragraph_index": idx,
@@ -130,7 +130,7 @@ def _get_fallback_suggestions(metrics: dict, language: str, score: int) -> list[
         })
         idx += 1
 
-    if metrics.get("lexical_diversity", 50) < 40:
+    if metrics.get("lexical_diversity", 50) < 55:
         fb = FALLBACK_SUGGESTIONS["lexical"][lang]
         suggestions.append({
             "paragraph_index": idx,
@@ -141,7 +141,7 @@ def _get_fallback_suggestions(metrics: dict, language: str, score: int) -> list[
         })
         idx += 1
 
-    if metrics.get("sentence_length_variance", 50) < 40:
+    if metrics.get("sentence_length_variance", 50) < 55:
         fb = FALLBACK_SUGGESTIONS["sentence_var"][lang]
         suggestions.append({
             "paragraph_index": idx,
@@ -197,23 +197,10 @@ async def analyze(body: AnalyzeRequest, request: Request) -> AnalyzeResponse | J
     language = detect_language(body.text)
     metrics = analyze_text(body.text, language)
     score = metrics["score"]
-    logger.info("Score: %d, language: %s, calling LLM...", score, language)
+    logger.info("Score: %d, language: %s", score, language)
 
-    llm_suggestions, llm_available = await get_llm_suggestions(
-        body.text, language, metrics
-    )
-
-    if llm_available and llm_suggestions:
-        valid_suggestions: list[dict] = []
-        for s in llm_suggestions:
-            try:
-                SuggestionResponse(**s)
-                valid_suggestions.append(s)
-            except Exception:
-                logger.warning("Invalid suggestion from LLM, skipping: %s", s)
-        suggestions = valid_suggestions if valid_suggestions else _get_fallback_suggestions(metrics, language, score)
-    else:
-        suggestions = _get_fallback_suggestions(metrics, language, score)
+    suggestions = _get_fallback_suggestions(metrics, language, score)
+    llm_available = False
 
     summary = _get_summary(score, language)
 
