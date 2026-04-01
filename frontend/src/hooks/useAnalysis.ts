@@ -25,7 +25,7 @@ export function useAnalysis(): UseAnalysisReturn {
     setResult(null);
 
     const controller = new AbortController();
-    const tid = setTimeout(() => controller.abort(), 30000);
+    const tid = setTimeout(() => controller.abort(), 60000);
 
     try {
       const res = await fetch('/api/analyze', {

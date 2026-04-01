@@ -10,7 +10,10 @@ logger = logging.getLogger(__name__)
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 
 FREE_MODELS = [
-    "nvidia/nemotron-3-super-120b-a12b:free",
+    "meta-llama/llama-3.3-70b-instruct:free",
+    "meta-llama/llama-3.1-8b-instruct:free",
+    "google/gemma-2-9b-it:free",
+    "mistralai/mistral-7b-instruct:free",
 ]
 
 LANGUAGE_NAMES: dict[str, str] = {
@@ -104,7 +107,7 @@ async def humanize_text(text: str, language: str) -> tuple[dict | None, bool]:
                 "temperature": 0.8,
                 "max_tokens": 4096,
             }
-            async with httpx.AsyncClient(timeout=30.0) as client:
+            async with httpx.AsyncClient(timeout=45.0) as client:
                 response = await client.post(OPENROUTER_URL, json=payload, headers=headers)
 
             if response.status_code in (429, 500, 502, 503):
