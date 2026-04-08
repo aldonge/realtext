@@ -54,26 +54,42 @@ def _strip_thinking(text: str) -> str:
 
 def _parse_response(content: str) -> dict | None:
     cleaned = _strip_thinking(content).strip()
+
+    # Remove markdown fence only if it wraps the entire response
     fence_match = re.search(r"```(?:json)?\s*([\s\S]*?)```", cleaned)
     if fence_match:
-        cleaned = fence_match.group(1).strip()
+        candidate = fence_match.group(1).strip()
+        # Only use if the fenced block looks like JSON, not embedded code inside humanized_text
+        if candidate.startswith("{"):
+            cleaned = candidate
 
+    # Try full JSON parse
     obj_match = re.search(r"\{[\s\S]*\}", cleaned)
     if obj_match:
-        cleaned = obj_match.group(0)
+        try:
+            data = json.loads(obj_match.group(0))
+            if isinstance(data, dict) and "humanized_text" in data:
+                changes = data.get("changes_made", [])
+                if not isinstance(changes, list):
+                    changes = []
+                return {
+                    "humanized_text": str(data["humanized_text"]),
+                    "changes_made": [str(c) for c in changes[:10]],
+                }
+        except (json.JSONDecodeError, KeyError):
+            pass
 
-    try:
-        data = json.loads(cleaned)
-        if isinstance(data, dict) and "humanized_text" in data:
-            changes = data.get("changes_made", [])
-            if not isinstance(changes, list):
-                changes = []
+    # Fallback: JSON was truncated — extract humanized_text directly via regex
+    text_match = re.search(r'"humanized_text"\s*:\s*"((?:[^"\\]|\\.)*)', cleaned)
+    if text_match:
+        partial_text = text_match.group(1).replace("\\n", "\n").replace('\\"', '"')
+        if len(partial_text) > 50:
+            logger.warning("JSON truncated, using partial humanized_text (%d chars)", len(partial_text))
             return {
-                "humanized_text": str(data["humanized_text"]),
-                "changes_made": [str(c) for c in changes[:10]],
+                "humanized_text": partial_text,
+                "changes_made": [],
             }
-    except (json.JSONDecodeError, KeyError):
-        pass
+
     return None
 
 
