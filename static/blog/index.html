@@ -24,6 +24,8 @@
         .nav { background: rgba(255,255,255,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid #E2E8F0; padding: 16px 20px; position: sticky; top: 0; z-index: 50; display: flex; align-items: center; gap: 24px; }
         .nav a { color: #0F172A; text-decoration: none; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 1.1rem; }
         .nav a .accent { color: #2563EB; }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+        .cursor-blink { animation: blink 1s step-end infinite; color: #2563EB; }
         .nav a.link { color: #475569; font-size: 0.9rem; font-weight: 500; }
         .nav a.link:hover { color: #0F172A; }
         .container { max-width: 760px; margin: 0 auto; padding: 48px 20px 72px; }
@@ -60,7 +62,7 @@
 </head>
 <body>
     <div class="nav">
-        <a href="/" class="logo"><span>Real</span><span class="accent">Text</span></a>
+        <a href="/" class="logo"><span>Real</span><span class="accent">Text</span><span class="cursor-blink">_</span></a>
         <a href="/app" class="link">Tool</a>
         <a href="/blog/" class="link">Blog</a>
     </div>
