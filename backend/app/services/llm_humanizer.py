@@ -11,12 +11,11 @@ logger = logging.getLogger(__name__)
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 
 FREE_MODELS = [
-    "nvidia/nemotron-3-super-120b-a12b:free",
-    "qwen/qwen3.6-plus-preview:free",
     "minimax/minimax-m2.5:free",
-    "arcee-ai/trinity-large-preview:free",
-    "nvidia/nemotron-3-nano-30b-a3b:free",
-    "stepfun/step-3.5-flash:free",
+    "nvidia/nemotron-3-super-120b-a12b:free",
+    "meta-llama/llama-3.3-70b-instruct:free",
+    "mistralai/mistral-7b-instruct:free",
+    "qwen/qwen-2.5-72b-instruct:free",
 ]
 
 LANGUAGE_NAMES: dict[str, str] = {
@@ -128,6 +127,7 @@ async def humanize_text(text: str, language: str) -> tuple[dict | None, bool]:
 
             data = response.json()
             content = data["choices"][0]["message"]["content"]
+            logger.debug("Raw response from %s: %s", model, content[:500])
             parsed = _parse_response(content)
 
             if parsed:
