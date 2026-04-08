@@ -11,11 +11,7 @@ logger = logging.getLogger(__name__)
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 
 FREE_MODELS = [
-    "minimax/minimax-m2.5:free",
     "nvidia/nemotron-3-super-120b-a12b:free",
-    "meta-llama/llama-3.3-70b-instruct:free",
-    "mistralai/mistral-7b-instruct:free",
-    "qwen/qwen-2.5-72b-instruct:free",
 ]
 
 LANGUAGE_NAMES: dict[str, str] = {
@@ -134,7 +130,7 @@ async def humanize_text(text: str, language: str) -> tuple[dict | None, bool]:
                 logger.info("Humanized with model %s", model)
                 return parsed, True
 
-            logger.warning("Failed to parse response from %s", model)
+            logger.warning("Failed to parse response from %s. Raw content: %s", model, content[:1000])
 
         except httpx.TimeoutException:
             logger.warning("Timeout on model %s", model)
