@@ -1,0 +1,127 @@
+{
+  "meta": {
+    "landing": {
+      "title": "RealText — Free AI Detector & Text Humanizer | Detect ChatGPT, GPT-5, Gemini, Claude",
+      "description": "Free AI text detector and humanizer. Analyze your text for AI patterns, get a detailed score, and receive paragraph-by-paragraph suggestions to make AI-generated text sound naturally human. Works in 20+ languages.",
+      "ogTitle": "RealText — Free AI Detector & Text Humanizer",
+      "ogDescription": "Detect AI-generated text and get actionable suggestions to make it sound human. Free, multilingual, no signup required."
+    },
+    "privacy": {
+      "title": "Privacy Policy — RealText",
+      "description": "RealText privacy policy. How we handle your data and protect your privacy."
+    },
+    "terms": {
+      "title": "Terms of Service — RealText",
+      "description": "RealText terms of service. Rules and conditions for using our AI text detection and humanization service."
+    },
+    "blog": {
+      "title": "Blog — AI Detection, Humanization & Writing Tips | RealText",
+      "description": "Articles on AI text detection, humanizing AI writing, and the differences between AI and human writing. Free tools and practical guides."
+    }
+  },
+  "nav": {
+    "how": "How it works",
+    "blog": "Blog",
+    "tool": "Tool"
+  },
+  "hero": {
+    "badge": "Free &middot; No signup &middot; 20+ languages",
+    "title": "Is your text <span class=\"text-accent\">authentic</span>?",
+    "subtitle": "Free AI detector and humanizer. Get a score, understand why, and learn how to make your text sound naturally human.",
+    "ctaPrimary": "Analyze your text — free",
+    "ctaSecondary": "See how it works"
+  },
+  "socialProof": "Stylistic analysis based on burstiness, lexical diversity, and repetition patterns",
+  "features": {
+    "title": "Why RealText",
+    "items": [
+      { "title": "Actionable suggestions", "desc": "Not just a score. Specific, paragraph-by-paragraph advice on what to fix and why." },
+      { "title": "20+ languages", "desc": "Analysis and suggestions in the language of your text. Italian, English, German, French, Spanish and many more." },
+      { "title": "Privacy first", "desc": "Your text is never stored. Analyzed in memory and discarded immediately. No accounts, no data collection." },
+      { "title": "Transparent metrics", "desc": "Burstiness, lexical diversity, repetition patterns. You see exactly why text was flagged. No black box." },
+      { "title": "Completely free", "desc": "5 analyses per day, no signup, no credit card. Enough for students, writers, and professionals." },
+      { "title": "Visual score", "desc": "A 0-100 gauge shows how AI-like your text is. Apply suggestions, re-analyze, watch your score improve." }
+    ]
+  },
+  "how": {
+    "title": "How it works",
+    "steps": [
+      { "title": "Paste your text", "desc": "Any language, up to 10,000 characters." },
+      { "title": "Get your score", "desc": "0-100 gauge with metric breakdown." },
+      { "title": "Read the suggestions", "desc": "Actionable advice tied to your paragraphs." },
+      { "title": "Improve and re-analyze", "desc": "Edit, re-run, see improvement." }
+    ]
+  },
+  "detection": {
+    "title": "How RealText analyzes text",
+    "paragraphs": [
+      "RealText uses <strong class=\"text-slate-900\">algorithmic stylistic analysis</strong> — not a black-box AI model. It measures specific, interpretable characteristics of your writing:",
+      "<strong class=\"text-slate-900\">Burstiness:</strong> Human writing naturally alternates between long and short sentences. AI tends to produce uniform sentence lengths. RealText measures this variance.",
+      "<strong class=\"text-slate-900\">Lexical Diversity (TTR):</strong> The ratio of unique words to total words. AI text often reuses the same vocabulary, while humans draw from a richer word pool.",
+      "<strong class=\"text-slate-900\">Repetition Patterns:</strong> AI frequently repeats structural patterns. RealText detects these n-gram repetitions across your text.",
+      "<strong class=\"text-slate-900\">AI-Typical Connectors:</strong> Phrases like \"It is important to note that\" or \"Moreover\" appear at unusually high rates in AI text. RealText counts these per language."
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      { "q": "Is RealText really free?", "a": "Yes. 5 free analyses per day without creating an account. No trial, no hidden costs, no credit card." },
+      { "q": "What AI models can RealText detect?", "a": "RealText detects stylistic patterns common to ChatGPT, GPT-5, Gemini, Claude, LLaMA, and Mistral. It analyzes writing style, not model-specific signatures." },
+      { "q": "How accurate is the detection?", "a": "Most reliable for unedited AI text. Less reliable for heavily edited content. We're transparent: the real value is in actionable suggestions, not just the score." },
+      { "q": "Is my text stored or shared?", "a": "No. Your text is analyzed in memory and immediately discarded. We never save, log, or share submitted content." },
+      { "q": "What languages are supported?", "a": "20+ languages. The interface follows your browser language, and suggestions are provided in the language of the text you submit." },
+      { "q": "Can I use RealText to \"beat\" AI detectors?", "a": "RealText helps improve writing quality by addressing robotic patterns. Better writing is the goal, not gaming detectors." }
+    ]
+  },
+  "blogSection": {
+    "title": "From the Blog"
+  },
+  "footer": {
+    "tagline": "Free AI text detector and humanizer.",
+    "links": {
+      "tool": "Tool",
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "blog": "Blog"
+    },
+    "copyright": "© 2026 RealText"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: April 2026",
+    "sections": [
+      { "heading": "Introduction", "body": "<p>RealText (\"we\", \"us\", \"our\") is committed to protecting your privacy. This Privacy Policy explains how we handle information when you use our website and AI text analysis service at realtext.org.</p>" },
+      { "heading": "Text Analysis Data", "body": "<p><strong>We do not store your text.</strong> When you submit text for analysis, it is processed in server memory and immediately discarded after the analysis is complete. We never save, log, or share the content you submit for analysis.</p>" },
+      { "heading": "Data We Collect", "body": "<p>We collect minimal data necessary to operate the service:</p><ul><li><strong>Anonymous usage counters:</strong> We track the number of analyses performed per IP address per day to enforce the daily free limit. No text content is stored.</li><li><strong>Server logs:</strong> Standard web server logs may contain IP addresses, browser type, and request timestamps. These are used solely for security and debugging purposes and are automatically rotated.</li></ul>" },
+      { "heading": "What We Do NOT Collect", "body": "<ul><li>We do not require account creation or registration</li><li>We do not collect email addresses, names, or personal identifiers</li><li>We do not use cookies for tracking or advertising</li><li>We do not share any data with third parties for marketing purposes</li><li>We do not store or log the text you submit for analysis</li></ul>" },
+      { "heading": "Third-Party Services", "body": "<p>Our text analysis may use third-party AI APIs (such as OpenAI or Anthropic) to generate humanization suggestions. When this occurs, your text is sent to these services for processing only. These services have their own privacy policies and data handling practices. We do not control how they process data beyond the scope of our API requests.</p>" },
+      { "heading": "Data Security", "body": "<p>We use industry-standard security measures to protect our infrastructure, including encrypted connections (HTTPS), firewalled servers, and minimal data retention.</p>" },
+      { "heading": "Your Rights", "body": "<p>Since we do not collect personal data or store user content, there is minimal data to access, modify, or delete. If you have questions about your data, contact us at the email below.</p>" },
+      { "heading": "Changes to This Policy", "body": "<p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated \"Last updated\" date.</p>" },
+      { "heading": "Contact", "body": "<p>For privacy-related questions, contact us at: <strong>privacy@realtext.org</strong></p>" }
+    ]
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated: April 2026",
+    "sections": [
+      { "heading": "Acceptance", "body": "<p>By using RealText (realtext.org), you agree to the following terms. If you do not agree, please do not use the service.</p>" },
+      { "heading": "Service Description", "body": "<p>RealText provides a free AI text detection and humanization tool. The service analyzes text for stylistic patterns commonly associated with AI-generated content and provides suggestions for improvement.</p>" },
+      { "heading": "Free Usage", "body": "<p>RealText offers up to 5 free text analyses per day per user, without registration. We reserve the right to modify usage limits at any time.</p>" },
+      { "heading": "Acceptable Use", "body": "<p>You agree to use RealText only for lawful purposes. You may not:</p><ul><li>Attempt to bypass usage limits through automated means</li><li>Use the service to process illegal, harmful, or abusive content</li><li>Reverse-engineer, scrape, or programmatically access the service without authorization</li><li>Interfere with the service's operation or other users' access</li></ul>" },
+      { "heading": "No Guarantees", "body": "<p>RealText provides text analysis as an informational tool. <strong>We do not guarantee the accuracy of AI detection results.</strong> Our analysis should not be used as the sole basis for academic, professional, or legal decisions. False positives and false negatives can occur.</p>" },
+      { "heading": "Intellectual Property", "body": "<p>You retain full ownership of any text you submit for analysis. We claim no rights over your content. The RealText name, design, and blog content are our intellectual property.</p>" },
+      { "heading": "Limitation of Liability", "body": "<p>RealText is provided \"as is\" without warranties of any kind. We are not liable for any damages arising from the use of our service, including but not limited to inaccurate detection results, service interruptions, or data loss.</p>" },
+      { "heading": "Changes to Terms", "body": "<p>We may update these Terms of Service at any time. Continued use of the service after changes constitutes acceptance of the updated terms.</p>" },
+      { "heading": "Contact", "body": "<p>For questions about these terms, contact us at: <strong>info@realtext.org</strong></p>" }
+    ]
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Articles about AI detection, writing, and authenticity",
+    "readMore": "Read article",
+    "minRead": "min read",
+    "updatedOn": "Updated",
+    "allArticles": "All articles"
+  }
+}

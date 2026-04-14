@@ -66,6 +66,7 @@ fi
 mkdir -p data
 
 echo ""
+echo -e "${YELLOW}→ Building static multilingual site (this happens inside Docker)...${NC}"
 echo "Build in corso (puo richiedere qualche minuto la prima volta)..."
 docker compose down -v 2>/dev/null || true
 docker compose build --no-cache

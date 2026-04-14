@@ -1,0 +1,29 @@
+<!-- Header -->
+<header class="fixed top-0 w-full z-50 border-b border-slate-200" style="background: rgba(255,255,255,0.92); backdrop-filter: blur(8px);">
+    <div class="max-w-5xl mx-auto px-5 h-16 flex items-center justify-between">
+        <!-- Logo -->
+        <a href="/{{currentLang}}/" class="flex items-center gap-0 text-xl font-heading font-extrabold tracking-tight">
+            <span class="text-slate-900">Real</span><span class="text-accent">Text</span><span class="cursor-blink text-accent">_</span>
+        </a>
+        <!-- Nav desktop -->
+        <nav class="hidden md:flex items-center gap-8">
+            <a href="/{{currentLang}}/#how-it-works" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">{{nav.how}}</a>
+            <a href="/{{currentLang}}/blog/" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">{{nav.blog}}</a>
+            <div class="flex items-center gap-1 ml-2">
+                {{langSwitcher}}
+            </div>
+        </nav>
+        <!-- Mobile hamburger -->
+        <button onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" class="md:hidden p-2 rounded-lg hover:bg-slate-100">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 bg-white px-5 py-4 space-y-3">
+        <a href="/{{currentLang}}/#how-it-works" class="block text-sm font-medium text-slate-600">{{nav.how}}</a>
+        <a href="/{{currentLang}}/blog/" class="block text-sm font-medium text-slate-600">{{nav.blog}}</a>
+        <div class="flex items-center gap-1 pt-2">
+            {{langSwitcher}}
+        </div>
+    </div>
+</header>

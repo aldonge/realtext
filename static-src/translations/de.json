@@ -1,0 +1,127 @@
+{
+  "meta": {
+    "landing": {
+      "title": "RealText — Kostenloser KI-Detektor & Text-Humanisierer | ChatGPT, GPT-5, Gemini, Claude erkennen",
+      "description": "Kostenloser KI-Text-Detektor und Humanisierer. Analysieren Sie Ihren Text auf KI-Muster, erhalten Sie eine detaillierte Bewertung und Absatz-für-Absatz-Vorschläge, um KI-generierten Text natürlich menschlich klingen zu lassen. Funktioniert in 20+ Sprachen.",
+      "ogTitle": "RealText — Kostenloser KI-Detektor & Text-Humanisierer",
+      "ogDescription": "KI-generierten Text erkennen und umsetzbare Vorschläge erhalten, um ihn menschlich klingen zu lassen. Kostenlos, mehrsprachig, ohne Registrierung."
+    },
+    "privacy": {
+      "title": "Datenschutzerklärung — RealText",
+      "description": "Datenschutzerklärung von RealText. Wie wir Ihre Daten verarbeiten und Ihre Privatsphäre schützen."
+    },
+    "terms": {
+      "title": "Nutzungsbedingungen — RealText",
+      "description": "Nutzungsbedingungen von RealText. Regeln und Bedingungen für die Nutzung unseres KI-Text-Erkennungs- und Humanisierungsdienstes."
+    },
+    "blog": {
+      "title": "Blog — KI-Erkennung, Humanisierung & Schreibtipps | RealText",
+      "description": "Artikel über KI-Texterkennung, Humanisierung von KI-Texten und die Unterschiede zwischen KI- und menschlichem Schreiben. Kostenlose Tools und praktische Anleitungen."
+    }
+  },
+  "nav": {
+    "how": "So funktioniert's",
+    "blog": "Blog",
+    "tool": "Tool"
+  },
+  "hero": {
+    "badge": "Kostenlos &middot; Ohne Registrierung &middot; 20+ Sprachen",
+    "title": "Ist Ihr Text <span class=\"text-accent\">authentisch</span>?",
+    "subtitle": "Kostenloser KI-Detektor und Humanisierer. Erhalten Sie eine Bewertung, verstehen Sie warum, und lernen Sie, wie Ihr Text natürlich menschlich klingt.",
+    "ctaPrimary": "Text analysieren — kostenlos",
+    "ctaSecondary": "So funktioniert's"
+  },
+  "socialProof": "Stilanalyse basierend auf Burstiness, lexikalischer Vielfalt und Wiederholungsmustern",
+  "features": {
+    "title": "Warum RealText",
+    "items": [
+      { "title": "Umsetzbare Vorschläge", "desc": "Nicht nur eine Bewertung. Spezifische Absatz-für-Absatz-Ratschläge, was zu verbessern ist und warum." },
+      { "title": "20+ Sprachen", "desc": "Analyse und Vorschläge in der Sprache Ihres Textes. Italienisch, Englisch, Deutsch, Französisch, Spanisch und viele mehr." },
+      { "title": "Datenschutz zuerst", "desc": "Ihr Text wird nie gespeichert. Im Speicher analysiert und sofort verworfen. Keine Konten, keine Datensammlung." },
+      { "title": "Transparente Metriken", "desc": "Burstiness, lexikalische Vielfalt, Wiederholungsmuster. Sie sehen genau, warum der Text markiert wurde. Keine Black Box." },
+      { "title": "Komplett kostenlos", "desc": "5 Analysen pro Tag, ohne Registrierung, ohne Kreditkarte. Genug für Studierende, Autoren und Fachleute." },
+      { "title": "Visueller Score", "desc": "Ein 0-100 Messgerät zeigt, wie KI-typisch Ihr Text ist. Wenden Sie Vorschläge an, analysieren Sie erneut, beobachten Sie die Verbesserung." }
+    ]
+  },
+  "how": {
+    "title": "So funktioniert's",
+    "steps": [
+      { "title": "Text einfügen", "desc": "Jede Sprache, bis zu 10.000 Zeichen." },
+      { "title": "Score erhalten", "desc": "0-100 Messgerät mit Metrik-Aufschlüsselung." },
+      { "title": "Vorschläge lesen", "desc": "Umsetzbare Ratschläge zu Ihren Absätzen." },
+      { "title": "Verbessern und erneut analysieren", "desc": "Bearbeiten, erneut analysieren, Verbesserung sehen." }
+    ]
+  },
+  "detection": {
+    "title": "Wie RealText Text analysiert",
+    "paragraphs": [
+      "RealText verwendet <strong class=\"text-slate-900\">algorithmische Stilanalyse</strong> — kein Black-Box-KI-Modell. Es misst spezifische, interpretierbare Merkmale Ihres Schreibstils:",
+      "<strong class=\"text-slate-900\">Burstiness:</strong> Menschliches Schreiben wechselt natürlich zwischen langen und kurzen Sätzen. KI neigt dazu, Sätze einheitlicher Länge zu produzieren. RealText misst diese Varianz.",
+      "<strong class=\"text-slate-900\">Lexikalische Vielfalt (TTR):</strong> Das Verhältnis einzigartiger Wörter zur Gesamtwortzahl. KI-Text verwendet oft denselben Wortschatz, während Menschen aus einem reicheren Wortpool schöpfen.",
+      "<strong class=\"text-slate-900\">Wiederholungsmuster:</strong> KI wiederholt häufig strukturelle Muster. RealText erkennt diese N-Gramm-Wiederholungen in Ihrem Text.",
+      "<strong class=\"text-slate-900\">KI-typische Konnektoren:</strong> Phrasen wie \"Es ist wichtig zu beachten, dass\" oder \"Darüber hinaus\" treten in KI-Text mit ungewöhnlich hoher Häufigkeit auf. RealText zählt diese pro Sprache."
+    ]
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "items": [
+      { "q": "Ist RealText wirklich kostenlos?", "a": "Ja. 5 kostenlose Analysen pro Tag ohne Kontoeröffnung. Keine Testphase, keine versteckten Kosten, keine Kreditkarte." },
+      { "q": "Welche KI-Modelle erkennt RealText?", "a": "RealText erkennt stilistische Muster, die für ChatGPT, GPT-5, Gemini, Claude, LLaMA und Mistral typisch sind. Es analysiert den Schreibstil, nicht modellspezifische Signaturen." },
+      { "q": "Wie genau ist die Erkennung?", "a": "Am zuverlässigsten bei unbearbeitetem KI-Text. Weniger zuverlässig bei stark bearbeitetem Inhalt. Wir sind transparent: Der wahre Wert liegt in den umsetzbaren Vorschlägen, nicht nur im Score." },
+      { "q": "Wird mein Text gespeichert oder weitergegeben?", "a": "Nein. Ihr Text wird im Speicher analysiert und sofort verworfen. Wir speichern, protokollieren oder teilen nie eingereichte Inhalte." },
+      { "q": "Welche Sprachen werden unterstützt?", "a": "20+ Sprachen. Die Oberfläche folgt Ihrer Browsersprache, und Vorschläge werden in der Sprache des analysierten Textes gegeben." },
+      { "q": "Kann ich RealText nutzen, um KI-Detektoren zu \"schlagen\"?", "a": "RealText hilft, die Schreibqualität zu verbessern, indem roboterhafte Muster angegangen werden. Besseres Schreiben ist das Ziel, nicht Detektoren zu täuschen." }
+    ]
+  },
+  "blogSection": {
+    "title": "Aus dem Blog"
+  },
+  "footer": {
+    "tagline": "Kostenloser KI-Text-Detektor und Humanisierer.",
+    "links": {
+      "tool": "Tool",
+      "privacy": "Datenschutz",
+      "terms": "Nutzungsbedingungen",
+      "blog": "Blog"
+    },
+    "copyright": "© 2026 RealText"
+  },
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "lastUpdated": "Letzte Aktualisierung: April 2026",
+    "sections": [
+      { "heading": "Einleitung", "body": "<p>RealText (\"wir\", \"uns\") verpflichtet sich, Ihre Privatsphäre zu schützen. Diese Datenschutzerklärung erklärt, wie wir Informationen verarbeiten, wenn Sie unsere Website und den KI-Textanalysedienst auf realtext.org nutzen.</p>" },
+      { "heading": "Textanalysedaten", "body": "<p><strong>Wir speichern Ihren Text nicht.</strong> Wenn Sie einen Text zur Analyse einreichen, wird er im Arbeitsspeicher des Servers verarbeitet und nach Abschluss der Analyse sofort verworfen. Wir speichern, protokollieren oder teilen nie die zur Analyse eingereichten Inhalte.</p>" },
+      { "heading": "Daten, die wir erheben", "body": "<p>Wir erheben die minimal notwendigen Daten für den Betrieb des Dienstes:</p><ul><li><strong>Anonyme Nutzungszähler:</strong> Wir erfassen die Anzahl der Analysen pro IP-Adresse und Tag zur Durchsetzung des täglichen Gratislimits. Keine Textinhalte werden gespeichert.</li><li><strong>Server-Protokolle:</strong> Standard-Webserver-Protokolle können IP-Adressen, Browsertyp und Anfrage-Zeitstempel enthalten. Diese werden ausschließlich für Sicherheit und Fehlersuche verwendet und automatisch rotiert.</li></ul>" },
+      { "heading": "Was wir NICHT erheben", "body": "<ul><li>Wir erfordern keine Kontoerstellung oder Registrierung</li><li>Wir erheben keine E-Mail-Adressen, Namen oder persönliche Identifikatoren</li><li>Wir verwenden keine Cookies für Tracking oder Werbung</li><li>Wir teilen keine Daten mit Dritten zu Marketingzwecken</li><li>Wir speichern oder protokollieren nicht den zur Analyse eingereichten Text</li></ul>" },
+      { "heading": "Drittanbieterdienste", "body": "<p>Unsere Textanalyse kann KI-APIs von Drittanbietern (wie OpenAI oder Anthropic) verwenden, um Humanisierungsvorschläge zu generieren. In diesem Fall wird Ihr Text nur zur Verarbeitung an diese Dienste gesendet. Diese Dienste haben ihre eigenen Datenschutzrichtlinien und Datenverarbeitungspraktiken.</p>" },
+      { "heading": "Datensicherheit", "body": "<p>Wir verwenden branchenübliche Sicherheitsmaßnahmen zum Schutz unserer Infrastruktur, einschließlich verschlüsselter Verbindungen (HTTPS), Firewall-geschützter Server und minimaler Datenspeicherung.</p>" },
+      { "heading": "Ihre Rechte", "body": "<p>Da wir keine personenbezogenen Daten erheben oder Benutzerinhalte speichern, gibt es minimale Daten zum Zugreifen, Ändern oder Löschen. Bei Fragen zu Ihren Daten kontaktieren Sie uns unter der unten angegebenen Adresse.</p>" },
+      { "heading": "Änderungen dieser Erklärung", "body": "<p>Wir können diese Datenschutzerklärung von Zeit zu Zeit aktualisieren. Änderungen werden auf dieser Seite mit einem aktualisierten Datum der \"Letzten Aktualisierung\" veröffentlicht.</p>" },
+      { "heading": "Kontakt", "body": "<p>Für datenschutzbezogene Fragen kontaktieren Sie uns unter: <strong>privacy@realtext.org</strong></p>" }
+    ]
+  },
+  "terms": {
+    "title": "Nutzungsbedingungen",
+    "lastUpdated": "Letzte Aktualisierung: April 2026",
+    "sections": [
+      { "heading": "Annahme", "body": "<p>Durch die Nutzung von RealText (realtext.org) stimmen Sie den folgenden Bedingungen zu. Wenn Sie nicht zustimmen, nutzen Sie den Dienst bitte nicht.</p>" },
+      { "heading": "Dienstbeschreibung", "body": "<p>RealText bietet ein kostenloses Tool zur KI-Texterkennung und -Humanisierung. Der Dienst analysiert Text auf stilistische Muster, die häufig mit KI-generierten Inhalten assoziiert werden, und liefert Verbesserungsvorschläge.</p>" },
+      { "heading": "Kostenlose Nutzung", "body": "<p>RealText bietet bis zu 5 kostenlose Textanalysen pro Tag und Nutzer ohne Registrierung. Wir behalten uns das Recht vor, Nutzungslimits jederzeit zu ändern.</p>" },
+      { "heading": "Akzeptable Nutzung", "body": "<p>Sie stimmen zu, RealText nur für rechtmäßige Zwecke zu nutzen. Es ist nicht gestattet:</p><ul><li>Nutzungslimits durch automatisierte Mittel zu umgehen</li><li>Den Dienst zur Verarbeitung illegaler, schädlicher oder missbräuchlicher Inhalte zu nutzen</li><li>Reverse Engineering, Scraping oder programmatischen Zugriff ohne Autorisierung durchzuführen</li><li>Den Betrieb des Dienstes oder den Zugang anderer Nutzer zu stören</li></ul>" },
+      { "heading": "Keine Garantien", "body": "<p>RealText stellt die Textanalyse als informatives Tool bereit. <strong>Wir garantieren nicht die Genauigkeit der KI-Erkennungsergebnisse.</strong> Unsere Analyse sollte nicht als alleinige Grundlage für akademische, berufliche oder rechtliche Entscheidungen verwendet werden. Falschpositive und Falschnegative können auftreten.</p>" },
+      { "heading": "Geistiges Eigentum", "body": "<p>Sie behalten das volle Eigentum an jedem zur Analyse eingereichten Text. Wir beanspruchen keine Rechte an Ihren Inhalten. Der Name RealText, das Design und die Blog-Inhalte sind unser geistiges Eigentum.</p>" },
+      { "heading": "Haftungsbeschränkung", "body": "<p>RealText wird \"wie besehen\" ohne Gewährleistung jeglicher Art bereitgestellt. Wir haften nicht für Schäden, die aus der Nutzung unseres Dienstes entstehen, einschließlich, aber nicht beschränkt auf ungenaue Erkennungsergebnisse, Dienstunterbrechungen oder Datenverlust.</p>" },
+      { "heading": "Änderungen der Bedingungen", "body": "<p>Wir können diese Nutzungsbedingungen jederzeit aktualisieren. Die fortgesetzte Nutzung des Dienstes nach Änderungen gilt als Annahme der aktualisierten Bedingungen.</p>" },
+      { "heading": "Kontakt", "body": "<p>Für Fragen zu diesen Bedingungen kontaktieren Sie uns unter: <strong>info@realtext.org</strong></p>" }
+    ]
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Artikel über KI-Erkennung, Schreiben und Authentizität",
+    "readMore": "Artikel lesen",
+    "minRead": "Min. Lesezeit",
+    "updatedOn": "Aktualisiert",
+    "allArticles": "Alle Artikel"
+  }
+}

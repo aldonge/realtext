@@ -1,0 +1,19 @@
+{
+  "_comment": "REVISIONE MANUALE RICHIESTA: spostare articoli da standalone a translationGroups quando sono traduzioni reciproche dello stesso contenuto. Esempi possibili da verificare: come-capire-testo-ai (IT) con check-if-text-is-ai-generated (EN); rendere-testo-ai-naturale (IT) con make-ai-text-natural (EN); ai-detection-cosa-funziona (IT) con free-ai-detection-reliable (EN); studenti-ai-plagio (IT) con bypass-ai-detection (EN). NON automatizzare questo, va deciso leggendo i contenuti.",
+  "translationGroups": [],
+  "standalone": [
+    { "lang": "it", "slug": "come-capire-testo-ai" },
+    { "lang": "it", "slug": "segnali-testo-chatgpt" },
+    { "lang": "it", "slug": "rendere-testo-ai-naturale" },
+    { "lang": "it", "slug": "ai-detection-cosa-funziona" },
+    { "lang": "it", "slug": "studenti-ai-plagio" },
+    { "lang": "en", "slug": "humanize-ai-text-free" },
+    { "lang": "en", "slug": "make-chatgpt-text-undetectable" },
+    { "lang": "en", "slug": "bypass-ai-detection" },
+    { "lang": "en", "slug": "check-if-text-is-ai-generated" },
+    { "lang": "en", "slug": "ai-content-detector-free" },
+    { "lang": "en", "slug": "ai-vs-human-writing" },
+    { "lang": "en", "slug": "free-ai-detection-reliable" },
+    { "lang": "en", "slug": "make-ai-text-natural" }
+  ]
+}

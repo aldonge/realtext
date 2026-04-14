@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+    <!-- SEO Primary -->
+    <title>Blog — AI Detection, Humanization e Consigli di Scrittura | RealText</title>
+    <meta name="description" content="Articoli su rilevamento testi AI, umanizzazione della scrittura AI e differenze tra testi AI e umani. Strumenti gratuiti e guide pratiche.">
+    <link rel="canonical" href="https://realtext.org/it/blog/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Blog — AI Detection, Humanization e Consigli di Scrittura | RealText">
+    <meta property="og:description" content="Articoli su rilevamento testi AI, umanizzazione della scrittura AI e differenze tra testi AI e umani. Strumenti gratuiti e guide pratiche.">
+    <meta property="og:url" content="https://realtext.org/it/blog/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="RealText">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog — AI Detection, Humanization e Consigli di Scrittura | RealText">
+    <meta name="twitter:description" content="Articoli su rilevamento testi AI, umanizzazione della scrittura AI e differenze tra testi AI e umani. Strumenti gratuiti e guide pratiche.">
+
+    <!-- hreflang -->
+        <link rel="alternate" hreflang="en" href="https://realtext.org/en/blog/">
+    <link rel="alternate" hreflang="it" href="https://realtext.org/it/blog/">
+    <link rel="alternate" hreflang="es" href="https://realtext.org/es/blog/">
+    <link rel="alternate" hreflang="de" href="https://realtext.org/de/blog/">
+    <link rel="alternate" hreflang="fr" href="https://realtext.org/fr/blog/">
+    <link rel="alternate" hreflang="pt" href="https://realtext.org/pt/blog/">
+    <link rel="alternate" hreflang="x-default" href="https://realtext.org/en/blog/">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: { DEFAULT: '#2563EB', hover: '#1D4ED8', light: '#EFF6FF' },
+            slate: {
+              50: '#F8FAFC', 100: '#F1F5F9', 200: '#E2E8F0', 300: '#CBD5E1',
+              400: '#94A3B8', 500: '#64748B', 600: '#475569', 700: '#334155',
+              800: '#1E293B', 900: '#0F172A'
+            }
+          },
+          fontFamily: {
+            heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+            body: ['"Inter"', 'sans-serif'],
+          }
+        }
+      }
+    }
+    </script>
+
+    <!-- Shared CSS -->
+    <link rel="stylesheet" href="/shared/styles.css">
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+        .cursor-blink { animation: blink 1s step-end infinite; }
+        html { scroll-behavior: smooth; }
+    </style>
+
+</head>
+<body class="bg-white text-slate-900 antialiased">
+
+<!-- Header -->
+<header class="fixed top-0 w-full z-50 border-b border-slate-200" style="background: rgba(255,255,255,0.92); backdrop-filter: blur(8px);">
+    <div class="max-w-5xl mx-auto px-5 h-16 flex items-center justify-between">
+        <!-- Logo -->
+        <a href="/it/" class="flex items-center gap-0 text-xl font-heading font-extrabold tracking-tight">
+            <span class="text-slate-900">Real</span><span class="text-accent">Text</span><span class="cursor-blink text-accent">_</span>
+        </a>
+        <!-- Nav desktop -->
+        <nav class="hidden md:flex items-center gap-8">
+            <a href="/it/#how-it-works" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Come funziona</a>
+            <a href="/it/blog/" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Blog</a>
+            <div class="flex items-center gap-1 ml-2">
+                <a href="/en/blog/" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">EN</a>
+                <a href="/it/blog/" class="px-2.5 py-1 text-xs font-medium rounded-md bg-accent text-white">IT</a>
+                <a href="/es/blog/" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">ES</a>
+                <a href="/de/blog/" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">DE</a>
+                <a href="/fr/blog/" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">FR</a>
+                <a href="/pt/blog/" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">PT</a>
+            </div>
+        </nav>
+        <!-- Mobile hamburger -->
+        <button onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" class="md:hidden p-2 rounded-lg hover:bg-slate-100">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 bg-white px-5 py-4 space-y-3">
+        <a href="/it/#how-it-works" class="block text-sm font-medium text-slate-600">Come funziona</a>
+        <a href="/it/blog/" class="block text-sm font-medium text-slate-600">Blog</a>
+        <div class="flex items-center gap-1 pt-2">
+            <a href="/en/blog/" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">EN</a>
+                <a href="/it/blog/" class="px-2.5 py-1 text-xs font-medium rounded-md bg-accent text-white">IT</a>
+                <a href="/es/blog/" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">ES</a>
+                <a href="/de/blog/" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">DE</a>
+                <a href="/fr/blog/" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">FR</a>
+                <a href="/pt/blog/" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">PT</a>
+        </div>
+    </div>
+</header>
+
+
+<div class="max-w-[720px] mx-auto px-5 pt-28 pb-16">
+    <h1 class="font-heading font-extrabold text-2xl md:text-3xl text-slate-900 mb-2">Blog</h1>
+    <p class="text-slate-500 mb-10">Articoli su AI detection, scrittura e autenticità</p>
+
+    <div class="divide-y divide-slate-200">
+        
+        <a href="/it/blog/ai-detection-cosa-funziona.html" class="block py-5 group">
+            <h2 class="font-heading font-bold text-base text-slate-900 group-hover:text-accent transition-colors mb-1">AI detection: cosa funziona davvero e cosa no</h2>
+            <p class="text-sm text-slate-500 mb-2">Analisi onesta dei tool di AI detection: cosa funziona, cosa no, e come usarli correttamente. Limiti e aspettative realistiche.</p>
+            <span class="text-xs text-slate-400">31 Mar 2026 · 2 min di lettura</span>
+        </a>
+        
+        <a href="/it/blog/come-capire-testo-ai.html" class="block py-5 group">
+            <h2 class="font-heading font-bold text-base text-slate-900 group-hover:text-accent transition-colors mb-1">Come capire se un testo è scritto da AI: guida completa</h2>
+            <p class="text-sm text-slate-500 mb-2">Guida completa per riconoscere un testo scritto dall'intelligenza artificiale. Scopri i segnali, le metriche e i tool per verificare l'autenticità di un testo.</p>
+            <span class="text-xs text-slate-400">31 Mar 2026 · 4 min di lettura</span>
+        </a>
+        
+        <a href="/it/blog/rendere-testo-ai-naturale.html" class="block py-5 group">
+            <h2 class="font-heading font-bold text-base text-slate-900 group-hover:text-accent transition-colors mb-1">Come rendere un testo AI più naturale: guida pratica</h2>
+            <p class="text-sm text-slate-500 mb-2">Tecniche pratiche per rendere un testo generato da AI più naturale e umano. Consigli concreti per migliorare burstiness, varietà lessicale e stile.</p>
+            <span class="text-xs text-slate-400">31 Mar 2026 · 2 min di lettura</span>
+        </a>
+        
+        <a href="/it/blog/segnali-testo-chatgpt.html" class="block py-5 group">
+            <h2 class="font-heading font-bold text-base text-slate-900 group-hover:text-accent transition-colors mb-1">5 segnali che un testo è stato generato da ChatGPT</h2>
+            <p class="text-sm text-slate-500 mb-2">5 segnali concreti per riconoscere un testo generato da ChatGPT. Impara a identificare i pattern tipici dell'AI nella scrittura.</p>
+            <span class="text-xs text-slate-400">31 Mar 2026 · 2 min di lettura</span>
+        </a>
+        
+        <a href="/it/blog/studenti-ai-plagio.html" class="block py-5 group">
+            <h2 class="font-heading font-bold text-base text-slate-900 group-hover:text-accent transition-colors mb-1">Studenti e AI: come usare ChatGPT senza problemi</h2>
+            <p class="text-sm text-slate-500 mb-2">Guida per studenti: come usare l'AI come assistente di scrittura senza rischiare problemi di plagio o detection. Consigli pratici e onesti.</p>
+            <span class="text-xs text-slate-400">31 Mar 2026 · 2 min di lettura</span>
+        </a>
+        
+    </div>
+</div>
+
+<!-- CTA -->
+<section class="py-12 px-5 bg-slate-50">
+    <div class="max-w-[720px] mx-auto text-center">
+        <a href="/app?lang=it" class="inline-flex items-center justify-center px-10 py-4 bg-accent text-white font-semibold text-base rounded-xl hover:bg-accent-hover transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/25">Analizza il tuo testo — gratis</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-slate-900 text-slate-400 py-12 px-5">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center md:items-start justify-between gap-6">
+        <div>
+            <a href="/it/" class="text-lg font-heading font-extrabold tracking-tight">
+                <span class="text-white">Real</span><span class="text-blue-400">Text</span>
+            </a>
+            <p class="text-sm mt-1 text-slate-500">Detector AI e humanizer gratuito.</p>
+        </div>
+        <div class="flex items-center gap-6 text-sm">
+            <a href="/app?lang=it" class="hover:text-white transition-colors">Strumento</a>
+            <a href="/it/privacy.html" class="hover:text-white transition-colors">Privacy</a>
+            <a href="/it/terms.html" class="hover:text-white transition-colors">Termini</a>
+            <a href="/it/blog/" class="hover:text-white transition-colors">Blog</a>
+        </div>
+    </div>
+    <div class="max-w-5xl mx-auto mt-8 pt-6 border-t border-slate-800 text-center text-xs text-slate-500">
+        © 2026 RealText
+    </div>
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="{{currentLang}}">
+<head>
+{{> head}}
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "{{article.title}}",
+        "description": "{{article.description}}",
+        "url": "https://realtext.org/{{currentLang}}/blog/{{article.slug}}.html",
+        "datePublished": "{{article.date}}",
+        "dateModified": "{{article.date}}",
+        "inLanguage": "{{currentLang}}",
+        "publisher": {
+            "@type": "Organization",
+            "name": "RealText",
+            "url": "https://realtext.org"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "RealText"
+        }
+    }
+    </script>
+</head>
+<body class="bg-white text-slate-900 antialiased">
+
+{{> header}}
+
+<article class="max-w-[720px] mx-auto px-5 pt-28 pb-16">
+    {{article.bodyHtml}}
+</article>
+
+<!-- Related articles -->
+{{#if relatedArticles.length}}
+<section class="py-12 px-5 bg-slate-50">
+    <div class="max-w-[720px] mx-auto">
+        <h2 class="font-heading font-bold text-xl text-slate-900 mb-6">{{blog.readMore}}</h2>
+        <ul class="space-y-3">
+            {{#each relatedArticles}}
+            <li><a href="/{{lang}}/blog/{{slug}}.html" class="text-accent font-medium hover:underline">{{title}}</a> <span class="text-slate-400 text-sm">· {{minRead}} {{blog.minRead}}</span></li>
+            {{/each}}
+        </ul>
+    </div>
+</section>
+{{/if}}
+
+{{> footer}}
+
+</body>
+</html>

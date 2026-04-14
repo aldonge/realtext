@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+    <!-- SEO Primary -->
+    <title>RealText — Kostenloser KI-Detektor & Text-Humanisierer | ChatGPT, GPT-5, Gemini, Claude erkennen</title>
+    <meta name="description" content="Kostenloser KI-Text-Detektor und Humanisierer. Analysieren Sie Ihren Text auf KI-Muster, erhalten Sie eine detaillierte Bewertung und Absatz-für-Absatz-Vorschläge, um KI-generierten Text natürlich menschlich klingen zu lassen. Funktioniert in 20+ Sprachen.">
+    <link rel="canonical" href="https://realtext.org/de/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="RealText — Kostenloser KI-Detektor & Text-Humanisierer">
+    <meta property="og:description" content="KI-generierten Text erkennen und umsetzbare Vorschläge erhalten, um ihn menschlich klingen zu lassen. Kostenlos, mehrsprachig, ohne Registrierung.">
+    <meta property="og:url" content="https://realtext.org/de/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="RealText">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="RealText — Kostenloser KI-Detektor & Text-Humanisierer">
+    <meta name="twitter:description" content="KI-generierten Text erkennen und umsetzbare Vorschläge erhalten, um ihn menschlich klingen zu lassen. Kostenlos, mehrsprachig, ohne Registrierung.">
+
+    <!-- hreflang -->
+        <link rel="alternate" hreflang="en" href="https://realtext.org/en/">
+    <link rel="alternate" hreflang="it" href="https://realtext.org/it/">
+    <link rel="alternate" hreflang="es" href="https://realtext.org/es/">
+    <link rel="alternate" hreflang="de" href="https://realtext.org/de/">
+    <link rel="alternate" hreflang="fr" href="https://realtext.org/fr/">
+    <link rel="alternate" hreflang="pt" href="https://realtext.org/pt/">
+    <link rel="alternate" hreflang="x-default" href="https://realtext.org/en/">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: { DEFAULT: '#2563EB', hover: '#1D4ED8', light: '#EFF6FF' },
+            slate: {
+              50: '#F8FAFC', 100: '#F1F5F9', 200: '#E2E8F0', 300: '#CBD5E1',
+              400: '#94A3B8', 500: '#64748B', 600: '#475569', 700: '#334155',
+              800: '#1E293B', 900: '#0F172A'
+            }
+          },
+          fontFamily: {
+            heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+            body: ['"Inter"', 'sans-serif'],
+          }
+        }
+      }
+    }
+    </script>
+
+    <!-- Shared CSS -->
+    <link rel="stylesheet" href="/shared/styles.css">
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+        .cursor-blink { animation: blink 1s step-end infinite; }
+        html { scroll-behavior: smooth; }
+    </style>
+
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "RealText",
+        "url": "https://realtext.org",
+        "description": "Kostenloser KI-Text-Detektor und Humanisierer. Analysieren Sie Ihren Text auf KI-Muster, erhalten Sie eine detaillierte Bewertung und Absatz-für-Absatz-Vorschläge, um KI-generierten Text natürlich menschlich klingen zu lassen. Funktioniert in 20+ Sprachen.",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Web",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "EUR"
+        },
+        "featureList": [
+            "AI text detection",
+            "Text humanization suggestions",
+            "Multilingual support (20+ languages)",
+            "Paragraph-by-paragraph analysis",
+            "Burstiness and lexical diversity metrics"
+        ],
+        "inLanguage": "de"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "inLanguage": "de",
+        "mainEntity": [
+            
+            {
+                "@type": "Question",
+                "name": "Ist RealText wirklich kostenlos?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ja. 5 kostenlose Analysen pro Tag ohne Kontoeröffnung. Keine Testphase, keine versteckten Kosten, keine Kreditkarte."
+                }
+            },
+            
+            {
+                "@type": "Question",
+                "name": "Welche KI-Modelle erkennt RealText?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "RealText erkennt stilistische Muster, die für ChatGPT, GPT-5, Gemini, Claude, LLaMA und Mistral typisch sind. Es analysiert den Schreibstil, nicht modellspezifische Signaturen."
+                }
+            },
+            
+            {
+                "@type": "Question",
+                "name": "Wie genau ist die Erkennung?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Am zuverlässigsten bei unbearbeitetem KI-Text. Weniger zuverlässig bei stark bearbeitetem Inhalt. Wir sind transparent: Der wahre Wert liegt in den umsetzbaren Vorschlägen, nicht nur im Score."
+                }
+            },
+            
+            {
+                "@type": "Question",
+                "name": "Wird mein Text gespeichert oder weitergegeben?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Nein. Ihr Text wird im Speicher analysiert und sofort verworfen. Wir speichern, protokollieren oder teilen nie eingereichte Inhalte."
+                }
+            },
+            
+            {
+                "@type": "Question",
+                "name": "Welche Sprachen werden unterstützt?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "20+ Sprachen. Die Oberfläche folgt Ihrer Browsersprache, und Vorschläge werden in der Sprache des analysierten Textes gegeben."
+                }
+            },
+            
+            {
+                "@type": "Question",
+                "name": "Kann ich RealText nutzen, um KI-Detektoren zu &quot;schlagen&quot;?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "RealText hilft, die Schreibqualität zu verbessern, indem roboterhafte Muster angegangen werden. Besseres Schreiben ist das Ziel, nicht Detektoren zu täuschen."
+                }
+            }
+            
+        ]
+    }
+    </script>
+</head>
+<body class="bg-white text-slate-900 antialiased">
+
+<!-- Header -->
+<header class="fixed top-0 w-full z-50 border-b border-slate-200" style="background: rgba(255,255,255,0.92); backdrop-filter: blur(8px);">
+    <div class="max-w-5xl mx-auto px-5 h-16 flex items-center justify-between">
+        <!-- Logo -->
+        <a href="/de/" class="flex items-center gap-0 text-xl font-heading font-extrabold tracking-tight">
+            <span class="text-slate-900">Real</span><span class="text-accent">Text</span><span class="cursor-blink text-accent">_</span>
+        </a>
+        <!-- Nav desktop -->
+        <nav class="hidden md:flex items-center gap-8">
+            <a href="/de/#how-it-works" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">So funktioniert's</a>
+            <a href="/de/blog/" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Blog</a>
+            <div class="flex items-center gap-1 ml-2">
+                <a href="/en/" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">EN</a>
+                <a href="/it/" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">IT</a>
+                <a href="/es/" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">ES</a>
+                <a href="/de/" class="px-2.5 py-1 text-xs font-medium rounded-md bg-accent text-white">DE</a>
+                <a href="/fr/" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">FR</a>
+                <a href="/pt/" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">PT</a>
+            </div>
+        </nav>
+        <!-- Mobile hamburger -->
+        <button onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" class="md:hidden p-2 rounded-lg hover:bg-slate-100">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 bg-white px-5 py-4 space-y-3">
+        <a href="/de/#how-it-works" class="block text-sm font-medium text-slate-600">So funktioniert's</a>
+        <a href="/de/blog/" class="block text-sm font-medium text-slate-600">Blog</a>
+        <div class="flex items-center gap-1 pt-2">
+            <a href="/en/" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">EN</a>
+                <a href="/it/" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">IT</a>
+                <a href="/es/" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">ES</a>
+                <a href="/de/" class="px-2.5 py-1 text-xs font-medium rounded-md bg-accent text-white">DE</a>
+                <a href="/fr/" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">FR</a>
+                <a href="/pt/" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">PT</a>
+        </div>
+    </div>
+</header>
+
+
+<!-- Hero -->
+<section class="pt-32 pb-20 px-5">
+    <div class="max-w-3xl mx-auto text-center">
+        <span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-sm font-medium bg-accent-light text-accent border border-blue-100 mb-6">Kostenlos &middot; Ohne Registrierung &middot; 20+ Sprachen</span>
+        <h1 class="font-heading font-extrabold text-4xl md:text-5xl lg:text-[3.25rem] leading-tight tracking-tight text-slate-900 mb-5">Ist Ihr Text <span class="text-accent">authentisch</span>?</h1>
+        <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">Kostenloser KI-Detektor und Humanisierer. Erhalten Sie eine Bewertung, verstehen Sie warum, und lernen Sie, wie Ihr Text natürlich menschlich klingt.</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="/app?lang=de" class="inline-flex items-center justify-center px-12 py-4 bg-accent text-white font-semibold text-lg rounded-xl hover:bg-accent-hover transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/25">Text analysieren — kostenlos</a>
+            <a href="#how-it-works" class="inline-flex items-center justify-center px-8 py-4 text-accent font-medium text-base rounded-xl hover:bg-accent-light transition-colors">So funktioniert's</a>
+        </div>
+    </div>
+</section>
+
+<!-- Social proof line -->
+<div class="text-center pb-16 px-5">
+    <p class="text-sm text-slate-400">Stilanalyse basierend auf Burstiness, lexikalischer Vielfalt und Wiederholungsmustern</p>
+</div>
+
+<!-- Features -->
+<section class="py-20 px-5 bg-slate-50">
+    <div class="max-w-5xl mx-auto">
+        <h2 class="font-heading font-bold text-2xl md:text-3xl text-center text-slate-900 mb-14">Warum RealText</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <div class="bg-white border border-slate-200 rounded-xl p-6 transition-shadow hover:shadow-md hover:shadow-slate-100">
+                <h3 class="font-heading font-bold text-base text-slate-900 mb-2">Umsetzbare Vorschläge</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">Nicht nur eine Bewertung. Spezifische Absatz-für-Absatz-Ratschläge, was zu verbessern ist und warum.</p>
+            </div>
+            
+            <div class="bg-white border border-slate-200 rounded-xl p-6 transition-shadow hover:shadow-md hover:shadow-slate-100">
+                <h3 class="font-heading font-bold text-base text-slate-900 mb-2">20+ Sprachen</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">Analyse und Vorschläge in der Sprache Ihres Textes. Italienisch, Englisch, Deutsch, Französisch, Spanisch und viele mehr.</p>
+            </div>
+            
+            <div class="bg-white border border-slate-200 rounded-xl p-6 transition-shadow hover:shadow-md hover:shadow-slate-100">
+                <h3 class="font-heading font-bold text-base text-slate-900 mb-2">Datenschutz zuerst</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">Ihr Text wird nie gespeichert. Im Speicher analysiert und sofort verworfen. Keine Konten, keine Datensammlung.</p>
+            </div>
+            
+            <div class="bg-white border border-slate-200 rounded-xl p-6 transition-shadow hover:shadow-md hover:shadow-slate-100">
+                <h3 class="font-heading font-bold text-base text-slate-900 mb-2">Transparente Metriken</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">Burstiness, lexikalische Vielfalt, Wiederholungsmuster. Sie sehen genau, warum der Text markiert wurde. Keine Black Box.</p>
+            </div>
+            
+            <div class="bg-white border border-slate-200 rounded-xl p-6 transition-shadow hover:shadow-md hover:shadow-slate-100">
+                <h3 class="font-heading font-bold text-base text-slate-900 mb-2">Komplett kostenlos</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">5 Analysen pro Tag, ohne Registrierung, ohne Kreditkarte. Genug für Studierende, Autoren und Fachleute.</p>
+            </div>
+            
+            <div class="bg-white border border-slate-200 rounded-xl p-6 transition-shadow hover:shadow-md hover:shadow-slate-100">
+                <h3 class="font-heading font-bold text-base text-slate-900 mb-2">Visueller Score</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">Ein 0-100 Messgerät zeigt, wie KI-typisch Ihr Text ist. Wenden Sie Vorschläge an, analysieren Sie erneut, beobachten Sie die Verbesserung.</p>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<!-- How it works -->
+<section id="how-it-works" class="py-20 px-5">
+    <div class="max-w-4xl mx-auto">
+        <h2 class="font-heading font-bold text-2xl md:text-3xl text-center text-slate-900 mb-14">So funktioniert's</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+            <div class="text-center">
+                <span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-accent-light text-accent font-heading font-extrabold text-xl mb-4">1</span>
+                <h3 class="font-heading font-bold text-sm text-slate-900 mb-1">Text einfügen</h3>
+                <p class="text-sm text-slate-500">Jede Sprache, bis zu 10.000 Zeichen.</p>
+            </div>
+            
+            <div class="text-center">
+                <span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-accent-light text-accent font-heading font-extrabold text-xl mb-4">2</span>
+                <h3 class="font-heading font-bold text-sm text-slate-900 mb-1">Score erhalten</h3>
+                <p class="text-sm text-slate-500">0-100 Messgerät mit Metrik-Aufschlüsselung.</p>
+            </div>
+            
+            <div class="text-center">
+                <span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-accent-light text-accent font-heading font-extrabold text-xl mb-4">3</span>
+                <h3 class="font-heading font-bold text-sm text-slate-900 mb-1">Vorschläge lesen</h3>
+                <p class="text-sm text-slate-500">Umsetzbare Ratschläge zu Ihren Absätzen.</p>
+            </div>
+            
+            <div class="text-center">
+                <span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-accent-light text-accent font-heading font-extrabold text-xl mb-4">4</span>
+                <h3 class="font-heading font-bold text-sm text-slate-900 mb-1">Verbessern und erneut analysieren</h3>
+                <p class="text-sm text-slate-500">Bearbeiten, erneut analysieren, Verbesserung sehen.</p>
+            </div>
+            
+        </div>
+        <div class="text-center mt-14">
+            <a href="/app?lang=de" class="inline-flex items-center justify-center px-10 py-4 bg-accent text-white font-semibold text-base rounded-xl hover:bg-accent-hover transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/25">Text analysieren — kostenlos</a>
+        </div>
+    </div>
+</section>
+
+<!-- Detection explanation -->
+<section class="py-20 px-5 bg-slate-50">
+    <div class="max-w-3xl mx-auto">
+        <h2 class="font-heading font-bold text-2xl md:text-3xl text-center text-slate-900 mb-10">Wie RealText Text analysiert</h2>
+        <div class="space-y-5 text-base text-slate-600 leading-relaxed">
+            
+            <p>RealText verwendet <strong class="text-slate-900">algorithmische Stilanalyse</strong> — kein Black-Box-KI-Modell. Es misst spezifische, interpretierbare Merkmale Ihres Schreibstils:</p>
+            
+            <p><strong class="text-slate-900">Burstiness:</strong> Menschliches Schreiben wechselt natürlich zwischen langen und kurzen Sätzen. KI neigt dazu, Sätze einheitlicher Länge zu produzieren. RealText misst diese Varianz.</p>
+            
+            <p><strong class="text-slate-900">Lexikalische Vielfalt (TTR):</strong> Das Verhältnis einzigartiger Wörter zur Gesamtwortzahl. KI-Text verwendet oft denselben Wortschatz, während Menschen aus einem reicheren Wortpool schöpfen.</p>
+            
+            <p><strong class="text-slate-900">Wiederholungsmuster:</strong> KI wiederholt häufig strukturelle Muster. RealText erkennt diese N-Gramm-Wiederholungen in Ihrem Text.</p>
+            
+            <p><strong class="text-slate-900">KI-typische Konnektoren:</strong> Phrasen wie "Es ist wichtig zu beachten, dass" oder "Darüber hinaus" treten in KI-Text mit ungewöhnlich hoher Häufigkeit auf. RealText zählt diese pro Sprache.</p>
+            
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-20 px-5">
+    <div class="max-w-3xl mx-auto">
+        <h2 class="font-heading font-bold text-2xl md:text-3xl text-center text-slate-900 mb-10">Häufig gestellte Fragen</h2>
+        <div class="divide-y divide-slate-200">
+            
+            <details class="py-5 group">
+                <summary class="flex items-center justify-between cursor-pointer font-heading font-semibold text-slate-900 text-base">Ist RealText wirklich kostenlos?</summary>
+                <p class="mt-3 text-slate-600 text-sm leading-relaxed">Ja. 5 kostenlose Analysen pro Tag ohne Kontoeröffnung. Keine Testphase, keine versteckten Kosten, keine Kreditkarte.</p>
+            </details>
+            
+            <details class="py-5 group">
+                <summary class="flex items-center justify-between cursor-pointer font-heading font-semibold text-slate-900 text-base">Welche KI-Modelle erkennt RealText?</summary>
+                <p class="mt-3 text-slate-600 text-sm leading-relaxed">RealText erkennt stilistische Muster, die für ChatGPT, GPT-5, Gemini, Claude, LLaMA und Mistral typisch sind. Es analysiert den Schreibstil, nicht modellspezifische Signaturen.</p>
+            </details>
+            
+            <details class="py-5 group">
+                <summary class="flex items-center justify-between cursor-pointer font-heading font-semibold text-slate-900 text-base">Wie genau ist die Erkennung?</summary>
+                <p class="mt-3 text-slate-600 text-sm leading-relaxed">Am zuverlässigsten bei unbearbeitetem KI-Text. Weniger zuverlässig bei stark bearbeitetem Inhalt. Wir sind transparent: Der wahre Wert liegt in den umsetzbaren Vorschlägen, nicht nur im Score.</p>
+            </details>
+            
+            <details class="py-5 group">
+                <summary class="flex items-center justify-between cursor-pointer font-heading font-semibold text-slate-900 text-base">Wird mein Text gespeichert oder weitergegeben?</summary>
+                <p class="mt-3 text-slate-600 text-sm leading-relaxed">Nein. Ihr Text wird im Speicher analysiert und sofort verworfen. Wir speichern, protokollieren oder teilen nie eingereichte Inhalte.</p>
+            </details>
+            
+            <details class="py-5 group">
+                <summary class="flex items-center justify-between cursor-pointer font-heading font-semibold text-slate-900 text-base">Welche Sprachen werden unterstützt?</summary>
+                <p class="mt-3 text-slate-600 text-sm leading-relaxed">20+ Sprachen. Die Oberfläche folgt Ihrer Browsersprache, und Vorschläge werden in der Sprache des analysierten Textes gegeben.</p>
+            </details>
+            
+            <details class="py-5 group">
+                <summary class="flex items-center justify-between cursor-pointer font-heading font-semibold text-slate-900 text-base">Kann ich RealText nutzen, um KI-Detektoren zu "schlagen"?</summary>
+                <p class="mt-3 text-slate-600 text-sm leading-relaxed">RealText hilft, die Schreibqualität zu verbessern, indem roboterhafte Muster angegangen werden. Besseres Schreiben ist das Ziel, nicht Detektoren zu täuschen.</p>
+            </details>
+            
+        </div>
+    </div>
+</section>
+
+<!-- Blog -->
+<section id="blog" class="py-20 px-5 bg-slate-50">
+    <div class="max-w-3xl mx-auto">
+        <h2 class="font-heading font-bold text-2xl md:text-3xl text-center text-slate-900 mb-10">Aus dem Blog</h2>
+        <ul class="space-y-3">
+            
+            <li style="padding-top:4px"><a href="/de/blog/" class="text-slate-500 text-sm font-medium hover:text-accent hover:underline">Alle Artikel &rarr;</a></li>
+        </ul>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-slate-900 text-slate-400 py-12 px-5">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center md:items-start justify-between gap-6">
+        <div>
+            <a href="/de/" class="text-lg font-heading font-extrabold tracking-tight">
+                <span class="text-white">Real</span><span class="text-blue-400">Text</span>
+            </a>
+            <p class="text-sm mt-1 text-slate-500">Kostenloser KI-Text-Detektor und Humanisierer.</p>
+        </div>
+        <div class="flex items-center gap-6 text-sm">
+            <a href="/app?lang=de" class="hover:text-white transition-colors">Tool</a>
+            <a href="/de/privacy.html" class="hover:text-white transition-colors">Datenschutz</a>
+            <a href="/de/terms.html" class="hover:text-white transition-colors">Nutzungsbedingungen</a>
+            <a href="/de/blog/" class="hover:text-white transition-colors">Blog</a>
+        </div>
+    </div>
+    <div class="max-w-5xl mx-auto mt-8 pt-6 border-t border-slate-800 text-center text-xs text-slate-500">
+        © 2026 RealText
+    </div>
+</footer>
+
+
+</body>
+</html>

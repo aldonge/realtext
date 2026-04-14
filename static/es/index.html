@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+    <!-- SEO Primary -->
+    <title>RealText — Detector de IA y Humanizador Gratuito | Detecta ChatGPT, GPT-5, Gemini, Claude</title>
+    <meta name="description" content="Detector de IA y humanizador gratuito. Analiza tu texto en busca de patrones de IA, obtén una puntuación detallada y recibe consejos párrafo por párrafo para que el texto generado por IA suene naturalmente humano. Funciona en 20+ idiomas.">
+    <link rel="canonical" href="https://realtext.org/es/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="RealText — Detector de IA y Humanizador Gratuito">
+    <meta property="og:description" content="Detecta texto generado por IA y obtén consejos prácticos para hacerlo sonar humano. Gratis, multilingüe, sin registro.">
+    <meta property="og:url" content="https://realtext.org/es/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="RealText">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="RealText — Detector de IA y Humanizador Gratuito">
+    <meta name="twitter:description" content="Detecta texto generado por IA y obtén consejos prácticos para hacerlo sonar humano. Gratis, multilingüe, sin registro.">
+
+    <!-- hreflang -->
+        <link rel="alternate" hreflang="en" href="https://realtext.org/en/">
+    <link rel="alternate" hreflang="it" href="https://realtext.org/it/">
+    <link rel="alternate" hreflang="es" href="https://realtext.org/es/">
+    <link rel="alternate" hreflang="de" href="https://realtext.org/de/">
+    <link rel="alternate" hreflang="fr" href="https://realtext.org/fr/">
+    <link rel="alternate" hreflang="pt" href="https://realtext.org/pt/">
+    <link rel="alternate" hreflang="x-default" href="https://realtext.org/en/">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: { DEFAULT: '#2563EB', hover: '#1D4ED8', light: '#EFF6FF' },
+            slate: {
+              50: '#F8FAFC', 100: '#F1F5F9', 200: '#E2E8F0', 300: '#CBD5E1',
+              400: '#94A3B8', 500: '#64748B', 600: '#475569', 700: '#334155',
+              800: '#1E293B', 900: '#0F172A'
+            }
+          },
+          fontFamily: {
+            heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+            body: ['"Inter"', 'sans-serif'],
+          }
+        }
+      }
+    }
+    </script>
+
+    <!-- Shared CSS -->
+    <link rel="stylesheet" href="/shared/styles.css">
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+        .cursor-blink { animation: blink 1s step-end infinite; }
+        html { scroll-behavior: smooth; }
+    </style>
+
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "RealText",
+        "url": "https://realtext.org",
+        "description": "Detector de IA y humanizador gratuito. Analiza tu texto en busca de patrones de IA, obtén una puntuación detallada y recibe consejos párrafo por párrafo para que el texto generado por IA suene naturalmente humano. Funciona en 20+ idiomas.",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Web",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "EUR"
+        },
+        "featureList": [
+            "AI text detection",
+            "Text humanization suggestions",
+            "Multilingual support (20+ languages)",
+            "Paragraph-by-paragraph analysis",
+            "Burstiness and lexical diversity metrics"
+        ],
+        "inLanguage": "es"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "inLanguage": "es",
+        "mainEntity": [
+            
+            {
+                "@type": "Question",
+                "name": "¿RealText es realmente gratis?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí. 5 análisis gratuitos por día sin crear cuenta. Sin periodo de prueba ni costos ocultos."
+                }
+            },
+            
+            {
+                "@type": "Question",
+                "name": "¿Qué modelos de IA detecta?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "RealText detecta patrones estilísticos de ChatGPT, GPT-5, Gemini, Claude, LLaMA y Mistral."
+                }
+            },
+            
+            {
+                "@type": "Question",
+                "name": "¿Qué tan precisa es la detección?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Más fiable con texto IA puro. Menos con contenido muy editado. El valor real está en los consejos concretos."
+                }
+            },
+            
+            {
+                "@type": "Question",
+                "name": "¿Mi texto se guarda?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. Se analiza en memoria y se descarta inmediatamente. Nunca guardamos ni compartimos el contenido."
+                }
+            },
+            
+            {
+                "@type": "Question",
+                "name": "¿Qué idiomas soporta?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "20+ idiomas. La interfaz sigue el idioma del navegador, y los consejos se dan en el idioma del texto."
+                }
+            },
+            
+            {
+                "@type": "Question",
+                "name": "¿Puedo usar RealText para &quot;vencer&quot; a los detectores?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "RealText ayuda a mejorar la calidad de escritura. El objetivo es escribir mejor, no engañar detectores."
+                }
+            }
+            
+        ]
+    }
+    </script>
+</head>
+<body class="bg-white text-slate-900 antialiased">
+
+<!-- Header -->
+<header class="fixed top-0 w-full z-50 border-b border-slate-200" style="background: rgba(255,255,255,0.92); backdrop-filter: blur(8px);">
+    <div class="max-w-5xl mx-auto px-5 h-16 flex items-center justify-between">
+        <!-- Logo -->
+        <a href="/es/" class="flex items-center gap-0 text-xl font-heading font-extrabold tracking-tight">
+            <span class="text-slate-900">Real</span><span class="text-accent">Text</span><span class="cursor-blink text-accent">_</span>
+        </a>
+        <!-- Nav desktop -->
+        <nav class="hidden md:flex items-center gap-8">
+            <a href="/es/#how-it-works" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Cómo funciona</a>
+            <a href="/es/blog/" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Blog</a>
+            <div class="flex items-center gap-1 ml-2">
+                <a href="/en/" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">EN</a>
+                <a href="/it/" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">IT</a>
+                <a href="/es/" class="px-2.5 py-1 text-xs font-medium rounded-md bg-accent text-white">ES</a>
+                <a href="/de/" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">DE</a>
+                <a href="/fr/" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">FR</a>
+                <a href="/pt/" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">PT</a>
+            </div>
+        </nav>
+        <!-- Mobile hamburger -->
+        <button onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" class="md:hidden p-2 rounded-lg hover:bg-slate-100">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 bg-white px-5 py-4 space-y-3">
+        <a href="/es/#how-it-works" class="block text-sm font-medium text-slate-600">Cómo funciona</a>
+        <a href="/es/blog/" class="block text-sm font-medium text-slate-600">Blog</a>
+        <div class="flex items-center gap-1 pt-2">
+            <a href="/en/" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">EN</a>
+                <a href="/it/" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">IT</a>
+                <a href="/es/" class="px-2.5 py-1 text-xs font-medium rounded-md bg-accent text-white">ES</a>
+                <a href="/de/" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">DE</a>
+                <a href="/fr/" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">FR</a>
+                <a href="/pt/" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">PT</a>
+        </div>
+    </div>
+</header>
+
+
+<!-- Hero -->
+<section class="pt-32 pb-20 px-5">
+    <div class="max-w-3xl mx-auto text-center">
+        <span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-sm font-medium bg-accent-light text-accent border border-blue-100 mb-6">Gratis &middot; Sin registro &middot; 20+ idiomas</span>
+        <h1 class="font-heading font-extrabold text-4xl md:text-5xl lg:text-[3.25rem] leading-tight tracking-tight text-slate-900 mb-5">¿Tu texto es <span class="text-accent">auténtico</span>?</h1>
+        <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">Detector de IA y humanizador gratuito. Obtén una puntuación, entiende por qué, y aprende a hacer tu texto más natural.</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="/app?lang=es" class="inline-flex items-center justify-center px-12 py-4 bg-accent text-white font-semibold text-lg rounded-xl hover:bg-accent-hover transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/25">Analiza tu texto — gratis</a>
+            <a href="#how-it-works" class="inline-flex items-center justify-center px-8 py-4 text-accent font-medium text-base rounded-xl hover:bg-accent-light transition-colors">Descubre cómo funciona</a>
+        </div>
+    </div>
+</section>
+
+<!-- Social proof line -->
+<div class="text-center pb-16 px-5">
+    <p class="text-sm text-slate-400">Análisis estilístico basado en burstiness, diversidad léxica y patrones repetitivos</p>
+</div>
+
+<!-- Features -->
+<section class="py-20 px-5 bg-slate-50">
+    <div class="max-w-5xl mx-auto">
+        <h2 class="font-heading font-bold text-2xl md:text-3xl text-center text-slate-900 mb-14">Por qué RealText</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <div class="bg-white border border-slate-200 rounded-xl p-6 transition-shadow hover:shadow-md hover:shadow-slate-100">
+                <h3 class="font-heading font-bold text-base text-slate-900 mb-2">Consejos concretos</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">No solo una puntuación. Consejos específicos párrafo por párrafo sobre qué corregir y por qué.</p>
+            </div>
+            
+            <div class="bg-white border border-slate-200 rounded-xl p-6 transition-shadow hover:shadow-md hover:shadow-slate-100">
+                <h3 class="font-heading font-bold text-base text-slate-900 mb-2">20+ idiomas</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">Análisis y consejos en el idioma de tu texto. Italiano, inglés, alemán, francés, español y muchos más.</p>
+            </div>
+            
+            <div class="bg-white border border-slate-200 rounded-xl p-6 transition-shadow hover:shadow-md hover:shadow-slate-100">
+                <h3 class="font-heading font-bold text-base text-slate-900 mb-2">Privacidad</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">Tu texto nunca se guarda. Analizado en memoria y descartado inmediatamente.</p>
+            </div>
+            
+            <div class="bg-white border border-slate-200 rounded-xl p-6 transition-shadow hover:shadow-md hover:shadow-slate-100">
+                <h3 class="font-heading font-bold text-base text-slate-900 mb-2">Métricas transparentes</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">Burstiness, diversidad léxica, patrones repetitivos. Sabes exactamente por qué el texto fue marcado.</p>
+            </div>
+            
+            <div class="bg-white border border-slate-200 rounded-xl p-6 transition-shadow hover:shadow-md hover:shadow-slate-100">
+                <h3 class="font-heading font-bold text-base text-slate-900 mb-2">Completamente gratis</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">5 análisis por día sin cuenta ni tarjeta de crédito.</p>
+            </div>
+            
+            <div class="bg-white border border-slate-200 rounded-xl p-6 transition-shadow hover:shadow-md hover:shadow-slate-100">
+                <h3 class="font-heading font-bold text-base text-slate-900 mb-2">Puntuación visual</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">Un medidor 0-100 muestra cuán IA parece tu texto. Aplica los consejos, re-analiza, observa la mejora.</p>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<!-- How it works -->
+<section id="how-it-works" class="py-20 px-5">
+    <div class="max-w-4xl mx-auto">
+        <h2 class="font-heading font-bold text-2xl md:text-3xl text-center text-slate-900 mb-14">Cómo funciona</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+            <div class="text-center">
+                <span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-accent-light text-accent font-heading font-extrabold text-xl mb-4">1</span>
+                <h3 class="font-heading font-bold text-sm text-slate-900 mb-1">Pega tu texto</h3>
+                <p class="text-sm text-slate-500">Cualquier idioma, hasta 10.000 caracteres.</p>
+            </div>
+            
+            <div class="text-center">
+                <span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-accent-light text-accent font-heading font-extrabold text-xl mb-4">2</span>
+                <h3 class="font-heading font-bold text-sm text-slate-900 mb-1">Obtén tu puntuación</h3>
+                <p class="text-sm text-slate-500">Medidor 0-100 con desglose de métricas.</p>
+            </div>
+            
+            <div class="text-center">
+                <span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-accent-light text-accent font-heading font-extrabold text-xl mb-4">3</span>
+                <h3 class="font-heading font-bold text-sm text-slate-900 mb-1">Lee los consejos</h3>
+                <p class="text-sm text-slate-500">Consejos prácticos vinculados a tus párrafos.</p>
+            </div>
+            
+            <div class="text-center">
+                <span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-accent-light text-accent font-heading font-extrabold text-xl mb-4">4</span>
+                <h3 class="font-heading font-bold text-sm text-slate-900 mb-1">Mejora y re-analiza</h3>
+                <p class="text-sm text-slate-500">Edita, vuelve a analizar, observa la mejora.</p>
+            </div>
+            
+        </div>
+        <div class="text-center mt-14">
+            <a href="/app?lang=es" class="inline-flex items-center justify-center px-10 py-4 bg-accent text-white font-semibold text-base rounded-xl hover:bg-accent-hover transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/25">Analiza tu texto — gratis</a>
+        </div>
+    </div>
+</section>
+
+<!-- Detection explanation -->
+<section class="py-20 px-5 bg-slate-50">
+    <div class="max-w-3xl mx-auto">
+        <h2 class="font-heading font-bold text-2xl md:text-3xl text-center text-slate-900 mb-10">Cómo RealText analiza el texto</h2>
+        <div class="space-y-5 text-base text-slate-600 leading-relaxed">
+            
+            <p>RealText usa <strong class="text-slate-900">análisis estilístico algorítmico</strong> — no un modelo de IA de caja negra. Mide características específicas e interpretables de tu escritura:</p>
+            
+            <p><strong class="text-slate-900">Burstiness:</strong> La escritura humana alterna naturalmente entre frases largas y cortas. La IA tiende a producir frases de longitud uniforme.</p>
+            
+            <p><strong class="text-slate-900">Diversidad Léxica (TTR):</strong> La proporción de palabras únicas respecto al total. El texto IA reutiliza el mismo vocabulario.</p>
+            
+            <p><strong class="text-slate-900">Patrones Repetitivos:</strong> La IA repite frecuentemente estructuras paralelas. RealText detecta estas repeticiones.</p>
+            
+            <p><strong class="text-slate-900">Conectores Típicos de IA:</strong> Frases como "Es importante destacar que" aparecen con frecuencia anómala en el texto IA.</p>
+            
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-20 px-5">
+    <div class="max-w-3xl mx-auto">
+        <h2 class="font-heading font-bold text-2xl md:text-3xl text-center text-slate-900 mb-10">Preguntas Frecuentes</h2>
+        <div class="divide-y divide-slate-200">
+            
+            <details class="py-5 group">
+                <summary class="flex items-center justify-between cursor-pointer font-heading font-semibold text-slate-900 text-base">¿RealText es realmente gratis?</summary>
+                <p class="mt-3 text-slate-600 text-sm leading-relaxed">Sí. 5 análisis gratuitos por día sin crear cuenta. Sin periodo de prueba ni costos ocultos.</p>
+            </details>
+            
+            <details class="py-5 group">
+                <summary class="flex items-center justify-between cursor-pointer font-heading font-semibold text-slate-900 text-base">¿Qué modelos de IA detecta?</summary>
+                <p class="mt-3 text-slate-600 text-sm leading-relaxed">RealText detecta patrones estilísticos de ChatGPT, GPT-5, Gemini, Claude, LLaMA y Mistral.</p>
+            </details>
+            
+            <details class="py-5 group">
+                <summary class="flex items-center justify-between cursor-pointer font-heading font-semibold text-slate-900 text-base">¿Qué tan precisa es la detección?</summary>
+                <p class="mt-3 text-slate-600 text-sm leading-relaxed">Más fiable con texto IA puro. Menos con contenido muy editado. El valor real está en los consejos concretos.</p>
+            </details>
+            
+            <details class="py-5 group">
+                <summary class="flex items-center justify-between cursor-pointer font-heading font-semibold text-slate-900 text-base">¿Mi texto se guarda?</summary>
+                <p class="mt-3 text-slate-600 text-sm leading-relaxed">No. Se analiza en memoria y se descarta inmediatamente. Nunca guardamos ni compartimos el contenido.</p>
+            </details>
+            
+            <details class="py-5 group">
+                <summary class="flex items-center justify-between cursor-pointer font-heading font-semibold text-slate-900 text-base">¿Qué idiomas soporta?</summary>
+                <p class="mt-3 text-slate-600 text-sm leading-relaxed">20+ idiomas. La interfaz sigue el idioma del navegador, y los consejos se dan en el idioma del texto.</p>
+            </details>
+            
+            <details class="py-5 group">
+                <summary class="flex items-center justify-between cursor-pointer font-heading font-semibold text-slate-900 text-base">¿Puedo usar RealText para "vencer" a los detectores?</summary>
+                <p class="mt-3 text-slate-600 text-sm leading-relaxed">RealText ayuda a mejorar la calidad de escritura. El objetivo es escribir mejor, no engañar detectores.</p>
+            </details>
+            
+        </div>
+    </div>
+</section>
+
+<!-- Blog -->
+<section id="blog" class="py-20 px-5 bg-slate-50">
+    <div class="max-w-3xl mx-auto">
+        <h2 class="font-heading font-bold text-2xl md:text-3xl text-center text-slate-900 mb-10">Del Blog</h2>
+        <ul class="space-y-3">
+            
+            <li style="padding-top:4px"><a href="/es/blog/" class="text-slate-500 text-sm font-medium hover:text-accent hover:underline">Todos los artículos &rarr;</a></li>
+        </ul>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-slate-900 text-slate-400 py-12 px-5">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center md:items-start justify-between gap-6">
+        <div>
+            <a href="/es/" class="text-lg font-heading font-extrabold tracking-tight">
+                <span class="text-white">Real</span><span class="text-blue-400">Text</span>
+            </a>
+            <p class="text-sm mt-1 text-slate-500">Detector de IA y humanizador gratuito.</p>
+        </div>
+        <div class="flex items-center gap-6 text-sm">
+            <a href="/app?lang=es" class="hover:text-white transition-colors">Herramienta</a>
+            <a href="/es/privacy.html" class="hover:text-white transition-colors">Privacidad</a>
+            <a href="/es/terms.html" class="hover:text-white transition-colors">Términos</a>
+            <a href="/es/blog/" class="hover:text-white transition-colors">Blog</a>
+        </div>
+    </div>
+    <div class="max-w-5xl mx-auto mt-8 pt-6 border-t border-slate-800 text-center text-xs text-slate-500">
+        © 2026 RealText
+    </div>
+</footer>
+
+
+</body>
+</html>

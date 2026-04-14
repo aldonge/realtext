@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="{{currentLang}}">
+<head>
+{{> head}}
+</head>
+<body class="bg-white text-slate-900 antialiased">
+
+{{> header}}
+
+<div class="max-w-[720px] mx-auto px-5 pt-28 pb-16">
+    <h1 class="font-heading font-extrabold text-2xl md:text-3xl text-slate-900 mb-2">{{blog.title}}</h1>
+    <p class="text-slate-500 mb-10">{{blog.subtitle}}</p>
+
+    <div class="divide-y divide-slate-200">
+        {{#each blogArticles}}
+        <a href="/{{lang}}/blog/{{slug}}.html" class="block py-5 group">
+            <h2 class="font-heading font-bold text-base text-slate-900 group-hover:text-accent transition-colors mb-1">{{title}}</h2>
+            <p class="text-sm text-slate-500 mb-2">{{description}}</p>
+            <span class="text-xs text-slate-400">{{formattedDate}} · {{minRead}} {{blog.minRead}}</span>
+        </a>
+        {{/each}}
+    </div>
+</div>
+
+<!-- CTA -->
+<section class="py-12 px-5 bg-slate-50">
+    <div class="max-w-[720px] mx-auto text-center">
+        <a href="/app?lang={{currentLang}}" class="inline-flex items-center justify-center px-10 py-4 bg-accent text-white font-semibold text-base rounded-xl hover:bg-accent-hover transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/25">{{hero.ctaPrimary}}</a>
+    </div>
+</section>
+
+{{> footer}}
+
+</body>
+</html>

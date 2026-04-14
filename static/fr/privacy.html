@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+    <!-- SEO Primary -->
+    <title>Politique de Confidentialité — RealText</title>
+    <meta name="description" content="Politique de confidentialité de RealText. Comment nous traitons vos données et protégeons votre vie privée.">
+    <link rel="canonical" href="https://realtext.org/fr/privacy.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Politique de Confidentialité — RealText">
+    <meta property="og:description" content="Politique de confidentialité de RealText. Comment nous traitons vos données et protégeons votre vie privée.">
+    <meta property="og:url" content="https://realtext.org/fr/privacy.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="RealText">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Politique de Confidentialité — RealText">
+    <meta name="twitter:description" content="Politique de confidentialité de RealText. Comment nous traitons vos données et protégeons votre vie privée.">
+
+    <!-- hreflang -->
+        <link rel="alternate" hreflang="en" href="https://realtext.org/en/privacy.html">
+    <link rel="alternate" hreflang="it" href="https://realtext.org/it/privacy.html">
+    <link rel="alternate" hreflang="es" href="https://realtext.org/es/privacy.html">
+    <link rel="alternate" hreflang="de" href="https://realtext.org/de/privacy.html">
+    <link rel="alternate" hreflang="fr" href="https://realtext.org/fr/privacy.html">
+    <link rel="alternate" hreflang="pt" href="https://realtext.org/pt/privacy.html">
+    <link rel="alternate" hreflang="x-default" href="https://realtext.org/en/privacy.html">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: { DEFAULT: '#2563EB', hover: '#1D4ED8', light: '#EFF6FF' },
+            slate: {
+              50: '#F8FAFC', 100: '#F1F5F9', 200: '#E2E8F0', 300: '#CBD5E1',
+              400: '#94A3B8', 500: '#64748B', 600: '#475569', 700: '#334155',
+              800: '#1E293B', 900: '#0F172A'
+            }
+          },
+          fontFamily: {
+            heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+            body: ['"Inter"', 'sans-serif'],
+          }
+        }
+      }
+    }
+    </script>
+
+    <!-- Shared CSS -->
+    <link rel="stylesheet" href="/shared/styles.css">
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+        .cursor-blink { animation: blink 1s step-end infinite; }
+        html { scroll-behavior: smooth; }
+    </style>
+
+</head>
+<body class="bg-white text-slate-900 antialiased">
+
+<!-- Header -->
+<header class="fixed top-0 w-full z-50 border-b border-slate-200" style="background: rgba(255,255,255,0.92); backdrop-filter: blur(8px);">
+    <div class="max-w-5xl mx-auto px-5 h-16 flex items-center justify-between">
+        <!-- Logo -->
+        <a href="/fr/" class="flex items-center gap-0 text-xl font-heading font-extrabold tracking-tight">
+            <span class="text-slate-900">Real</span><span class="text-accent">Text</span><span class="cursor-blink text-accent">_</span>
+        </a>
+        <!-- Nav desktop -->
+        <nav class="hidden md:flex items-center gap-8">
+            <a href="/fr/#how-it-works" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Comment ça marche</a>
+            <a href="/fr/blog/" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Blog</a>
+            <div class="flex items-center gap-1 ml-2">
+                <a href="/en/privacy.html" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">EN</a>
+                <a href="/it/privacy.html" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">IT</a>
+                <a href="/es/privacy.html" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">ES</a>
+                <a href="/de/privacy.html" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">DE</a>
+                <a href="/fr/privacy.html" class="px-2.5 py-1 text-xs font-medium rounded-md bg-accent text-white">FR</a>
+                <a href="/pt/privacy.html" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">PT</a>
+            </div>
+        </nav>
+        <!-- Mobile hamburger -->
+        <button onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" class="md:hidden p-2 rounded-lg hover:bg-slate-100">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </button>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 bg-white px-5 py-4 space-y-3">
+        <a href="/fr/#how-it-works" class="block text-sm font-medium text-slate-600">Comment ça marche</a>
+        <a href="/fr/blog/" class="block text-sm font-medium text-slate-600">Blog</a>
+        <div class="flex items-center gap-1 pt-2">
+            <a href="/en/privacy.html" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">EN</a>
+                <a href="/it/privacy.html" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">IT</a>
+                <a href="/es/privacy.html" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">ES</a>
+                <a href="/de/privacy.html" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">DE</a>
+                <a href="/fr/privacy.html" class="px-2.5 py-1 text-xs font-medium rounded-md bg-accent text-white">FR</a>
+                <a href="/pt/privacy.html" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">PT</a>
+        </div>
+    </div>
+</header>
+
+
+<div class="max-w-[720px] mx-auto px-5 pt-28 pb-16">
+    <h1 class="font-heading font-extrabold text-2xl md:text-3xl text-slate-900 mb-4">Politique de Confidentialité</h1>
+    <p class="text-slate-400 text-sm mb-10">Dernière mise à jour : avril 2026</p>
+
+    
+    <h2 class="font-heading font-bold text-lg md:text-xl text-slate-900 mt-10 mb-3">Introduction</h2>
+    <div class="text-slate-600 leading-relaxed [&_p]:mb-4 [&_ul]:mb-4 [&_ul]:ml-6 [&_li]:mb-2 [&_strong]:text-slate-900"><p>RealText (« nous ») s'engage à protéger votre vie privée. Cette politique de confidentialité explique comment nous traitons les informations lorsque vous utilisez notre site web et notre service d'analyse de textes IA sur realtext.org.</p></div>
+    
+    <h2 class="font-heading font-bold text-lg md:text-xl text-slate-900 mt-10 mb-3">Données d'analyse textuelle</h2>
+    <div class="text-slate-600 leading-relaxed [&_p]:mb-4 [&_ul]:mb-4 [&_ul]:ml-6 [&_li]:mb-2 [&_strong]:text-slate-900"><p><strong>Nous ne stockons pas votre texte.</strong> Lorsque vous soumettez un texte pour analyse, il est traité dans la mémoire du serveur et immédiatement supprimé une fois l'analyse terminée. Nous ne sauvegardons, ne journalisons ni ne partageons jamais le contenu soumis pour analyse.</p></div>
+    
+    <h2 class="font-heading font-bold text-lg md:text-xl text-slate-900 mt-10 mb-3">Données que nous collectons</h2>
+    <div class="text-slate-600 leading-relaxed [&_p]:mb-4 [&_ul]:mb-4 [&_ul]:ml-6 [&_li]:mb-2 [&_strong]:text-slate-900"><p>Nous collectons le minimum de données nécessaire au fonctionnement du service :</p><ul><li><strong>Compteurs d'utilisation anonymes :</strong> Nous suivons le nombre d'analyses effectuées par adresse IP et par jour pour appliquer la limite quotidienne gratuite. Aucun contenu textuel n'est stocké.</li><li><strong>Journaux du serveur :</strong> Les journaux standard du serveur web peuvent contenir des adresses IP, le type de navigateur et les horodatages des requêtes. Ils sont utilisés exclusivement pour la sécurité et le débogage et sont automatiquement renouvelés.</li></ul></div>
+    
+    <h2 class="font-heading font-bold text-lg md:text-xl text-slate-900 mt-10 mb-3">Ce que nous NE collectons PAS</h2>
+    <div class="text-slate-600 leading-relaxed [&_p]:mb-4 [&_ul]:mb-4 [&_ul]:ml-6 [&_li]:mb-2 [&_strong]:text-slate-900"><ul><li>Nous n'exigeons pas de création de compte ni d'inscription</li><li>Nous ne collectons pas d'adresses e-mail, de noms ni d'identifiants personnels</li><li>Nous n'utilisons pas de cookies de suivi ou de publicité</li><li>Nous ne partageons aucune donnée avec des tiers à des fins marketing</li><li>Nous ne stockons ni ne journalisons le texte soumis pour analyse</li></ul></div>
+    
+    <h2 class="font-heading font-bold text-lg md:text-xl text-slate-900 mt-10 mb-3">Services tiers</h2>
+    <div class="text-slate-600 leading-relaxed [&_p]:mb-4 [&_ul]:mb-4 [&_ul]:ml-6 [&_li]:mb-2 [&_strong]:text-slate-900"><p>Notre analyse textuelle peut utiliser des APIs d'IA tierces (comme OpenAI ou Anthropic) pour générer des suggestions d'humanisation. Dans ce cas, votre texte est envoyé à ces services uniquement pour le traitement. Ces services ont leurs propres politiques de confidentialité et pratiques de traitement des données.</p></div>
+    
+    <h2 class="font-heading font-bold text-lg md:text-xl text-slate-900 mt-10 mb-3">Sécurité des données</h2>
+    <div class="text-slate-600 leading-relaxed [&_p]:mb-4 [&_ul]:mb-4 [&_ul]:ml-6 [&_li]:mb-2 [&_strong]:text-slate-900"><p>Nous utilisons des mesures de sécurité standard de l'industrie pour protéger notre infrastructure, notamment des connexions chiffrées (HTTPS), des serveurs pare-feu et une conservation minimale des données.</p></div>
+    
+    <h2 class="font-heading font-bold text-lg md:text-xl text-slate-900 mt-10 mb-3">Vos droits</h2>
+    <div class="text-slate-600 leading-relaxed [&_p]:mb-4 [&_ul]:mb-4 [&_ul]:ml-6 [&_li]:mb-2 [&_strong]:text-slate-900"><p>Puisque nous ne collectons pas de données personnelles ni ne stockons de contenu utilisateur, il y a un minimum de données à consulter, modifier ou supprimer. Pour toute question concernant vos données, contactez-nous à l'adresse indiquée ci-dessous.</p></div>
+    
+    <h2 class="font-heading font-bold text-lg md:text-xl text-slate-900 mt-10 mb-3">Modifications de cette politique</h2>
+    <div class="text-slate-600 leading-relaxed [&_p]:mb-4 [&_ul]:mb-4 [&_ul]:ml-6 [&_li]:mb-2 [&_strong]:text-slate-900"><p>Nous pouvons mettre à jour cette politique de confidentialité périodiquement. Les modifications seront publiées sur cette page avec une date de « Dernière mise à jour » actualisée.</p></div>
+    
+    <h2 class="font-heading font-bold text-lg md:text-xl text-slate-900 mt-10 mb-3">Contact</h2>
+    <div class="text-slate-600 leading-relaxed [&_p]:mb-4 [&_ul]:mb-4 [&_ul]:ml-6 [&_li]:mb-2 [&_strong]:text-slate-900"><p>Pour les questions relatives à la confidentialité, contactez-nous à : <strong>privacy@realtext.org</strong></p></div>
+    
+</div>
+
+<!-- Footer -->
+<footer class="bg-slate-900 text-slate-400 py-12 px-5">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center md:items-start justify-between gap-6">
+        <div>
+            <a href="/fr/" class="text-lg font-heading font-extrabold tracking-tight">
+                <span class="text-white">Real</span><span class="text-blue-400">Text</span>
+            </a>
+            <p class="text-sm mt-1 text-slate-500">Détecteur de texte IA et humaniseur gratuit.</p>
+        </div>
+        <div class="flex items-center gap-6 text-sm">
+            <a href="/app?lang=fr" class="hover:text-white transition-colors">Outil</a>
+            <a href="/fr/privacy.html" class="hover:text-white transition-colors">Confidentialité</a>
+            <a href="/fr/terms.html" class="hover:text-white transition-colors">Conditions</a>
+            <a href="/fr/blog/" class="hover:text-white transition-colors">Blog</a>
+        </div>
+    </div>
+    <div class="max-w-5xl mx-auto mt-8 pt-6 border-t border-slate-800 text-center text-xs text-slate-500">
+        © 2026 RealText
+    </div>
+</footer>
+
+
+</body>
+</html>
