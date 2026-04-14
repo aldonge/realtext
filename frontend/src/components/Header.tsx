@@ -1,9 +1,12 @@
 import { useTranslation } from 'react-i18next';
 
 const LANGUAGES = [
-  { code: 'it', label: 'IT' },
   { code: 'en', label: 'EN' },
+  { code: 'it', label: 'IT' },
   { code: 'es', label: 'ES' },
+  { code: 'de', label: 'DE' },
+  { code: 'fr', label: 'FR' },
+  { code: 'pt', label: 'PT' },
 ];
 
 interface HeaderProps {
