@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{currentLang}}">
 <head>
-{{> head}}
+{{> article-head}}
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -26,29 +26,47 @@
     }
     </script>
 </head>
-<body class="bg-white text-slate-900 antialiased">
+<body>
 
-{{> header}}
+<div class="nav">
+    <a href="/{{currentLang}}/" class="logo">
+        <span>Real</span><span class="accent">Text</span><span class="cursor-blink">_</span>
+    </a>
+    <div class="lang-switcher">
+        <a href="{{languageLinks.en}}" class="lang-btn{{#if isEn}} active{{/if}}">EN</a>
+        <a href="{{languageLinks.it}}" class="lang-btn{{#if isIt}} active{{/if}}">IT</a>
+        <a href="{{languageLinks.es}}" class="lang-btn{{#if isEs}} active{{/if}}">ES</a>
+        <a href="{{languageLinks.de}}" class="lang-btn{{#if isDe}} active{{/if}}">DE</a>
+        <a href="{{languageLinks.fr}}" class="lang-btn{{#if isFr}} active{{/if}}">FR</a>
+        <a href="{{languageLinks.pt}}" class="lang-btn{{#if isPt}} active{{/if}}">PT</a>
+    </div>
+</div>
 
-<article class="max-w-[720px] mx-auto px-5 pt-28 pb-16">
+<article class="container">
     {{article.bodyHtml}}
-</article>
 
-<!-- Related articles -->
-{{#if relatedArticles.length}}
-<section class="py-12 px-5 bg-slate-50">
-    <div class="max-w-[720px] mx-auto">
-        <h2 class="font-heading font-bold text-xl text-slate-900 mb-6">{{blog.readMore}}</h2>
-        <ul class="space-y-3">
+    <!-- Related articles -->
+    {{#if relatedArticles.length}}
+    <section class="related">
+        <h2>{{blog.readMore}}</h2>
+        <ul>
             {{#each relatedArticles}}
-            <li><a href="/{{lang}}/blog/{{slug}}.html" class="text-accent font-medium hover:underline">{{title}}</a> <span class="text-slate-400 text-sm">· {{minRead}} {{blog.minRead}}</span></li>
+            <li><a href="/{{lang}}/blog/{{slug}}.html">{{title}}</a></li>
             {{/each}}
         </ul>
-    </div>
-</section>
-{{/if}}
+    </section>
+    {{/if}}
+</article>
 
-{{> footer}}
+<footer>
+    <div style="margin-bottom: 16px;">
+        <a href="/{{currentLang}}/">Home</a>
+        <a href="/app">Tool</a>
+        <a href="/{{currentLang}}/privacy.html">Privacy</a>
+        <a href="/{{currentLang}}/terms.html">Terms</a>
+    </div>
+    <p>&copy; 2026 RealText</p>
+</footer>
 
 </body>
 </html>

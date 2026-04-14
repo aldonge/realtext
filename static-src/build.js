@@ -81,8 +81,8 @@ function deepMerge(base, override) {
 
 // ─── Template engine ────────────────────────────────────────────────────────
 function renderTemplate(template, vars) {
-  // Handle partials {{> partialName}}
-  let result = template.replace(/\{\{>\s*(\w+)\s*\}\}/g, (match, name) => {
+  // Handle partials {{> partialName}} (supports hyphens in names)
+  let result = template.replace(/\{\{>\s*([\w-]+)\s*\}\}/g, (match, name) => {
     const partialPath = path.join(SRC_DIR, 'templates', 'partials', name + '.html');
     if (fs.existsSync(partialPath)) {
       return fs.readFileSync(partialPath, 'utf8');
@@ -203,19 +203,47 @@ function buildHreflang(currentLang, currentPath, availableLangs) {
 function buildArticleHreflang(articleLang, articleSlug, meta) {
   // Check if this article is in a translation group
   for (const group of meta.translationGroups) {
-    const match = group.find(a => a.lang === articleLang && a.slug === articleSlug);
-    if (match) {
+    if (group.versions && group.versions[articleLang] === articleSlug) {
       let tags = '';
-      for (const a of group) {
-        tags += `    <link rel="alternate" hreflang="${a.lang}" href="${BASE_URL}/${a.lang}/blog/${a.slug}.html">\n`;
+      for (const [lang, slug] of Object.entries(group.versions)) {
+        tags += `    <link rel="alternate" hreflang="${lang}" href="${BASE_URL}/${lang}/blog/${slug}.html">\n`;
       }
-      tags += `    <link rel="alternate" hreflang="x-default" href="${BASE_URL}/${articleLang}/blog/${articleSlug}.html">`;
+      // x-default: prefer EN version if it exists, otherwise self
+      const defaultLang = group.versions.en ? 'en' : articleLang;
+      const defaultSlug = group.versions.en || articleSlug;
+      tags += `    <link rel="alternate" hreflang="x-default" href="${BASE_URL}/${defaultLang}/blog/${defaultSlug}.html">`;
       return tags;
     }
   }
   // Standalone: only self hreflang
   return `    <link rel="alternate" hreflang="${articleLang}" href="${BASE_URL}/${articleLang}/blog/${articleSlug}.html">\n` +
          `    <link rel="alternate" hreflang="x-default" href="${BASE_URL}/${articleLang}/blog/${articleSlug}.html">`;
+}
+
+// ─── Article language links (smart switcher) ─────────────────────────────────
+function buildArticleLanguageLinks(articleLang, articleSlug, meta) {
+  const links = {};
+  // Check if this article is in a translation group
+  let group = null;
+  for (const g of meta.translationGroups) {
+    if (g.versions && g.versions[articleLang] === articleSlug) {
+      group = g;
+      break;
+    }
+  }
+  for (const lang of LANGUAGES) {
+    if (lang === articleLang) {
+      // Self link
+      links[lang] = `/${lang}/blog/${articleSlug}.html`;
+    } else if (group && group.versions[lang]) {
+      // Translation exists in group
+      links[lang] = `/${lang}/blog/${group.versions[lang]}.html`;
+    } else {
+      // No translation: go to blog index
+      links[lang] = `/${lang}/blog/`;
+    }
+  }
+  return links;
 }
 
 // ─── Language switcher builder ──────────────────────────────────────────────
@@ -381,7 +409,13 @@ function main() {
       langSwitcher: buildLangSwitcher(lang, 'privacy.html'),
       legalTitle: t.privacy.title,
       legalLastUpdated: t.privacy.lastUpdated,
-      legalSections: t.privacy.sections
+      legalSections: t.privacy.sections,
+      isEn: lang === 'en',
+      isIt: lang === 'it',
+      isEs: lang === 'es',
+      isDe: lang === 'de',
+      isFr: lang === 'fr',
+      isPt: lang === 'pt'
     });
     const privacyHtml = renderTemplate(legalTpl, privacyVars);
     validateHtml(privacyHtml, `/${lang}/privacy.html`);
@@ -407,7 +441,13 @@ function main() {
       langSwitcher: buildLangSwitcher(lang, 'terms.html'),
       legalTitle: t.terms.title,
       legalLastUpdated: t.terms.lastUpdated,
-      legalSections: t.terms.sections
+      legalSections: t.terms.sections,
+      isEn: lang === 'en',
+      isIt: lang === 'it',
+      isEs: lang === 'es',
+      isDe: lang === 'de',
+      isFr: lang === 'fr',
+      isPt: lang === 'pt'
     });
     const termsHtml = renderTemplate(legalTpl, termsVars);
     validateHtml(termsHtml, `/${lang}/terms.html`);
@@ -452,6 +492,7 @@ function main() {
     for (const article of langArticles) {
       const relatedArticles = langArticles.filter(a => a.slug !== article.slug).slice(0, 3);
       const artHreflang = buildArticleHreflang(lang, article.slug, articlesMeta);
+      const languageLinks = buildArticleLanguageLinks(lang, article.slug, articlesMeta);
 
       const articleVars = Object.assign({}, t, {
         currentLang: lang,
@@ -463,7 +504,14 @@ function main() {
         hreflangTags: artHreflang,
         langSwitcher: buildLangSwitcher(lang, `blog/${article.slug}.html`),
         article: article,
-        relatedArticles: relatedArticles
+        relatedArticles: relatedArticles,
+        languageLinks: languageLinks,
+        isEn: lang === 'en',
+        isIt: lang === 'it',
+        isEs: lang === 'es',
+        isDe: lang === 'de',
+        isFr: lang === 'fr',
+        isPt: lang === 'pt'
       });
       const articleHtml = renderTemplate(articleTpl, articleVars);
       validateHtml(articleHtml, `/${lang}/blog/${article.slug}.html`);

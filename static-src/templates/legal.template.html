@@ -1,23 +1,43 @@
 <!DOCTYPE html>
 <html lang="{{currentLang}}">
 <head>
-{{> head}}
+{{> legal-head}}
 </head>
-<body class="bg-white text-slate-900 antialiased">
+<body>
 
-{{> header}}
+<div class="nav">
+    <a href="/{{currentLang}}/" class="logo">
+        <span>Real</span><span class="accent">Text</span><span class="cursor-blink">_</span>
+    </a>
+    <div class="lang-switcher">
+        <a href="/en/{{currentPath}}" class="lang-btn{{#if isEn}} active{{/if}}">EN</a>
+        <a href="/it/{{currentPath}}" class="lang-btn{{#if isIt}} active{{/if}}">IT</a>
+        <a href="/es/{{currentPath}}" class="lang-btn{{#if isEs}} active{{/if}}">ES</a>
+        <a href="/de/{{currentPath}}" class="lang-btn{{#if isDe}} active{{/if}}">DE</a>
+        <a href="/fr/{{currentPath}}" class="lang-btn{{#if isFr}} active{{/if}}">FR</a>
+        <a href="/pt/{{currentPath}}" class="lang-btn{{#if isPt}} active{{/if}}">PT</a>
+    </div>
+</div>
 
-<div class="max-w-[720px] mx-auto px-5 pt-28 pb-16">
-    <h1 class="font-heading font-extrabold text-2xl md:text-3xl text-slate-900 mb-4">{{legalTitle}}</h1>
-    <p class="text-slate-400 text-sm mb-10">{{legalLastUpdated}}</p>
+<div class="container">
+    <h1>{{legalTitle}}</h1>
+    <p class="meta">{{legalLastUpdated}}</p>
 
     {{#each legalSections}}
-    <h2 class="font-heading font-bold text-lg md:text-xl text-slate-900 mt-10 mb-3">{{heading}}</h2>
-    <div class="text-slate-600 leading-relaxed [&_p]:mb-4 [&_ul]:mb-4 [&_ul]:ml-6 [&_li]:mb-2 [&_strong]:text-slate-900">{{body}}</div>
+    <h2>{{heading}}</h2>
+    <div>{{body}}</div>
     {{/each}}
 </div>
 
-{{> footer}}
+<footer>
+    <div style="margin-bottom: 16px;">
+        <a href="/{{currentLang}}/">Home</a>
+        <a href="/app">Tool</a>
+        <a href="/{{currentLang}}/privacy.html">Privacy</a>
+        <a href="/{{currentLang}}/terms.html">Terms</a>
+    </div>
+    <p>&copy; 2026 RealText</p>
+</footer>
 
 </body>
 </html>

@@ -1,19 +1,38 @@
 {
-  "_comment": "REVISIONE MANUALE RICHIESTA: spostare articoli da standalone a translationGroups quando sono traduzioni reciproche dello stesso contenuto. Esempi possibili da verificare: come-capire-testo-ai (IT) con check-if-text-is-ai-generated (EN); rendere-testo-ai-naturale (IT) con make-ai-text-natural (EN); ai-detection-cosa-funziona (IT) con free-ai-detection-reliable (EN); studenti-ai-plagio (IT) con bypass-ai-detection (EN). NON automatizzare questo, va deciso leggendo i contenuti.",
-  "translationGroups": [],
+  "_comment": "Translation groups: articles that are conceptual translations of each other across languages. Standalone: articles that exist only in one language or have no equivalent in others. To add a new translation pair, move both articles from standalone to a new translationGroups entry.",
+  "translationGroups": [
+    {
+      "groupId": "ai-detection-guide",
+      "topic": "How to identify AI-generated text",
+      "versions": {
+        "it": "come-capire-testo-ai",
+        "en": "check-if-text-is-ai-generated"
+      }
+    },
+    {
+      "groupId": "humanize-ai-techniques",
+      "topic": "How to make AI text sound natural",
+      "versions": {
+        "it": "rendere-testo-ai-naturale",
+        "en": "make-ai-text-natural"
+      }
+    },
+    {
+      "groupId": "detector-reliability",
+      "topic": "How reliable are AI detectors",
+      "versions": {
+        "it": "ai-detection-cosa-funziona",
+        "en": "free-ai-detection-reliable"
+      }
+    }
+  ],
   "standalone": [
-    { "lang": "it", "slug": "come-capire-testo-ai" },
     { "lang": "it", "slug": "segnali-testo-chatgpt" },
-    { "lang": "it", "slug": "rendere-testo-ai-naturale" },
-    { "lang": "it", "slug": "ai-detection-cosa-funziona" },
     { "lang": "it", "slug": "studenti-ai-plagio" },
     { "lang": "en", "slug": "humanize-ai-text-free" },
     { "lang": "en", "slug": "make-chatgpt-text-undetectable" },
     { "lang": "en", "slug": "bypass-ai-detection" },
-    { "lang": "en", "slug": "check-if-text-is-ai-generated" },
     { "lang": "en", "slug": "ai-content-detector-free" },
-    { "lang": "en", "slug": "ai-vs-human-writing" },
-    { "lang": "en", "slug": "free-ai-detection-reliable" },
-    { "lang": "en", "slug": "make-ai-text-natural" }
+    { "lang": "en", "slug": "ai-vs-human-writing" }
   ]
 }
