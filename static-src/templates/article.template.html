@@ -28,19 +28,21 @@
 </head>
 <body>
 
-<div class="nav">
-    <a href="/{{currentLang}}/" class="logo">
-        <span>Real</span><span class="accent">Text</span><span class="cursor-blink">_</span>
-    </a>
-    <div class="lang-switcher">
-        <a href="{{languageLinks.en}}" class="lang-btn{{#if isEn}} active{{/if}}">EN</a>
-        <a href="{{languageLinks.it}}" class="lang-btn{{#if isIt}} active{{/if}}">IT</a>
-        <a href="{{languageLinks.es}}" class="lang-btn{{#if isEs}} active{{/if}}">ES</a>
-        <a href="{{languageLinks.de}}" class="lang-btn{{#if isDe}} active{{/if}}">DE</a>
-        <a href="{{languageLinks.fr}}" class="lang-btn{{#if isFr}} active{{/if}}">FR</a>
-        <a href="{{languageLinks.pt}}" class="lang-btn{{#if isPt}} active{{/if}}">PT</a>
+<header class="nav-wrapper">
+    <div class="nav">
+        <a href="/{{currentLang}}/" class="logo">
+            <span>Real</span><span class="accent">Text</span><span class="cursor-blink">_</span>
+        </a>
+        <div class="lang-switcher">
+            <a href="{{languageLinks.en}}" class="lang-btn{{#if isEn}} active{{/if}}">EN</a>
+            <a href="{{languageLinks.it}}" class="lang-btn{{#if isIt}} active{{/if}}">IT</a>
+            <a href="{{languageLinks.es}}" class="lang-btn{{#if isEs}} active{{/if}}">ES</a>
+            <a href="{{languageLinks.de}}" class="lang-btn{{#if isDe}} active{{/if}}">DE</a>
+            <a href="{{languageLinks.fr}}" class="lang-btn{{#if isFr}} active{{/if}}">FR</a>
+            <a href="{{languageLinks.pt}}" class="lang-btn{{#if isPt}} active{{/if}}">PT</a>
+        </div>
     </div>
-</div>
+</header>
 
 <article class="container">
     {{article.bodyHtml}}

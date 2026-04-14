@@ -14,32 +14,40 @@ body {
 /* Headings */
 h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
 
-/* Nav */
+/* Nav — matches landing header style */
 .nav {
     background: rgba(255,255,255,0.92);
     backdrop-filter: blur(8px);
     border-bottom: 1px solid #E2E8F0;
-    padding: 16px 20px;
+    height: 64px;
+    padding: 0 20px;
     position: sticky;
     top: 0;
     z-index: 50;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.nav-wrapper {
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #E2E8F0;
+    position: sticky;
+    top: 0;
+    z-index: 50;
 }
 .nav .logo {
     color: #0F172A;
     text-decoration: none;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 800;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
+    letter-spacing: -0.025em;
 }
-.nav a {
-    color: #0F172A;
+.nav .logo:hover {
     text-decoration: none;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 800;
-    font-size: 1.1rem;
 }
 .nav a .accent { color: #2563EB; }
 
@@ -47,20 +55,22 @@ h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
 @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 .cursor-blink { animation: blink 1s step-end infinite; color: #2563EB; }
 
-/* Language switcher */
+/* Language switcher — matches landing Tailwind style */
 .lang-switcher {
     display: flex;
-    gap: 8px;
+    align-items: center;
+    gap: 4px;
 }
 .lang-btn {
     padding: 4px 10px;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: #64748B;
     border-radius: 6px;
     text-decoration: none;
     font-family: 'Inter', sans-serif;
     font-weight: 500;
     transition: background 0.15s;
+    line-height: 1;
 }
 .lang-btn:hover {
     background: #F1F5F9;
