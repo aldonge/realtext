@@ -7,12 +7,12 @@
 
     <!-- SEO Primary -->
     <title>Perplexity and Burstiness: The Metrics Behind AI Detection — RealText Blog</title>
-    <meta name="description" content="Perplexity and burstiness are the two metrics most AI detectors rely on. Here is what they mean, why AI scores low on both, and when the logic breaks down.">
+    <meta name="description" content="A clear explanation of perplexity and burstiness — the two core metrics used to detect AI-generated text.">
     <link rel="canonical" href="https://realtext.org/en/blog/perplexity-burstiness-ai.html">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Perplexity and Burstiness: The Metrics Behind AI Detection">
-    <meta property="og:description" content="Perplexity and burstiness are the two metrics most AI detectors rely on. Here is what they mean, why AI scores low on both, and when the logic breaks down.">
+    <meta property="og:description" content="A clear explanation of perplexity and burstiness — the two core metrics used to detect AI-generated text.">
     <meta property="og:url" content="https://realtext.org/en/blog/perplexity-burstiness-ai.html">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="RealText">
@@ -20,10 +20,10 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Perplexity and Burstiness: The Metrics Behind AI Detection">
-    <meta name="twitter:description" content="Perplexity and burstiness are the two metrics most AI detectors rely on. Here is what they mean, why AI scores low on both, and when the logic breaks down.">
+    <meta name="twitter:description" content="A clear explanation of perplexity and burstiness — the two core metrics used to detect AI-generated text.">
 
     <!-- hreflang -->
-    <link rel="alternate" hreflang="en" href="https://realtext.org/en/blog/perplexity-burstiness-ai.html">
+        <link rel="alternate" hreflang="en" href="https://realtext.org/en/blog/perplexity-burstiness-ai.html">
     <link rel="alternate" hreflang="x-default" href="https://realtext.org/en/blog/perplexity-burstiness-ai.html">
 
     <!-- Fonts -->
@@ -34,13 +34,14 @@
     <!-- Shared CSS -->
     <link rel="stylesheet" href="/shared/styles.css">
 
+
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "Perplexity and Burstiness: The Metrics Behind AI Detection",
-        "description": "Perplexity and burstiness are the two metrics most AI detectors rely on. Here is what they mean, why AI scores low on both, and when the logic breaks down.",
+        "description": "A clear explanation of perplexity and burstiness — the two core metrics used to detect AI-generated text.",
         "url": "https://realtext.org/en/blog/perplexity-burstiness-ai.html",
         "datePublished": "2026-04-16",
         "dateModified": "2026-04-16",
@@ -77,66 +78,77 @@
 
 <article class="container">
     <h1>Perplexity and Burstiness: The Metrics Behind AI Detection</h1>
-    <p class="meta">April 16, 2026 · 6 min read</p>
+        <p class="meta">Updated April 2026 · 4 min read</p>
 
-    <p>If you have ever wondered why an AI detector flagged or cleared a text, the answer almost always comes back to two numbers: <strong>perplexity and burstiness</strong>. They are the core of AI detection and the reason detectors behave the way they do. You can get by without understanding them, but once you do, detector output stops feeling like a black box.</p>
+        <p>Every AI detector reduces text to a handful of numerical metrics. Two of them do most of the work: perplexity and burstiness. If you understand what these measure and why AI text scores the way it does on each, you understand 80% of how detection works — and you know what to target if you're trying to make text sound more human.</p>
 
-    <h2>What perplexity actually measures</h2>
+        <h2>Perplexity: how predictable is this text?</h2>
 
-    <p>Perplexity is a measurement borrowed from information theory. Informally, it answers the question: given a language model, how surprised is it by each word in this text?</p>
+        <p>Perplexity is a concept from natural language processing. It measures how surprised a language model would be by a given text. Low perplexity means the next word was easy to predict; high perplexity means the next word was unexpected.</p>
 
-    <p>Pick a sentence like "The cat sat on the mat." A language model reads word by word. After "The cat sat on the", the word "mat" is extremely likely. The model assigns it a high probability, meaning low surprise, meaning low perplexity. Now consider "The cat sat on the bureaucracy." The word "bureaucracy" is unexpected. High surprise, high perplexity.</p>
+        <p>Human writing has higher perplexity than you'd expect. We use unusual words, unexpected phrasings, ideas that don't naturally follow the previous sentence. AI text is generated by maximizing predictability — each word is chosen because the model thinks it's the most likely next word given the context. The result: AI text has systematically lower perplexity than human writing about the same topic.</p>
 
-    <p>AI-generated text tends to score low on perplexity because it is produced by exactly the kind of model that computes these probabilities, and it tends to pick high-probability next words. Human text tends to have higher and more variable perplexity because humans choose words for reasons the model does not predict: personal voice, context, memory, mood, word play. In technical terms, an AI detector computes the average perplexity of your text under a reference model, and compares it to the range typical of human writing.</p>
+        <p>The catch is that some human writing also has low perplexity. Formal academic prose, legal writing, technical documentation — genres where the vocabulary is constrained and the phrasing conventionalized — can score as low as AI on this single metric. That's why no detector uses perplexity alone.</p>
 
-    <h2>What burstiness adds</h2>
+        <h2>Burstiness: how much does it vary?</h2>
 
-    <p>Perplexity alone is not enough. Some humans write very predictably, and some AI prompts produce surprising word choices. So detectors measure a second feature: <strong>burstiness</strong>, which captures variance rather than average.</p>
+        <p>Burstiness measures variation across the text. Specifically, it looks at sentence length: how much the number of words per sentence fluctuates from sentence to sentence across the document.</p>
 
-    <p>In the AI detection context, burstiness usually refers to variance in sentence length and structural complexity across a passage. Humans write in bursts: a long descriptive sentence, then a short punchy one, then a medium explanation, then a fragment. AI models, unless prompted otherwise, tend to produce sentences of similar length and similar structural complexity. Plotted, human text looks jagged; AI text looks smooth.</p>
+        <p>Human writing is bursty. One sentence is four words, the next is thirty-five, the third is sixteen. This variation reflects how humans actually think — we compress some ideas into fragments and expand others across multiple clauses. AI writing is metronomic. Sentence after sentence lands in the same narrow range — typically 18 to 25 words. The variation is small and the rhythm is flat.</p>
 
-    <p>Some researchers extend the concept to variance of perplexity itself, measuring whether surprising words cluster together (human) or spread evenly (AI). Both interpretations get at the same intuition: natural writing has rhythm, and rhythm means variance.</p>
+        <p>Burstiness is harder to fake than perplexity. You can swap in unusual words to raise perplexity without changing the structure of your sentences. You can't raise burstiness without actually restructuring — cutting long sentences, merging short ones, adding fragments.</p>
 
-    <h2>How detectors combine the two</h2>
+        <h2>Why AI scores low on both</h2>
 
-    <p>A typical detector computes per-sentence perplexity and per-sentence length, then feeds both into a classifier trained on labeled examples. Some tools add stylometric features (punctuation ratios, transition word frequency, type-token ratio) but perplexity and burstiness do most of the work. The final score is roughly a function of how far your text sits from the human distribution on these axes.</p>
+        <p>Both metrics are low in AI text for the same underlying reason: language models are trained to generate the most likely continuation of a prompt. Each word is the most likely next word; each sentence is the most likely next sentence structure. The model has no internal rhythm, no point it wants to make, no specific memory to reach for. It produces text that sits in the statistical middle of its training distribution.</p>
 
-    <p>This is why paraphrasing advice that targets both axes actually works, while surface synonym swapping does not. If you want to see these principles applied to real text, see our <a href="/en/blog/how-to-paraphrase-ai-text.html">paraphrasing guide</a>. For a broader view of accuracy, our <a href="/en/blog/ai-detector-accuracy.html">accuracy article</a> puts the math in context.</p>
+        <p>Humans don't do this. We write to say something specific, which takes us to unusual words and asymmetric structures. The mathematics of language generation produces smooth, uniform text; the mathematics of human intention produces bumpy, varied text. Detectors measure the bumpiness.</p>
 
-    <h2>Where the logic breaks down</h2>
+        <h2>How detectors combine the metrics</h2>
 
-    <p>Three failure modes show up in practice.</p>
+        <p>No serious detector uses just one metric. Tools like <a href="/en/blog/gptzero-alternative.html">GPTZero, ZeroGPT, and Sapling</a> combine perplexity, burstiness, vocabulary diversity, and several smaller signals into a single score. Some weight perplexity more heavily; others weight burstiness. This is why different tools disagree on borderline texts — they're summing the same ingredients in different proportions.</p>
 
-    <p><strong>Tightly controlled human writing.</strong> Technical documentation, legal contracts, lab reports, and translated text tend to have low perplexity and low burstiness by design. A lawyer writing a contract and an AI producing one will look statistically similar. This is one of the main drivers of false positives. For specifics, see <a href="/en/blog/ai-detector-false-positives.html">false positives on human text</a>.</p>
+        <p>When two detectors disagree, the disagreement usually comes down to this weighting. If your text has low perplexity but high burstiness (structured but varied), some detectors will flag it and some won't. That ambiguity is the useful signal: the text is genuinely borderline, not definitively one thing or the other.</p>
 
-    <p><strong>AI prompted to vary.</strong> Ask GPT-4 to "write with varied sentence lengths, include a fragment, and use first-person asides," and the output's burstiness goes up sharply. Perplexity also rises slightly. Scores drop. The detector is measuring surface features, and surface features are now under the prompter's control.</p>
+        <h2>What this means for writing</h2>
 
-    <p><strong>Non-English text.</strong> Most public detectors were trained primarily on English. Perplexity calibrations for other languages are often wrong, which leads to overconfident scoring in both directions on Spanish, German, or Italian text. Tools built with multilingual models, including <a href="/app">RealText</a>, tend to do better here but the gap is real.</p>
+        <p>If you want your writing to read as human — to a human or to a detector — target these metrics directly. Vary your sentence lengths deliberately. Use specific and unusual words rather than the "safe" options. Cut formal connectors. Add specific details that couldn't come from a generic language model.</p>
 
-    <h2>Why this matters for interpretation</h2>
+        <p>These are all things good writers do anyway. Detectors are essentially measuring how well-varied and specific your writing is. The overlap between "writing that reads as human" and "writing that's engaging" is nearly total. Improving your detector score and improving your writing are mostly the same project.</p>
 
-    <p>When a detector reports "95% likely AI," what it actually means is: "this text sits 95% of the way into the distribution of statistically AI-like features we have seen." That is a useful statement. It is not the same as "a model wrote this." A deliberate stylist, a non-native speaker, or a careful technical writer can produce text that lives in that same distribution without ever touching an AI.</p>
+        <h2>Why RealText exposes the metrics directly</h2>
 
-    <p>Understanding perplexity and burstiness also helps you understand why hybrid text behaves the way it does. A paragraph of your own writing brings noise, a paragraph of AI output brings smoothness. The average lands somewhere in the middle, producing 40-60% scores that neither confirm nor clear. Our <a href="/en/blog/free-ai-detection-reliable.html">reliability article</a> explores this in depth.</p>
+        <p><a href="/app">RealText</a> shows you perplexity, burstiness, and TTR as separate numbers instead of hiding them behind a single score. This lets you see which metric is pulling your score down and target it specifically. A text with low burstiness and normal perplexity needs rhythm work; a text with low perplexity and normal burstiness needs vocabulary work. Without that breakdown, every edit is a guess.</p>
 
-    <h2>One more caveat</h2>
+        <div class="cta-box">
+            <p>See the metrics behind your score.</p>
+            <a href="/app">Try RealText Free →</a>
+        </div>
+        <section class="related">
+            <h2>Related Articles</h2>
+            <ul>
+                <li><a href="/en/blog/ai-detector-accuracy.html">How Accurate Are AI Detectors? The Honest Truth</a></li>
+                <li><a href="/en/blog/how-to-paraphrase-ai-text.html">How to Paraphrase AI Text to Sound More Human</a></li>
+                <li><a href="/en/blog/ai-detector-false-positives.html">AI Detector False Positives: Why Human Text Gets Flagged</a></li>
+                <li><a href="/en/blog/gptzero-alternative.html">GPTZero Alternatives: Free AI Detectors Worth Trying</a></li>
+            </ul>
+        </section>
 
-    <p>As models get larger and training data grows, the gap between AI perplexity and human perplexity narrows. GPT-5 output, well-prompted, is noticeably closer to human baselines than GPT-3.5 was. The arms race will continue, and detectors that rely only on these two metrics will keep losing ground. Stylometric signals, watermarking, and document-level provenance will matter more. But for now, perplexity and burstiness are still where most of the signal lives, and knowing that is the difference between treating a detector as magic and reading it as data.</p>
-
-    <div class="cta-box">
-        <p>Want to see perplexity and burstiness applied to your own writing?</p>
-        <a href="/app">Analyze Your Text Free →</a>
-    </div>
-
+    <!-- Related articles -->
+    
     <section class="related">
-        <h2>Related Articles</h2>
+        <h2>Read article</h2>
         <ul>
+            
+            <li><a href="/en/blog/ai-content-google-seo.html">AI Content and Google SEO: Does Google Penalize AI Writing?</a></li>
+            
             <li><a href="/en/blog/ai-detector-accuracy.html">How Accurate Are AI Detectors? The Honest Truth</a></li>
+            
             <li><a href="/en/blog/ai-detector-false-positives.html">AI Detector False Positives: Why Human Text Gets Flagged</a></li>
-            <li><a href="/en/blog/how-to-paraphrase-ai-text.html">How to Paraphrase AI Text to Sound More Human</a></li>
-            <li><a href="/en/blog/free-ai-detection-reliable.html">Free AI Detection: How Reliable Is It Really?</a></li>
+            
         </ul>
     </section>
+    
 </article>
 
 <footer>
