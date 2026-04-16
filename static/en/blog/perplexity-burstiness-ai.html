@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+    <!-- SEO Primary -->
+    <title>Perplexity and Burstiness: The Metrics Behind AI Detection — RealText Blog</title>
+    <meta name="description" content="Perplexity and burstiness are the two metrics most AI detectors rely on. Here is what they mean, why AI scores low on both, and when the logic breaks down.">
+    <link rel="canonical" href="https://realtext.org/en/blog/perplexity-burstiness-ai.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Perplexity and Burstiness: The Metrics Behind AI Detection">
+    <meta property="og:description" content="Perplexity and burstiness are the two metrics most AI detectors rely on. Here is what they mean, why AI scores low on both, and when the logic breaks down.">
+    <meta property="og:url" content="https://realtext.org/en/blog/perplexity-burstiness-ai.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="RealText">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Perplexity and Burstiness: The Metrics Behind AI Detection">
+    <meta name="twitter:description" content="Perplexity and burstiness are the two metrics most AI detectors rely on. Here is what they mean, why AI scores low on both, and when the logic breaks down.">
+
+    <!-- hreflang -->
+    <link rel="alternate" hreflang="en" href="https://realtext.org/en/blog/perplexity-burstiness-ai.html">
+    <link rel="alternate" hreflang="x-default" href="https://realtext.org/en/blog/perplexity-burstiness-ai.html">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Shared CSS -->
+    <link rel="stylesheet" href="/shared/styles.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Perplexity and Burstiness: The Metrics Behind AI Detection",
+        "description": "Perplexity and burstiness are the two metrics most AI detectors rely on. Here is what they mean, why AI scores low on both, and when the logic breaks down.",
+        "url": "https://realtext.org/en/blog/perplexity-burstiness-ai.html",
+        "datePublished": "2026-04-16",
+        "dateModified": "2026-04-16",
+        "inLanguage": "en",
+        "publisher": {
+            "@type": "Organization",
+            "name": "RealText",
+            "url": "https://realtext.org"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "RealText"
+        }
+    }
+    </script>
+</head>
+<body>
+
+<header class="nav-wrapper">
+    <div class="nav">
+        <a href="/en/" class="logo">
+            <span>Real</span><span class="accent">Text</span><span class="cursor-blink">_</span>
+        </a>
+        <div class="lang-switcher">
+            <a href="/en/blog/perplexity-burstiness-ai.html" class="lang-btn active">EN</a>
+            <a href="/it/blog/" class="lang-btn">IT</a>
+            <a href="/es/blog/" class="lang-btn">ES</a>
+            <a href="/de/blog/" class="lang-btn">DE</a>
+            <a href="/fr/blog/" class="lang-btn">FR</a>
+            <a href="/pt/blog/" class="lang-btn">PT</a>
+        </div>
+    </div>
+</header>
+
+<article class="container">
+    <h1>Perplexity and Burstiness: The Metrics Behind AI Detection</h1>
+    <p class="meta">April 16, 2026 · 6 min read</p>
+
+    <p>If you have ever wondered why an AI detector flagged or cleared a text, the answer almost always comes back to two numbers: <strong>perplexity and burstiness</strong>. They are the core of AI detection and the reason detectors behave the way they do. You can get by without understanding them, but once you do, detector output stops feeling like a black box.</p>
+
+    <h2>What perplexity actually measures</h2>
+
+    <p>Perplexity is a measurement borrowed from information theory. Informally, it answers the question: given a language model, how surprised is it by each word in this text?</p>
+
+    <p>Pick a sentence like "The cat sat on the mat." A language model reads word by word. After "The cat sat on the", the word "mat" is extremely likely. The model assigns it a high probability, meaning low surprise, meaning low perplexity. Now consider "The cat sat on the bureaucracy." The word "bureaucracy" is unexpected. High surprise, high perplexity.</p>
+
+    <p>AI-generated text tends to score low on perplexity because it is produced by exactly the kind of model that computes these probabilities, and it tends to pick high-probability next words. Human text tends to have higher and more variable perplexity because humans choose words for reasons the model does not predict: personal voice, context, memory, mood, word play. In technical terms, an AI detector computes the average perplexity of your text under a reference model, and compares it to the range typical of human writing.</p>
+
+    <h2>What burstiness adds</h2>
+
+    <p>Perplexity alone is not enough. Some humans write very predictably, and some AI prompts produce surprising word choices. So detectors measure a second feature: <strong>burstiness</strong>, which captures variance rather than average.</p>
+
+    <p>In the AI detection context, burstiness usually refers to variance in sentence length and structural complexity across a passage. Humans write in bursts: a long descriptive sentence, then a short punchy one, then a medium explanation, then a fragment. AI models, unless prompted otherwise, tend to produce sentences of similar length and similar structural complexity. Plotted, human text looks jagged; AI text looks smooth.</p>
+
+    <p>Some researchers extend the concept to variance of perplexity itself, measuring whether surprising words cluster together (human) or spread evenly (AI). Both interpretations get at the same intuition: natural writing has rhythm, and rhythm means variance.</p>
+
+    <h2>How detectors combine the two</h2>
+
+    <p>A typical detector computes per-sentence perplexity and per-sentence length, then feeds both into a classifier trained on labeled examples. Some tools add stylometric features (punctuation ratios, transition word frequency, type-token ratio) but perplexity and burstiness do most of the work. The final score is roughly a function of how far your text sits from the human distribution on these axes.</p>
+
+    <p>This is why paraphrasing advice that targets both axes actually works, while surface synonym swapping does not. If you want to see these principles applied to real text, see our <a href="/en/blog/how-to-paraphrase-ai-text.html">paraphrasing guide</a>. For a broader view of accuracy, our <a href="/en/blog/ai-detector-accuracy.html">accuracy article</a> puts the math in context.</p>
+
+    <h2>Where the logic breaks down</h2>
+
+    <p>Three failure modes show up in practice.</p>
+
+    <p><strong>Tightly controlled human writing.</strong> Technical documentation, legal contracts, lab reports, and translated text tend to have low perplexity and low burstiness by design. A lawyer writing a contract and an AI producing one will look statistically similar. This is one of the main drivers of false positives. For specifics, see <a href="/en/blog/ai-detector-false-positives.html">false positives on human text</a>.</p>
+
+    <p><strong>AI prompted to vary.</strong> Ask GPT-4 to "write with varied sentence lengths, include a fragment, and use first-person asides," and the output's burstiness goes up sharply. Perplexity also rises slightly. Scores drop. The detector is measuring surface features, and surface features are now under the prompter's control.</p>
+
+    <p><strong>Non-English text.</strong> Most public detectors were trained primarily on English. Perplexity calibrations for other languages are often wrong, which leads to overconfident scoring in both directions on Spanish, German, or Italian text. Tools built with multilingual models, including <a href="/app">RealText</a>, tend to do better here but the gap is real.</p>
+
+    <h2>Why this matters for interpretation</h2>
+
+    <p>When a detector reports "95% likely AI," what it actually means is: "this text sits 95% of the way into the distribution of statistically AI-like features we have seen." That is a useful statement. It is not the same as "a model wrote this." A deliberate stylist, a non-native speaker, or a careful technical writer can produce text that lives in that same distribution without ever touching an AI.</p>
+
+    <p>Understanding perplexity and burstiness also helps you understand why hybrid text behaves the way it does. A paragraph of your own writing brings noise, a paragraph of AI output brings smoothness. The average lands somewhere in the middle, producing 40-60% scores that neither confirm nor clear. Our <a href="/en/blog/free-ai-detection-reliable.html">reliability article</a> explores this in depth.</p>
+
+    <h2>One more caveat</h2>
+
+    <p>As models get larger and training data grows, the gap between AI perplexity and human perplexity narrows. GPT-5 output, well-prompted, is noticeably closer to human baselines than GPT-3.5 was. The arms race will continue, and detectors that rely only on these two metrics will keep losing ground. Stylometric signals, watermarking, and document-level provenance will matter more. But for now, perplexity and burstiness are still where most of the signal lives, and knowing that is the difference between treating a detector as magic and reading it as data.</p>
+
+    <div class="cta-box">
+        <p>Want to see perplexity and burstiness applied to your own writing?</p>
+        <a href="/app">Analyze Your Text Free →</a>
+    </div>
+
+    <section class="related">
+        <h2>Related Articles</h2>
+        <ul>
+            <li><a href="/en/blog/ai-detector-accuracy.html">How Accurate Are AI Detectors? The Honest Truth</a></li>
+            <li><a href="/en/blog/ai-detector-false-positives.html">AI Detector False Positives: Why Human Text Gets Flagged</a></li>
+            <li><a href="/en/blog/how-to-paraphrase-ai-text.html">How to Paraphrase AI Text to Sound More Human</a></li>
+            <li><a href="/en/blog/free-ai-detection-reliable.html">Free AI Detection: How Reliable Is It Really?</a></li>
+        </ul>
+    </section>
+</article>
+
+<footer>
+    <div style="margin-bottom: 16px;">
+        <a href="/en/">Home</a>
+        <a href="/app">Tool</a>
+        <a href="/en/privacy.html">Privacy</a>
+        <a href="/en/terms.html">Terms</a>
+    </div>
+    <p>&copy; 2026 RealText</p>
+</footer>
+
+</body>
+</html>

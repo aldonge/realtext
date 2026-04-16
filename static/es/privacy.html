@@ -36,140 +36,71 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <!-- Tailwind CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            accent: { DEFAULT: '#2563EB', hover: '#1D4ED8', light: '#EFF6FF' },
-            slate: {
-              50: '#F8FAFC', 100: '#F1F5F9', 200: '#E2E8F0', 300: '#CBD5E1',
-              400: '#94A3B8', 500: '#64748B', 600: '#475569', 700: '#334155',
-              800: '#1E293B', 900: '#0F172A'
-            }
-          },
-          fontFamily: {
-            heading: ['"Plus Jakarta Sans"', 'sans-serif'],
-            body: ['"Inter"', 'sans-serif'],
-          }
-        }
-      }
-    }
-    </script>
-
     <!-- Shared CSS -->
     <link rel="stylesheet" href="/shared/styles.css">
 
-    <style>
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
-        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
-        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
-        .cursor-blink { animation: blink 1s step-end infinite; }
-        html { scroll-behavior: smooth; }
-    </style>
-
 </head>
-<body class="bg-white text-slate-900 antialiased">
+<body>
 
-<!-- Header -->
-<header class="fixed top-0 w-full z-50 border-b border-slate-200" style="background: rgba(255,255,255,0.92); backdrop-filter: blur(8px);">
-    <div class="max-w-5xl mx-auto px-5 h-16 flex items-center justify-between">
-        <!-- Logo -->
-        <a href="/es/" class="flex items-center gap-0 text-xl font-heading font-extrabold tracking-tight">
-            <span class="text-slate-900">Real</span><span class="text-accent">Text</span><span class="cursor-blink text-accent">_</span>
+<header class="nav-wrapper">
+    <div class="nav">
+        <a href="/es/" class="logo">
+            <span>Real</span><span class="accent">Text</span><span class="cursor-blink">_</span>
         </a>
-        <!-- Nav desktop -->
-        <nav class="hidden md:flex items-center gap-8">
-            <a href="/es/#how-it-works" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Cómo funciona</a>
-            <a href="/es/blog/" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Blog</a>
-            <div class="flex items-center gap-1 ml-2">
-                <a href="/en/privacy.html" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">EN</a>
-                <a href="/it/privacy.html" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">IT</a>
-                <a href="/es/privacy.html" class="px-2.5 py-1 text-xs font-medium rounded-md bg-accent text-white">ES</a>
-                <a href="/de/privacy.html" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">DE</a>
-                <a href="/fr/privacy.html" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">FR</a>
-                <a href="/pt/privacy.html" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">PT</a>
-            </div>
-        </nav>
-        <!-- Mobile hamburger -->
-        <button onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" class="md:hidden p-2 rounded-lg hover:bg-slate-100">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
-        </button>
-    </div>
-    <!-- Mobile menu -->
-    <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 bg-white px-5 py-4 space-y-3">
-        <a href="/es/#how-it-works" class="block text-sm font-medium text-slate-600">Cómo funciona</a>
-        <a href="/es/blog/" class="block text-sm font-medium text-slate-600">Blog</a>
-        <div class="flex items-center gap-1 pt-2">
-            <a href="/en/privacy.html" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">EN</a>
-                <a href="/it/privacy.html" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">IT</a>
-                <a href="/es/privacy.html" class="px-2.5 py-1 text-xs font-medium rounded-md bg-accent text-white">ES</a>
-                <a href="/de/privacy.html" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">DE</a>
-                <a href="/fr/privacy.html" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">FR</a>
-                <a href="/pt/privacy.html" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">PT</a>
+        <div class="lang-switcher">
+            <a href="/en/privacy.html" class="lang-btn">EN</a>
+            <a href="/it/privacy.html" class="lang-btn">IT</a>
+            <a href="/es/privacy.html" class="lang-btn active">ES</a>
+            <a href="/de/privacy.html" class="lang-btn">DE</a>
+            <a href="/fr/privacy.html" class="lang-btn">FR</a>
+            <a href="/pt/privacy.html" class="lang-btn">PT</a>
         </div>
     </div>
 </header>
 
+<div class="container">
+    <h1>Política de Privacidad</h1>
+    <p class="meta">Última actualización: abril 2026</p>
 
-<div class="max-w-[720px] mx-auto px-5 pt-28 pb-16">
-    <h1 class="font-heading font-extrabold text-2xl md:text-3xl text-slate-900 mb-4">Política de Privacidad</h1>
-    <p class="text-slate-400 text-sm mb-10">Última actualización: abril 2026</p>
-
     
-    <h2 class="font-heading font-bold text-lg md:text-xl text-slate-900 mt-10 mb-3">Introducción</h2>
-    <div class="text-slate-600 leading-relaxed [&_p]:mb-4 [&_ul]:mb-4 [&_ul]:ml-6 [&_li]:mb-2 [&_strong]:text-slate-900"><p>RealText ("nosotros") se compromete a proteger tu privacidad. Esta política explica cómo manejamos la información cuando utilizas nuestro sitio web y servicio de análisis de textos IA en realtext.org.</p></div>
+    <h2>Introducción</h2>
+    <div><p>RealText ("nosotros") se compromete a proteger tu privacidad. Esta política explica cómo manejamos la información cuando utilizas nuestro sitio web y servicio de análisis de textos IA en realtext.org.</p></div>
     
-    <h2 class="font-heading font-bold text-lg md:text-xl text-slate-900 mt-10 mb-3">Datos del análisis textual</h2>
-    <div class="text-slate-600 leading-relaxed [&_p]:mb-4 [&_ul]:mb-4 [&_ul]:ml-6 [&_li]:mb-2 [&_strong]:text-slate-900"><p><strong>No almacenamos tu texto.</strong> Cuando envías un texto para análisis, se procesa en la memoria del servidor y se descarta inmediatamente al completar el análisis. Nunca guardamos, registramos ni compartimos el contenido enviado.</p></div>
+    <h2>Datos del análisis textual</h2>
+    <div><p><strong>No almacenamos tu texto.</strong> Cuando envías un texto para análisis, se procesa en la memoria del servidor y se descarta inmediatamente al completar el análisis. Nunca guardamos, registramos ni compartimos el contenido enviado.</p></div>
     
-    <h2 class="font-heading font-bold text-lg md:text-xl text-slate-900 mt-10 mb-3">Datos que recopilamos</h2>
-    <div class="text-slate-600 leading-relaxed [&_p]:mb-4 [&_ul]:mb-4 [&_ul]:ml-6 [&_li]:mb-2 [&_strong]:text-slate-900"><p>Recopilamos los datos mínimos necesarios para operar el servicio:</p><ul><li><strong>Contadores anónimos de uso:</strong> Monitorizamos el número de análisis por dirección IP al día para aplicar el límite diario gratuito. No se almacena contenido textual.</li><li><strong>Registros del servidor:</strong> Los registros estándar del servidor web pueden contener direcciones IP, tipo de navegador y marcas de tiempo. Se utilizan exclusivamente para seguridad y depuración.</li></ul></div>
+    <h2>Datos que recopilamos</h2>
+    <div><p>Recopilamos los datos mínimos necesarios para operar el servicio:</p><ul><li><strong>Contadores anónimos de uso:</strong> Monitorizamos el número de análisis por dirección IP al día para aplicar el límite diario gratuito. No se almacena contenido textual.</li><li><strong>Registros del servidor:</strong> Los registros estándar del servidor web pueden contener direcciones IP, tipo de navegador y marcas de tiempo. Se utilizan exclusivamente para seguridad y depuración.</li></ul></div>
     
-    <h2 class="font-heading font-bold text-lg md:text-xl text-slate-900 mt-10 mb-3">Lo que NO recopilamos</h2>
-    <div class="text-slate-600 leading-relaxed [&_p]:mb-4 [&_ul]:mb-4 [&_ul]:ml-6 [&_li]:mb-2 [&_strong]:text-slate-900"><ul><li>No requerimos creación de cuenta ni registro</li><li>No recopilamos correos electrónicos, nombres ni identificadores personales</li><li>No usamos cookies de seguimiento o publicidad</li><li>No compartimos datos con terceros con fines de marketing</li><li>No almacenamos ni registramos el texto enviado para análisis</li></ul></div>
+    <h2>Lo que NO recopilamos</h2>
+    <div><ul><li>No requerimos creación de cuenta ni registro</li><li>No recopilamos correos electrónicos, nombres ni identificadores personales</li><li>No usamos cookies de seguimiento o publicidad</li><li>No compartimos datos con terceros con fines de marketing</li><li>No almacenamos ni registramos el texto enviado para análisis</li></ul></div>
     
-    <h2 class="font-heading font-bold text-lg md:text-xl text-slate-900 mt-10 mb-3">Servicios de terceros</h2>
-    <div class="text-slate-600 leading-relaxed [&_p]:mb-4 [&_ul]:mb-4 [&_ul]:ml-6 [&_li]:mb-2 [&_strong]:text-slate-900"><p>Nuestro análisis textual puede utilizar APIs de IA de terceros (como OpenAI o Anthropic) para generar sugerencias de humanización. En tal caso, tu texto se envía a estos servicios solo para procesamiento. Estos servicios tienen sus propias políticas de privacidad.</p></div>
+    <h2>Servicios de terceros</h2>
+    <div><p>Nuestro análisis textual puede utilizar APIs de IA de terceros (como OpenAI o Anthropic) para generar sugerencias de humanización. En tal caso, tu texto se envía a estos servicios solo para procesamiento. Estos servicios tienen sus propias políticas de privacidad.</p></div>
     
-    <h2 class="font-heading font-bold text-lg md:text-xl text-slate-900 mt-10 mb-3">Seguridad de datos</h2>
-    <div class="text-slate-600 leading-relaxed [&_p]:mb-4 [&_ul]:mb-4 [&_ul]:ml-6 [&_li]:mb-2 [&_strong]:text-slate-900"><p>Utilizamos medidas de seguridad estándar de la industria para proteger nuestra infraestructura, incluyendo conexiones cifradas (HTTPS), servidores con cortafuegos y retención mínima de datos.</p></div>
+    <h2>Seguridad de datos</h2>
+    <div><p>Utilizamos medidas de seguridad estándar de la industria para proteger nuestra infraestructura, incluyendo conexiones cifradas (HTTPS), servidores con cortafuegos y retención mínima de datos.</p></div>
     
-    <h2 class="font-heading font-bold text-lg md:text-xl text-slate-900 mt-10 mb-3">Tus derechos</h2>
-    <div class="text-slate-600 leading-relaxed [&_p]:mb-4 [&_ul]:mb-4 [&_ul]:ml-6 [&_li]:mb-2 [&_strong]:text-slate-900"><p>Dado que no recopilamos datos personales ni almacenamos contenido de usuarios, los datos a acceder, modificar o eliminar son mínimos. Para preguntas sobre tus datos, contáctanos en la dirección indicada a continuación.</p></div>
+    <h2>Tus derechos</h2>
+    <div><p>Dado que no recopilamos datos personales ni almacenamos contenido de usuarios, los datos a acceder, modificar o eliminar son mínimos. Para preguntas sobre tus datos, contáctanos en la dirección indicada a continuación.</p></div>
     
-    <h2 class="font-heading font-bold text-lg md:text-xl text-slate-900 mt-10 mb-3">Cambios en esta política</h2>
-    <div class="text-slate-600 leading-relaxed [&_p]:mb-4 [&_ul]:mb-4 [&_ul]:ml-6 [&_li]:mb-2 [&_strong]:text-slate-900"><p>Podemos actualizar esta política de privacidad periódicamente. Los cambios se publicarán en esta página con una fecha de "Última actualización" actualizada.</p></div>
+    <h2>Cambios en esta política</h2>
+    <div><p>Podemos actualizar esta política de privacidad periódicamente. Los cambios se publicarán en esta página con una fecha de "Última actualización" actualizada.</p></div>
     
-    <h2 class="font-heading font-bold text-lg md:text-xl text-slate-900 mt-10 mb-3">Contacto</h2>
-    <div class="text-slate-600 leading-relaxed [&_p]:mb-4 [&_ul]:mb-4 [&_ul]:ml-6 [&_li]:mb-2 [&_strong]:text-slate-900"><p>Para preguntas sobre privacidad, contáctanos en: <strong>privacy@realtext.org</strong></p></div>
+    <h2>Contacto</h2>
+    <div><p>Para preguntas sobre privacidad, contáctanos en: <strong>privacy@realtext.org</strong></p></div>
     
 </div>
 
-<!-- Footer -->
-<footer class="bg-slate-900 text-slate-400 py-12 px-5">
-    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center md:items-start justify-between gap-6">
-        <div>
-            <a href="/es/" class="text-lg font-heading font-extrabold tracking-tight">
-                <span class="text-white">Real</span><span class="text-blue-400">Text</span>
-            </a>
-            <p class="text-sm mt-1 text-slate-500">Detector de IA y humanizador gratuito.</p>
-        </div>
-        <div class="flex items-center gap-6 text-sm">
-            <a href="/app?lang=es" class="hover:text-white transition-colors">Herramienta</a>
-            <a href="/es/privacy.html" class="hover:text-white transition-colors">Privacidad</a>
-            <a href="/es/terms.html" class="hover:text-white transition-colors">Términos</a>
-            <a href="/es/blog/" class="hover:text-white transition-colors">Blog</a>
-        </div>
+<footer>
+    <div style="margin-bottom: 16px;">
+        <a href="/es/">Home</a>
+        <a href="/app">Tool</a>
+        <a href="/es/privacy.html">Privacy</a>
+        <a href="/es/terms.html">Terms</a>
     </div>
-    <div class="max-w-5xl mx-auto mt-8 pt-6 border-t border-slate-800 text-center text-xs text-slate-500">
-        © 2026 RealText
-    </div>
+    <p>&copy; 2026 RealText</p>
 </footer>
-
 
 </body>
 </html>

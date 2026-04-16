@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+    <!-- SEO Primary -->
+    <title>¿Qué Tan Precisos Son los Detectores de IA? La Verdad — RealText Blog</title>
+    <meta name="description" content="Cifras reales de precisión de los detectores de IA, falsos positivos en hablantes no nativos, diferencia entre precision y recall, y cómo interpretar bien los resultados.">
+    <link rel="canonical" href="https://realtext.org/es/blog/precision-detector-ia.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="¿Qué Tan Precisos Son los Detectores de IA? La Verdad">
+    <meta property="og:description" content="Cifras reales de precisión de los detectores de IA, falsos positivos en hablantes no nativos, diferencia entre precision y recall, y cómo interpretar bien los resultados.">
+    <meta property="og:url" content="https://realtext.org/es/blog/precision-detector-ia.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="RealText">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="¿Qué Tan Precisos Son los Detectores de IA? La Verdad">
+    <meta name="twitter:description" content="Cifras reales de precisión de los detectores de IA, falsos positivos en hablantes no nativos, diferencia entre precision y recall, y cómo interpretar bien los resultados.">
+
+    <!-- hreflang -->
+    <link rel="alternate" hreflang="es" href="https://realtext.org/es/blog/precision-detector-ia.html">
+    <link rel="alternate" hreflang="x-default" href="https://realtext.org/es/blog/precision-detector-ia.html">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Shared CSS -->
+    <link rel="stylesheet" href="/shared/styles.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "¿Qué Tan Precisos Son los Detectores de IA? La Verdad",
+        "description": "Cifras reales de precisión de los detectores de IA, falsos positivos en hablantes no nativos, diferencia entre precision y recall, y cómo interpretar bien los resultados.",
+        "url": "https://realtext.org/es/blog/precision-detector-ia.html",
+        "datePublished": "2026-04-16",
+        "dateModified": "2026-04-16",
+        "inLanguage": "es",
+        "publisher": {
+            "@type": "Organization",
+            "name": "RealText",
+            "url": "https://realtext.org"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "RealText"
+        }
+    }
+    </script>
+</head>
+<body>
+
+<header class="nav-wrapper">
+    <div class="nav">
+        <a href="/es/" class="logo">
+            <span>Real</span><span class="accent">Text</span><span class="cursor-blink">_</span>
+        </a>
+        <div class="lang-switcher">
+            <a href="/en/blog/" class="lang-btn">EN</a>
+            <a href="/it/blog/" class="lang-btn">IT</a>
+            <a href="/es/blog/precision-detector-ia.html" class="lang-btn active">ES</a>
+            <a href="/de/blog/" class="lang-btn">DE</a>
+            <a href="/fr/blog/" class="lang-btn">FR</a>
+            <a href="/pt/blog/" class="lang-btn">PT</a>
+        </div>
+    </div>
+</header>
+
+<article class="container">
+    <h1>¿Qué Tan Precisos Son los Detectores de IA? La Verdad</h1>
+    <p class="meta">16 de abril de 2026 · 6 min de lectura</p>
+
+    <p>La <strong>precisión de los detectores de IA</strong> es uno de los temas peor comunicados del sector. Las webs comerciales prometen 99%; los estudios académicos reportan entre 60% y 90% según las condiciones. Ambos pueden tener razón: depende qué midas y sobre qué textos. Aquí vamos a desmontar las cifras con criterio y sin marketing.</p>
+
+    <h2>Las cifras reales según tipo de texto</h2>
+    <p>Varios estudios independientes coinciden en un rango razonable:</p>
+    <ul>
+        <li><strong>Texto 100% IA sin editar:</strong> 85-95% de detección correcta.</li>
+        <li><strong>Texto IA parafraseado por otra IA:</strong> 65-75% de detección.</li>
+        <li><strong>Texto IA editado por un humano superficialmente:</strong> 55-70%.</li>
+        <li><strong>Texto IA reescrito por un humano con esfuerzo:</strong> 30-50%.</li>
+        <li><strong>Texto humano puro:</strong> 2-10% de falsos positivos según herramienta y tipo de prosa.</li>
+    </ul>
+    <p>Es decir: los detectores funcionan muy bien contra ChatGPT crudo y se vuelven cada vez menos fiables a medida que hay edición humana. Esto explica por qué ninguna institución seria usa un detector como prueba única.</p>
+
+    <h2>Precision y recall, explicados sin jerga</h2>
+    <p>Cuando un estudio habla de "precisión", puede referirse a dos cosas distintas:</p>
+    <ul>
+        <li><strong>Precision:</strong> de los textos que la herramienta marca como IA, ¿cuántos lo son de verdad? Respuesta alta = pocos falsos positivos.</li>
+        <li><strong>Recall:</strong> de todos los textos IA que existen en la muestra, ¿cuántos consigue atrapar la herramienta? Respuesta alta = pocos falsos negativos.</li>
+    </ul>
+    <p>Una herramienta puede tener 98% de recall (atrapa casi todo) pero 80% de precision (de lo que marca, el 20% son inocentes). Al revés también pasa. Cuando leas una cifra suelta, pregunta siempre: ¿de qué tipo es?</p>
+    <p>Una aproximación práctica: cuando un detector te dice "este texto es IA", la probabilidad real de que lo sea depende del contexto. Si estás analizando ensayos universitarios (donde la mayoría son humanos), hasta una herramienta con 95% de precision genera una cantidad importante de falsos positivos absolutos, simplemente porque la base humana es enorme.</p>
+
+    <h2>Falsos positivos en hablantes no nativos</h2>
+    <p>Un hallazgo incómodo publicado en 2023 por investigadores de Stanford: varios detectores populares marcaban como IA hasta el 61% de los ensayos escritos por estudiantes no nativos de inglés, frente a menos del 5% de los nativos. La explicación es sencilla: los no nativos tienden a usar vocabulario más estandarizado, frases más regulares, estructura más previsible. Exactamente lo que mide el detector como señal de IA.</p>
+    <p>En español ocurre algo parecido con estudiantes que escriben con prosa planchada, formal, sin coloquialismos. La buena noticia: los modelos han mejorado desde 2023 y el sesgo se ha reducido. La mala: sigue existiendo, sobre todo en herramientas entrenadas principalmente en inglés. Una comparativa de las opciones disponibles la tienes en <a href="/es/blog/detector-ia-gratis.html">Detector IA Gratis</a>.</p>
+
+    <h2>Cómo interpretar un resultado con criterio</h2>
+    <p>Un porcentaje nunca debería ser veredicto. Unas reglas de interpretación útiles:</p>
+    <ol>
+        <li><strong>Nunca confíes en una única herramienta.</strong> Cruza al menos dos detectores independientes.</li>
+        <li><strong>Mira el detalle por oración</strong>, no solo el global. Un 45% global con un párrafo concreto al 95% es una pista más útil que el promedio.</li>
+        <li><strong>Considera el contexto.</strong> Manuales técnicos, prosa académica formal y textos traducidos disparan falsos positivos.</li>
+        <li><strong>Longitud mínima:</strong> textos de menos de 200-300 palabras producen ruido. Ni lo tomes en serio.</li>
+        <li><strong>Complementa con lectura humana.</strong> Busca las señales concretas en <a href="/es/blog/senales-texto-chatgpt.html">10 Señales de que un Texto fue Escrito por ChatGPT</a>.</li>
+    </ol>
+
+    <h2>Casos reales de mal uso</h2>
+    <p>En 2023, un profesor de Texas suspendió a toda una clase tras pegar los trabajos en ChatGPT y preguntarle si los había escrito él. ChatGPT dijo que sí (siempre lo dice). La universidad tuvo que anular las sanciones. El modelo generativo no es un detector: no tiene memoria de lo que produjo y no sabe identificar su propia salida.</p>
+    <p>En 2024, una universidad europea usó un detector comercial como prueba única para abrir expedientes. Varios alumnos apelaron y ganaron, porque la herramienta tenía 9% de falsos positivos documentados. Los detectores son indicios, no pruebas.</p>
+
+    <h2>Qué hace diferente una buena herramienta</h2>
+    <p>Una herramienta como <a href="/app">RealText</a> apuesta por tres cosas: calibración específica para español, explicabilidad (ves qué oraciones disparan el resultado) y transparencia sobre los límites. Ningún detector serio debería venderte seguridad absoluta. Más contexto sobre el uso práctico en <a href="/es/blog/detector-ia-estudiantes.html">Detector IA para Estudiantes</a> y <a href="/es/blog/como-detectar-texto-ia.html">Cómo Detectar Texto Generado por IA</a>.</p>
+
+    <h2>Conclusión</h2>
+    <p>Los detectores de IA son útiles, imperfectos y, sobre todo, contextuales. Funcionan muy bien en ciertos escenarios y muy mal en otros. Usarlos con criterio significa entender lo que miden, conocer sus sesgos y no delegar en ellos decisiones que afectan a personas sin verificación adicional.</p>
+
+    <div class="cta-box">
+        <p>Analiza tu texto con un detector transparente y decide con criterio, no con adivinación.</p>
+        <a href="/app">Prueba RealText gratis →</a>
+    </div>
+
+    <section class="related">
+        <h2>Artículos relacionados</h2>
+        <ul>
+            <li><a href="/es/blog/detector-ia-gratis.html">Detector IA Gratis: Las Mejores Herramientas en 2026</a></li>
+            <li><a href="/es/blog/senales-texto-chatgpt.html">10 Señales de que un Texto fue Escrito por ChatGPT</a></li>
+            <li><a href="/es/blog/como-detectar-texto-ia.html">Cómo Detectar Texto Generado por IA: Guía Completa</a></li>
+            <li><a href="/es/blog/detector-ia-estudiantes.html">Detector IA para Estudiantes: Verifica tu Texto Antes de Entregar</a></li>
+        </ul>
+    </section>
+</article>
+
+<footer>
+    <div style="margin-bottom: 16px;">
+        <a href="/es/">Inicio</a>
+        <a href="/app">Herramienta</a>
+        <a href="/es/privacy.html">Privacidad</a>
+        <a href="/es/terms.html">Términos</a>
+    </div>
+    <p>&copy; 2026 RealText</p>
+</footer>
+
+</body>
+</html>

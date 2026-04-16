@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+    <!-- SEO Primary -->
+    <title>How Accurate Are AI Detectors? The Honest Truth — RealText Blog</title>
+    <meta name="description" content="How accurate are AI detectors really? We break down precision, recall, false positive rates on edited text, and why no score should be treated as proof.">
+    <link rel="canonical" href="https://realtext.org/en/blog/ai-detector-accuracy.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="How Accurate Are AI Detectors? The Honest Truth">
+    <meta property="og:description" content="How accurate are AI detectors really? We break down precision, recall, false positive rates on edited text, and why no score should be treated as proof.">
+    <meta property="og:url" content="https://realtext.org/en/blog/ai-detector-accuracy.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="RealText">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How Accurate Are AI Detectors? The Honest Truth">
+    <meta name="twitter:description" content="How accurate are AI detectors really? We break down precision, recall, false positive rates on edited text, and why no score should be treated as proof.">
+
+    <!-- hreflang -->
+    <link rel="alternate" hreflang="en" href="https://realtext.org/en/blog/ai-detector-accuracy.html">
+    <link rel="alternate" hreflang="x-default" href="https://realtext.org/en/blog/ai-detector-accuracy.html">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Shared CSS -->
+    <link rel="stylesheet" href="/shared/styles.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "How Accurate Are AI Detectors? The Honest Truth",
+        "description": "How accurate are AI detectors really? We break down precision, recall, false positive rates on edited text, and why no score should be treated as proof.",
+        "url": "https://realtext.org/en/blog/ai-detector-accuracy.html",
+        "datePublished": "2026-04-16",
+        "dateModified": "2026-04-16",
+        "inLanguage": "en",
+        "publisher": {
+            "@type": "Organization",
+            "name": "RealText",
+            "url": "https://realtext.org"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "RealText"
+        }
+    }
+    </script>
+</head>
+<body>
+
+<header class="nav-wrapper">
+    <div class="nav">
+        <a href="/en/" class="logo">
+            <span>Real</span><span class="accent">Text</span><span class="cursor-blink">_</span>
+        </a>
+        <div class="lang-switcher">
+            <a href="/en/blog/ai-detector-accuracy.html" class="lang-btn active">EN</a>
+            <a href="/it/blog/" class="lang-btn">IT</a>
+            <a href="/es/blog/" class="lang-btn">ES</a>
+            <a href="/de/blog/" class="lang-btn">DE</a>
+            <a href="/fr/blog/" class="lang-btn">FR</a>
+            <a href="/pt/blog/" class="lang-btn">PT</a>
+        </div>
+    </div>
+</header>
+
+<article class="container">
+    <h1>How Accurate Are AI Detectors? The Honest Truth</h1>
+    <p class="meta">April 16, 2026 · 6 min read</p>
+
+    <p>When someone asks <strong>how accurate are AI detectors</strong>, the answer they usually want is a single percentage. The real answer is messier. Accuracy depends on which model produced the text, whether a human edited it afterwards, how long the sample is, and what language the author typically writes in. A detector that scores 99% on a lab benchmark can drop below 65% on real-world content from your inbox.</p>
+
+    <h2>The headline numbers and what they hide</h2>
+
+    <p>Vendors love publishing a single accuracy figure. GPTZero claims around 85% on unedited GPT-generated text. Copyleaks advertises 99%. Originality.ai reports 96-98% on certain benchmarks. These numbers are not lies, but they are almost always measured under favorable conditions: long samples, a specific target model, no human editing, and English written by native speakers.</p>
+
+    <p>Independent evaluations tell a different story. A 2024 study at the University of Maryland tested seven commercial detectors on GPT-4 output that had been lightly edited by a human. The average true-positive rate fell to roughly 39%. In our own spot tests, ZeroGPT and Copyleaks agree on less than 70% of samples when the text is even moderately paraphrased. For more context on this, see our deeper look at <a href="/en/blog/free-ai-detection-reliable.html">how reliable free AI detection really is</a>.</p>
+
+    <h2>Precision, recall, and why both matter</h2>
+
+    <p>Accuracy is not one number. Two separate metrics matter:</p>
+
+    <ul>
+        <li><strong>Precision:</strong> of all texts flagged as AI, how many really are AI. Low precision means innocent authors get accused.</li>
+        <li><strong>Recall:</strong> of all AI texts in the wild, how many get caught. Low recall means students and spammers slip through.</li>
+    </ul>
+
+    <p>Detectors tune a threshold that trades these off. Push precision to 99% and you miss half the AI content. Push recall to 99% and you flag 10-15% of genuinely human text. The <strong>F1 score</strong>, which balances both, is usually between 0.70 and 0.85 on realistic mixed datasets. That is solid, but it is not a lie detector.</p>
+
+    <h2>Edited and hybrid text breaks everything</h2>
+
+    <p>Pure ChatGPT output from 2023 was easy to spot. In 2026 most "AI content" is actually hybrid: a prompt produces a draft, a human rewrites paragraphs, moves sentences, adds their own examples. Once a human rewrites even 20% of the text, most detectors lose half their signal. Our tests mirror those of <a href="/en/blog/ai-detector-false-positives.html">independent researchers investigating false positives</a>: on lightly edited GPT-4 output, average true-positive rates sit around 55-65%.</p>
+
+    <p>If you want to understand the mechanics behind why editing throws detectors off, read our explainer on <a href="/en/blog/perplexity-burstiness-ai.html">perplexity and burstiness</a>, the two metrics most detectors rely on under the hood.</p>
+
+    <h2>False positives: the human cost</h2>
+
+    <p>A 2023 Stanford study found that seven popular detectors flagged TOEFL essays by non-native English speakers as AI-generated 61% of the time. Native English essays from the same detectors: around 5%. That is a huge disparity, and it points to a structural problem: detectors learn that clean, predictable, slightly formal prose looks like AI, which also describes how many non-native writers and academic authors write.</p>
+
+    <p>Technical documentation, legal writing, and concise instructional content also trigger false positives at elevated rates. A detector that is 99% accurate in general can still be wrong one time in twenty, which is dangerous if you are using it to accuse a student.</p>
+
+    <h2>What accuracy looks like by model</h2>
+
+    <p>As of early 2026, rough detection rates look like this:</p>
+
+    <ul>
+        <li>GPT-3.5 raw output: 85-95% detected across major tools.</li>
+        <li>GPT-4 raw: 70-85%.</li>
+        <li>GPT-5 raw with careful prompting: 45-65%.</li>
+        <li>Claude 3.5 / 4: 60-75% raw, lower when prompted to vary style.</li>
+        <li>Any of the above after 15 minutes of honest human editing: 30-55%.</li>
+    </ul>
+
+    <p>You can validate these numbers on your own samples with a free tool like <a href="/app">RealText</a> or by cross-checking with a <a href="/en/blog/gptzero-alternative.html">GPTZero alternative</a> to see how different engines score the same passage.</p>
+
+    <h2>How to interpret a detector score</h2>
+
+    <p>Treat the percentage as one piece of evidence, not a verdict. A 95% AI score on a 300-word excerpt with no human context can reasonably trigger a conversation. The same score on a non-native English speaker writing a clean lab report should not end a career. If you are a student checking your own work, our <a href="/en/blog/ai-detector-for-students.html">guide to self-checking as a student</a> explains how to read scores without panic.</p>
+
+    <p>The honest summary: modern AI detectors are useful signals, not proof. Used well, they catch careless AI dumping and flag texts that warrant a closer look. Used badly, they generate confident false accusations against the people least able to defend themselves.</p>
+
+    <div class="cta-box">
+        <p>Want to see how a passage scores across different signals before trusting any single number?</p>
+        <a href="/app">Analyze Your Text Free →</a>
+    </div>
+
+    <section class="related">
+        <h2>Related Articles</h2>
+        <ul>
+            <li><a href="/en/blog/free-ai-detection-reliable.html">Free AI Detection: How Reliable Is It Really?</a></li>
+            <li><a href="/en/blog/ai-detector-false-positives.html">AI Detector False Positives: Why Human Text Gets Flagged</a></li>
+            <li><a href="/en/blog/perplexity-burstiness-ai.html">Perplexity and Burstiness: The Metrics Behind AI Detection</a></li>
+            <li><a href="/en/blog/best-free-ai-detector-2026.html">Best Free AI Detector in 2026: An Honest Comparison</a></li>
+        </ul>
+    </section>
+</article>
+
+<footer>
+    <div style="margin-bottom: 16px;">
+        <a href="/en/">Home</a>
+        <a href="/app">Tool</a>
+        <a href="/en/privacy.html">Privacy</a>
+        <a href="/en/terms.html">Terms</a>
+    </div>
+    <p>&copy; 2026 RealText</p>
+</footer>
+
+</body>
+</html>

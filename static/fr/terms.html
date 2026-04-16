@@ -36,140 +36,71 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <!-- Tailwind CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            accent: { DEFAULT: '#2563EB', hover: '#1D4ED8', light: '#EFF6FF' },
-            slate: {
-              50: '#F8FAFC', 100: '#F1F5F9', 200: '#E2E8F0', 300: '#CBD5E1',
-              400: '#94A3B8', 500: '#64748B', 600: '#475569', 700: '#334155',
-              800: '#1E293B', 900: '#0F172A'
-            }
-          },
-          fontFamily: {
-            heading: ['"Plus Jakarta Sans"', 'sans-serif'],
-            body: ['"Inter"', 'sans-serif'],
-          }
-        }
-      }
-    }
-    </script>
-
     <!-- Shared CSS -->
     <link rel="stylesheet" href="/shared/styles.css">
 
-    <style>
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
-        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
-        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
-        .cursor-blink { animation: blink 1s step-end infinite; }
-        html { scroll-behavior: smooth; }
-    </style>
-
 </head>
-<body class="bg-white text-slate-900 antialiased">
+<body>
 
-<!-- Header -->
-<header class="fixed top-0 w-full z-50 border-b border-slate-200" style="background: rgba(255,255,255,0.92); backdrop-filter: blur(8px);">
-    <div class="max-w-5xl mx-auto px-5 h-16 flex items-center justify-between">
-        <!-- Logo -->
-        <a href="/fr/" class="flex items-center gap-0 text-xl font-heading font-extrabold tracking-tight">
-            <span class="text-slate-900">Real</span><span class="text-accent">Text</span><span class="cursor-blink text-accent">_</span>
+<header class="nav-wrapper">
+    <div class="nav">
+        <a href="/fr/" class="logo">
+            <span>Real</span><span class="accent">Text</span><span class="cursor-blink">_</span>
         </a>
-        <!-- Nav desktop -->
-        <nav class="hidden md:flex items-center gap-8">
-            <a href="/fr/#how-it-works" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Comment ça marche</a>
-            <a href="/fr/blog/" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Blog</a>
-            <div class="flex items-center gap-1 ml-2">
-                <a href="/en/terms.html" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">EN</a>
-                <a href="/it/terms.html" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">IT</a>
-                <a href="/es/terms.html" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">ES</a>
-                <a href="/de/terms.html" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">DE</a>
-                <a href="/fr/terms.html" class="px-2.5 py-1 text-xs font-medium rounded-md bg-accent text-white">FR</a>
-                <a href="/pt/terms.html" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">PT</a>
-            </div>
-        </nav>
-        <!-- Mobile hamburger -->
-        <button onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" class="md:hidden p-2 rounded-lg hover:bg-slate-100">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
-        </button>
-    </div>
-    <!-- Mobile menu -->
-    <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 bg-white px-5 py-4 space-y-3">
-        <a href="/fr/#how-it-works" class="block text-sm font-medium text-slate-600">Comment ça marche</a>
-        <a href="/fr/blog/" class="block text-sm font-medium text-slate-600">Blog</a>
-        <div class="flex items-center gap-1 pt-2">
-            <a href="/en/terms.html" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">EN</a>
-                <a href="/it/terms.html" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">IT</a>
-                <a href="/es/terms.html" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">ES</a>
-                <a href="/de/terms.html" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">DE</a>
-                <a href="/fr/terms.html" class="px-2.5 py-1 text-xs font-medium rounded-md bg-accent text-white">FR</a>
-                <a href="/pt/terms.html" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-500 hover:bg-slate-100">PT</a>
+        <div class="lang-switcher">
+            <a href="/en/terms.html" class="lang-btn">EN</a>
+            <a href="/it/terms.html" class="lang-btn">IT</a>
+            <a href="/es/terms.html" class="lang-btn">ES</a>
+            <a href="/de/terms.html" class="lang-btn">DE</a>
+            <a href="/fr/terms.html" class="lang-btn active">FR</a>
+            <a href="/pt/terms.html" class="lang-btn">PT</a>
         </div>
     </div>
 </header>
 
+<div class="container">
+    <h1>Conditions d'Utilisation</h1>
+    <p class="meta">Dernière mise à jour : avril 2026</p>
 
-<div class="max-w-[720px] mx-auto px-5 pt-28 pb-16">
-    <h1 class="font-heading font-extrabold text-2xl md:text-3xl text-slate-900 mb-4">Conditions d'Utilisation</h1>
-    <p class="text-slate-400 text-sm mb-10">Dernière mise à jour : avril 2026</p>
-
     
-    <h2 class="font-heading font-bold text-lg md:text-xl text-slate-900 mt-10 mb-3">Acceptation</h2>
-    <div class="text-slate-600 leading-relaxed [&_p]:mb-4 [&_ul]:mb-4 [&_ul]:ml-6 [&_li]:mb-2 [&_strong]:text-slate-900"><p>En utilisant RealText (realtext.org), vous acceptez les conditions suivantes. Si vous n'êtes pas d'accord, veuillez ne pas utiliser le service.</p></div>
+    <h2>Acceptation</h2>
+    <div><p>En utilisant RealText (realtext.org), vous acceptez les conditions suivantes. Si vous n'êtes pas d'accord, veuillez ne pas utiliser le service.</p></div>
     
-    <h2 class="font-heading font-bold text-lg md:text-xl text-slate-900 mt-10 mb-3">Description du service</h2>
-    <div class="text-slate-600 leading-relaxed [&_p]:mb-4 [&_ul]:mb-4 [&_ul]:ml-6 [&_li]:mb-2 [&_strong]:text-slate-900"><p>RealText fournit un outil gratuit de détection et d'humanisation de textes IA. Le service analyse le texte à la recherche de schémas stylistiques communément associés au contenu généré par IA et fournit des suggestions d'amélioration.</p></div>
+    <h2>Description du service</h2>
+    <div><p>RealText fournit un outil gratuit de détection et d'humanisation de textes IA. Le service analyse le texte à la recherche de schémas stylistiques communément associés au contenu généré par IA et fournit des suggestions d'amélioration.</p></div>
     
-    <h2 class="font-heading font-bold text-lg md:text-xl text-slate-900 mt-10 mb-3">Utilisation gratuite</h2>
-    <div class="text-slate-600 leading-relaxed [&_p]:mb-4 [&_ul]:mb-4 [&_ul]:ml-6 [&_li]:mb-2 [&_strong]:text-slate-900"><p>RealText offre jusqu'à 5 analyses de texte gratuites par jour et par utilisateur, sans inscription. Nous nous réservons le droit de modifier les limites d'utilisation à tout moment.</p></div>
+    <h2>Utilisation gratuite</h2>
+    <div><p>RealText offre jusqu'à 5 analyses de texte gratuites par jour et par utilisateur, sans inscription. Nous nous réservons le droit de modifier les limites d'utilisation à tout moment.</p></div>
     
-    <h2 class="font-heading font-bold text-lg md:text-xl text-slate-900 mt-10 mb-3">Utilisation acceptable</h2>
-    <div class="text-slate-600 leading-relaxed [&_p]:mb-4 [&_ul]:mb-4 [&_ul]:ml-6 [&_li]:mb-2 [&_strong]:text-slate-900"><p>Vous acceptez d'utiliser RealText uniquement à des fins légales. Il est interdit de :</p><ul><li>Tenter de contourner les limites d'utilisation par des moyens automatisés</li><li>Utiliser le service pour traiter du contenu illégal, nuisible ou abusif</li><li>Effectuer de l'ingénierie inverse, du scraping ou un accès programmatique au service sans autorisation</li><li>Interférer avec le fonctionnement du service ou l'accès des autres utilisateurs</li></ul></div>
+    <h2>Utilisation acceptable</h2>
+    <div><p>Vous acceptez d'utiliser RealText uniquement à des fins légales. Il est interdit de :</p><ul><li>Tenter de contourner les limites d'utilisation par des moyens automatisés</li><li>Utiliser le service pour traiter du contenu illégal, nuisible ou abusif</li><li>Effectuer de l'ingénierie inverse, du scraping ou un accès programmatique au service sans autorisation</li><li>Interférer avec le fonctionnement du service ou l'accès des autres utilisateurs</li></ul></div>
     
-    <h2 class="font-heading font-bold text-lg md:text-xl text-slate-900 mt-10 mb-3">Aucune garantie</h2>
-    <div class="text-slate-600 leading-relaxed [&_p]:mb-4 [&_ul]:mb-4 [&_ul]:ml-6 [&_li]:mb-2 [&_strong]:text-slate-900"><p>RealText fournit l'analyse textuelle en tant qu'outil informatif. <strong>Nous ne garantissons pas l'exactitude des résultats de détection d'IA.</strong> Notre analyse ne devrait pas être utilisée comme seule base pour des décisions académiques, professionnelles ou juridiques. Des faux positifs et faux négatifs peuvent survenir.</p></div>
+    <h2>Aucune garantie</h2>
+    <div><p>RealText fournit l'analyse textuelle en tant qu'outil informatif. <strong>Nous ne garantissons pas l'exactitude des résultats de détection d'IA.</strong> Notre analyse ne devrait pas être utilisée comme seule base pour des décisions académiques, professionnelles ou juridiques. Des faux positifs et faux négatifs peuvent survenir.</p></div>
     
-    <h2 class="font-heading font-bold text-lg md:text-xl text-slate-900 mt-10 mb-3">Propriété intellectuelle</h2>
-    <div class="text-slate-600 leading-relaxed [&_p]:mb-4 [&_ul]:mb-4 [&_ul]:ml-6 [&_li]:mb-2 [&_strong]:text-slate-900"><p>Vous conservez la pleine propriété de tout texte soumis pour analyse. Nous ne revendiquons aucun droit sur votre contenu. Le nom RealText, le design et le contenu du blog sont notre propriété intellectuelle.</p></div>
+    <h2>Propriété intellectuelle</h2>
+    <div><p>Vous conservez la pleine propriété de tout texte soumis pour analyse. Nous ne revendiquons aucun droit sur votre contenu. Le nom RealText, le design et le contenu du blog sont notre propriété intellectuelle.</p></div>
     
-    <h2 class="font-heading font-bold text-lg md:text-xl text-slate-900 mt-10 mb-3">Limitation de responsabilité</h2>
-    <div class="text-slate-600 leading-relaxed [&_p]:mb-4 [&_ul]:mb-4 [&_ul]:ml-6 [&_li]:mb-2 [&_strong]:text-slate-900"><p>RealText est fourni « en l'état » sans garantie d'aucune sorte. Nous ne sommes pas responsables des dommages résultant de l'utilisation de notre service, y compris mais sans s'y limiter les résultats de détection inexacts, les interruptions de service ou la perte de données.</p></div>
+    <h2>Limitation de responsabilité</h2>
+    <div><p>RealText est fourni « en l'état » sans garantie d'aucune sorte. Nous ne sommes pas responsables des dommages résultant de l'utilisation de notre service, y compris mais sans s'y limiter les résultats de détection inexacts, les interruptions de service ou la perte de données.</p></div>
     
-    <h2 class="font-heading font-bold text-lg md:text-xl text-slate-900 mt-10 mb-3">Modifications des conditions</h2>
-    <div class="text-slate-600 leading-relaxed [&_p]:mb-4 [&_ul]:mb-4 [&_ul]:ml-6 [&_li]:mb-2 [&_strong]:text-slate-900"><p>Nous pouvons mettre à jour ces Conditions d'Utilisation à tout moment. L'utilisation continue du service après les modifications constitue l'acceptation des conditions mises à jour.</p></div>
+    <h2>Modifications des conditions</h2>
+    <div><p>Nous pouvons mettre à jour ces Conditions d'Utilisation à tout moment. L'utilisation continue du service après les modifications constitue l'acceptation des conditions mises à jour.</p></div>
     
-    <h2 class="font-heading font-bold text-lg md:text-xl text-slate-900 mt-10 mb-3">Contact</h2>
-    <div class="text-slate-600 leading-relaxed [&_p]:mb-4 [&_ul]:mb-4 [&_ul]:ml-6 [&_li]:mb-2 [&_strong]:text-slate-900"><p>Pour les questions concernant ces conditions, contactez-nous à : <strong>info@realtext.org</strong></p></div>
+    <h2>Contact</h2>
+    <div><p>Pour les questions concernant ces conditions, contactez-nous à : <strong>info@realtext.org</strong></p></div>
     
 </div>
 
-<!-- Footer -->
-<footer class="bg-slate-900 text-slate-400 py-12 px-5">
-    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center md:items-start justify-between gap-6">
-        <div>
-            <a href="/fr/" class="text-lg font-heading font-extrabold tracking-tight">
-                <span class="text-white">Real</span><span class="text-blue-400">Text</span>
-            </a>
-            <p class="text-sm mt-1 text-slate-500">Détecteur de texte IA et humaniseur gratuit.</p>
-        </div>
-        <div class="flex items-center gap-6 text-sm">
-            <a href="/app?lang=fr" class="hover:text-white transition-colors">Outil</a>
-            <a href="/fr/privacy.html" class="hover:text-white transition-colors">Confidentialité</a>
-            <a href="/fr/terms.html" class="hover:text-white transition-colors">Conditions</a>
-            <a href="/fr/blog/" class="hover:text-white transition-colors">Blog</a>
-        </div>
+<footer>
+    <div style="margin-bottom: 16px;">
+        <a href="/fr/">Home</a>
+        <a href="/app">Tool</a>
+        <a href="/fr/privacy.html">Privacy</a>
+        <a href="/fr/terms.html">Terms</a>
     </div>
-    <div class="max-w-5xl mx-auto mt-8 pt-6 border-t border-slate-800 text-center text-xs text-slate-500">
-        © 2026 RealText
-    </div>
+    <p>&copy; 2026 RealText</p>
 </footer>
-
 
 </body>
 </html>

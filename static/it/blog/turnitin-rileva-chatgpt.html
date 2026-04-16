@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+    <!-- SEO Primary -->
+    <title>Turnitin Rileva ChatGPT? Quello che Gli Studenti Devono Sapere — RealText Blog</title>
+    <meta name="description" content="Come funziona il modulo AI Detection di Turnitin, i suoi limiti reali, i falsi positivi sui non madrelingua e cosa fare se il tuo elaborato viene segnalato ingiustamente.">
+    <link rel="canonical" href="https://realtext.org/it/blog/turnitin-rileva-chatgpt.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Turnitin e ChatGPT: Precisione Reale e Cosa Vedono i Prof">
+    <meta property="og:description" content="Come funziona il modulo AI Detection di Turnitin, i suoi limiti reali, i falsi positivi sui non madrelingua e cosa fare se il tuo elaborato viene segnalato ingiustamente.">
+    <meta property="og:url" content="https://realtext.org/it/blog/turnitin-rileva-chatgpt.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="RealText">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Turnitin e ChatGPT: Precisione Reale e Cosa Vedono i Prof">
+    <meta name="twitter:description" content="Come funziona il modulo AI Detection di Turnitin, i suoi limiti reali, i falsi positivi sui non madrelingua e cosa fare se il tuo elaborato viene segnalato ingiustamente.">
+
+    <!-- hreflang -->
+    <link rel="alternate" hreflang="it" href="https://realtext.org/it/blog/turnitin-rileva-chatgpt.html">
+    <link rel="alternate" hreflang="x-default" href="https://realtext.org/it/blog/turnitin-rileva-chatgpt.html">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Shared CSS -->
+    <link rel="stylesheet" href="/shared/styles.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Turnitin Rileva ChatGPT? Quello che Gli Studenti Devono Sapere",
+        "description": "Come funziona il modulo AI Detection di Turnitin, i suoi limiti reali, i falsi positivi sui non madrelingua e cosa fare se il tuo elaborato viene segnalato ingiustamente.",
+        "url": "https://realtext.org/it/blog/turnitin-rileva-chatgpt.html",
+        "datePublished": "2026-04-16",
+        "dateModified": "2026-04-16",
+        "inLanguage": "it",
+        "publisher": {
+            "@type": "Organization",
+            "name": "RealText",
+            "url": "https://realtext.org"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "RealText"
+        }
+    }
+    </script>
+</head>
+<body>
+
+<header class="nav-wrapper">
+    <div class="nav">
+        <a href="/it/" class="logo">
+            <span>Real</span><span class="accent">Text</span><span class="cursor-blink">_</span>
+        </a>
+        <div class="lang-switcher">
+            <a href="/en/blog/" class="lang-btn">EN</a>
+            <a href="/it/blog/turnitin-rileva-chatgpt.html" class="lang-btn active">IT</a>
+            <a href="/es/blog/" class="lang-btn">ES</a>
+            <a href="/de/blog/" class="lang-btn">DE</a>
+            <a href="/fr/blog/" class="lang-btn">FR</a>
+            <a href="/pt/blog/" class="lang-btn">PT</a>
+        </div>
+    </div>
+</header>
+
+<article class="container">
+    <h1>Turnitin Rileva ChatGPT? Quello che Gli Studenti Devono Sapere</h1>
+    <p class="meta">16 aprile 2026 · 6 min di lettura</p>
+
+    <p>La risposta breve è sì, ma con tanti "ma" che rendono la risposta lunga la parte interessante. Turnitin è ancora lo strumento più diffuso nelle università italiane per il controllo degli elaborati, e dal 2023 ha un modulo dedicato al testo generato dall'intelligenza artificiale. Capire come funziona davvero, e soprattutto dove sbaglia, è fondamentale per qualsiasi studente che voglia evitare guai.</p>
+
+    <h2>Da dove arriva il modulo AI di Turnitin</h2>
+
+    <p>Turnitin ha lanciato la sua funzione "AI Writing Detection" ad aprile 2023, circa quattro mesi dopo l'uscita pubblica di ChatGPT. Il lancio è stato veloce — forse troppo — e non sono mancate le polemiche. L'azienda ha dichiarato subito un'accuratezza del 98% con un tasso di falsi positivi inferiore all'1%. Sono numeri di marketing: studi accademici indipendenti successivi hanno mostrato cifre molto più basse in condizioni reali.</p>
+
+    <p>Il sistema è integrato nel flusso di consegna degli elaborati: quando carichi un PDF o un documento Word, oltre al classico report di similarità ricevi anche uno score AI che indica la percentuale di testo verosimilmente generato. Solo il docente lo vede, lo studente no. Questo è un punto spesso frainteso.</p>
+
+    <h2>Come funziona tecnicamente</h2>
+
+    <p>Turnitin non rivela i dettagli del proprio modello, ma da paper accademici e test indipendenti sappiamo che il rilevatore analizza due dimensioni statistiche:</p>
+
+    <ul>
+        <li><strong>Perplessità</strong>: quanto il testo sorprende un modello linguistico di riferimento. L'AI scrive in modo molto prevedibile, gli umani no.</li>
+        <li><strong>Burstiness</strong>: la variazione nella lunghezza e complessità delle frasi. Gli umani alternano frasi lunghe e corte, l'AI tende a restare su una lunghezza media costante.</li>
+    </ul>
+
+    <p>Il punteggio finale è una media ponderata calcolata su segmenti del testo. Per approfondire questi concetti, puoi leggere <a href="/it/blog/ai-detection-cosa-funziona.html">cosa funziona davvero nella detection AI</a>.</p>
+
+    <h2>L'accuratezza dichiarata contro la realtà</h2>
+
+    <p>Il 98% dichiarato vale in condizioni ideali: testo interamente generato da GPT-3.5 o GPT-4 in inglese, nessuna modifica successiva. Basta cambiare una di queste variabili e i numeri crollano:</p>
+
+    <ul>
+        <li>Testo parafrasato a mano dopo la generazione: accuratezza intorno al 60-65%.</li>
+        <li>Testo mescolato (paragrafi AI + paragrafi umani): molto peggio, sui 50%.</li>
+        <li>Testo in italiano puro: Turnitin è tarato principalmente sull'inglese, e su elaborati italiani la precisione cala sensibilmente.</li>
+        <li>Testo di studenti non madrelingua: qui entriamo nel territorio dei falsi positivi gravi.</li>
+    </ul>
+
+    <p>Per un approfondimento numerico leggi l'articolo sull'<a href="/it/blog/accuratezza-detector-ai.html">accuratezza reale dei detector AI</a>.</p>
+
+    <h2>Il problema dei falsi positivi</h2>
+
+    <p>Nel 2023 uno studio di Stanford pubblicato su Patterns ha mostrato che gli strumenti di AI detection, incluso Turnitin, classificano i testi scritti da studenti non madrelingua come "generati da AI" in oltre il 50% dei casi. La ragione è statistica: chi scrive in una lingua non nativa usa costruzioni più semplici, vocabolario più standard, frasi più regolari. Esattamente le caratteristiche che il modello interpreta come "artificiali".</p>
+
+    <p>Stesso problema per i testi accademici molto formali, le traduzioni di qualità e gli elaborati tecnici strutturati in modo rigoroso. Se scrivi una buona tesi in economia seguendo alla lettera le convenzioni del settore, rischi uno score più alto di chi scrive in modo sciatto. È un paradosso, ma è così. Per capire chi è più esposto leggi <a href="/it/blog/falsi-positivi-detector-ai.html">quando il testo umano viene scambiato per AI</a>.</p>
+
+    <h2>Cosa vede esattamente il professore</h2>
+
+    <p>Il docente riceve una pagina di report con:</p>
+
+    <ol>
+        <li>Una percentuale complessiva (0-100%) di testo "probabilmente AI".</li>
+        <li>Il testo evidenziato a blocchi, con le porzioni sospette in azzurro.</li>
+        <li>Una nota di cautela di Turnitin stessa che invita a non usare lo score come unica prova.</li>
+    </ol>
+
+    <p>Quest'ultimo punto è importante: Turnitin dichiara esplicitamente che il suo report non va usato come "prova definitiva". Eppure nella pratica molti docenti lo usano esattamente così. Se finisci in questa situazione, è un buon argomento di difesa.</p>
+
+    <h2>Cosa fare se sei segnalato ingiustamente</h2>
+
+    <p>Prima cosa: non farti prendere dal panico e non confessare un uso di AI che non c'è stato. Richiedi di vedere il report completo, non solo la percentuale. Presenta le bozze intermedie del tuo lavoro — la cronologia di Google Docs è d'oro in questi casi. Chiedi un colloquio orale sul contenuto: se hai scritto tu, saprai discuterne nei dettagli. Puoi anche far controllare il testo da un secondo strumento indipendente come <a href="/app">RealText</a>, che può confermare o smentire il sospetto con un secondo parere.</p>
+
+    <p>Le università italiane, dopo diverse cause, stanno iniziando a non sanzionare più sulla sola base dello score Turnitin. È un passo avanti, ma le pratiche variano molto da ateneo ad ateneo.</p>
+
+    <div class="cta-box">
+        <p>Se vuoi verificare come il tuo testo verrà classificato prima di consegnarlo, passa RealText: è gratuito, nativo italiano e ti dà uno score immediato.</p>
+        <a href="/app">Prova RealText gratis →</a>
+    </div>
+
+    <section class="related">
+        <h2>Articoli correlati</h2>
+        <ul>
+            <li><a href="/it/blog/chatgpt-plagio-universita.html">ChatGPT e il Plagio all'Università: Cosa Rischi Davvero</a></li>
+            <li><a href="/it/blog/falsi-positivi-detector-ai.html">Falsi Positivi nei Detector AI: Quando il Tuo Testo Viene Scambiato per AI</a></li>
+            <li><a href="/it/blog/accuratezza-detector-ai.html">Quanto Sono Accurati i Detector AI? La Verità</a></li>
+            <li><a href="/it/blog/ai-detection-cosa-funziona.html">AI detection: cosa funziona davvero e cosa no</a></li>
+        </ul>
+    </section>
+</article>
+
+<footer>
+    <div style="margin-bottom: 16px;">
+        <a href="/it/">Home</a>
+        <a href="/app">Tool</a>
+        <a href="/it/privacy.html">Privacy</a>
+        <a href="/it/terms.html">Termini</a>
+    </div>
+    <p>&copy; 2026 RealText</p>
+</footer>
+
+</body>
+</html>

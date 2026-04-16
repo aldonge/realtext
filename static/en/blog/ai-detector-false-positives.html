@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+
+    <!-- SEO Primary -->
+    <title>AI Detector False Positives: Why Human Text Gets Flagged — RealText Blog</title>
+    <meta name="description" content="Why AI detector false positives hit non-native English speakers, academic writers, and technical authors most. Real rates and how to reduce your risk.">
+    <link rel="canonical" href="https://realtext.org/en/blog/ai-detector-false-positives.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="AI Detector False Positives: Why Human Text Gets Flagged">
+    <meta property="og:description" content="Why AI detector false positives hit non-native English speakers, academic writers, and technical authors most. Real rates and how to reduce your risk.">
+    <meta property="og:url" content="https://realtext.org/en/blog/ai-detector-false-positives.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="RealText">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Detector False Positives: Why Human Text Gets Flagged">
+    <meta name="twitter:description" content="Why AI detector false positives hit non-native English speakers, academic writers, and technical authors most. Real rates and how to reduce your risk.">
+
+    <!-- hreflang -->
+    <link rel="alternate" hreflang="en" href="https://realtext.org/en/blog/ai-detector-false-positives.html">
+    <link rel="alternate" hreflang="x-default" href="https://realtext.org/en/blog/ai-detector-false-positives.html">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Shared CSS -->
+    <link rel="stylesheet" href="/shared/styles.css">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "AI Detector False Positives: Why Human Text Gets Flagged",
+        "description": "Why AI detector false positives hit non-native English speakers, academic writers, and technical authors most. Real rates and how to reduce your risk.",
+        "url": "https://realtext.org/en/blog/ai-detector-false-positives.html",
+        "datePublished": "2026-04-16",
+        "dateModified": "2026-04-16",
+        "inLanguage": "en",
+        "publisher": {
+            "@type": "Organization",
+            "name": "RealText",
+            "url": "https://realtext.org"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "RealText"
+        }
+    }
+    </script>
+</head>
+<body>
+
+<header class="nav-wrapper">
+    <div class="nav">
+        <a href="/en/" class="logo">
+            <span>Real</span><span class="accent">Text</span><span class="cursor-blink">_</span>
+        </a>
+        <div class="lang-switcher">
+            <a href="/en/blog/ai-detector-false-positives.html" class="lang-btn active">EN</a>
+            <a href="/it/blog/" class="lang-btn">IT</a>
+            <a href="/es/blog/" class="lang-btn">ES</a>
+            <a href="/de/blog/" class="lang-btn">DE</a>
+            <a href="/fr/blog/" class="lang-btn">FR</a>
+            <a href="/pt/blog/" class="lang-btn">PT</a>
+        </div>
+    </div>
+</header>
+
+<article class="container">
+    <h1>AI Detector False Positives: Why Human Text Gets Flagged</h1>
+    <p class="meta">April 16, 2026 · 6 min read</p>
+
+    <p>An <strong>AI detector false positive</strong> is when a tool labels human-written text as AI-generated. It is not a rare glitch. For certain categories of writing, false positives are the dominant failure mode of AI detectors today, and the people hurt most are rarely the ones who would cheat. This post walks through who is affected, why, how often, and what you can do about it.</p>
+
+    <h2>Who gets flagged the most</h2>
+
+    <p>Five groups are overrepresented in false-positive cases:</p>
+
+    <ul>
+        <li><strong>Non-native English speakers.</strong> Stanford's 2023 study found 61% of TOEFL essays flagged as AI across seven major detectors, compared to 5% for native English essays with similar topics.</li>
+        <li><strong>Academic writers using formal tone.</strong> Lit reviews, abstracts, and methodology sections regularly score 70%+ AI on GPTZero and Copyleaks even when written from scratch.</li>
+        <li><strong>Technical writers.</strong> API documentation, engineering specifications, and medical writing score high because precision and repetition are required features of the genre.</li>
+        <li><strong>Very concise writers.</strong> Text under 300 words has unstable scores regardless of source, and succinct human writing often scores AI-like.</li>
+        <li><strong>Translators and authors of translated text.</strong> Professional translation smooths idiosyncrasies that humans would otherwise inject.</li>
+    </ul>
+
+    <h2>Why this happens, statistically</h2>
+
+    <p>Detectors measure <strong>perplexity</strong> (how predictable the word choices are to a language model) and <strong>burstiness</strong> (how much sentence length and structure vary). Our full explainer on <a href="/en/blog/perplexity-burstiness-ai.html">perplexity and burstiness</a> covers the technical side. The short version is that both metrics measure surface features, and the surface features of clean formal writing overlap substantially with AI output.</p>
+
+    <p>When a non-native English speaker writes carefully, they often use a smaller, more standard vocabulary. They avoid idioms. They mirror the textbook sentence structures they learned. That is exactly what produces low perplexity, and low perplexity is exactly what detectors flag.</p>
+
+    <p>Something similar happens with academic writing. Academic style actively suppresses first-person voice, personal anecdotes, hedges, and fragments. All of those are features detectors use to infer humanness. Strip them out in service of formal convention and you look like GPT to a classifier.</p>
+
+    <h2>Published false positive rates</h2>
+
+    <p>Rates depend on the tool and the writing population. Rough ranges from peer-reviewed and independent studies between 2023 and 2025:</p>
+
+    <ul>
+        <li>Native English general writing: 1-5% false positives across major tools.</li>
+        <li>Native English formal academic writing: 4-12%.</li>
+        <li>ESL/non-native English writing: 15-60% depending on tool and L1 language.</li>
+        <li>Machine-translated human writing: 30-50%.</li>
+        <li>Concise technical documentation: 10-25%.</li>
+    </ul>
+
+    <p>These are not outliers. They are the normal operating range of the technology. Anyone telling you a detector is "99% accurate" is reporting numbers from their best conditions and hiding the worst. See our fuller <a href="/en/blog/ai-detector-accuracy.html">accuracy article</a> for how vendor claims compare to real-world results.</p>
+
+    <h2>The human cost</h2>
+
+    <p>Students have been expelled, publication deals have been cancelled, and freelance writers have been fired based on AI detection scores that were simply wrong. In the worst cases, instructors treat a percentage as proof and skip the conversation. Universities are slowly moving away from this, but the institutional response is uneven and the burden of disproof still usually falls on the writer.</p>
+
+    <p>If you are a student concerned about being flagged, our <a href="/en/blog/ai-detector-for-students.html">self-check guide</a> walks through what to do before submission. If it has already happened, our <a href="/en/blog/does-turnitin-detect-ai.html">Turnitin-specific article</a> covers practical steps.</p>
+
+    <h2>Reducing your false-positive risk</h2>
+
+    <p>You do not have to abandon your voice to avoid flags. A few targeted adjustments reliably lower scores:</p>
+
+    <ol>
+        <li><strong>Introduce structural variety.</strong> If five of your sentences in a row are 20-25 words, rewrite one as a six-word punch and one as a 35-word complex sentence.</li>
+        <li><strong>Add at least one specific detail per paragraph.</strong> A name, a date, a number, a place. Specifics break AI-likeness almost instantly.</li>
+        <li><strong>Allow one first-person observation or hedge per section.</strong> "In my reading," "this is where the data gets thin," or "I was skeptical until I saw the chart."</li>
+        <li><strong>Vary transitions.</strong> Cut "furthermore" and "moreover" to at most one each. Replace with "and there is another angle", "the opposite is also true", or a period and a new thought.</li>
+        <li><strong>Read aloud.</strong> If a passage sounds like a lecture, it probably reads as AI. If it sounds like you explaining to a friend, it probably reads as human.</li>
+    </ol>
+
+    <h2>Triangulate before you trust</h2>
+
+    <p>Never rely on one detector. If your writing gets flagged, run the same text through two or three others. Tools disagree frequently, and disagreement is a strong signal of low confidence. <a href="/app">RealText</a> is one option designed specifically to give context rather than a single number, and there are other <a href="/en/blog/gptzero-alternative.html">free alternatives</a> worth running in parallel.</p>
+
+    <h2>The bigger takeaway</h2>
+
+    <p>AI detectors are a tool, not a tribunal. False positives cluster in specific, predictable populations, and the people who write carefully, formally, or in a second language pay the heaviest price. Until the technology matures, the right response to a flagged document is a conversation, not a verdict.</p>
+
+    <div class="cta-box">
+        <p>Test your text with a tool that explains its reasoning, not just a percentage.</p>
+        <a href="/app">Analyze Your Text Free →</a>
+    </div>
+
+    <section class="related">
+        <h2>Related Articles</h2>
+        <ul>
+            <li><a href="/en/blog/ai-detector-accuracy.html">How Accurate Are AI Detectors? The Honest Truth</a></li>
+            <li><a href="/en/blog/ai-detector-for-students.html">AI Detector for Students: How to Check Your Own Writing</a></li>
+            <li><a href="/en/blog/perplexity-burstiness-ai.html">Perplexity and Burstiness: The Metrics Behind AI Detection</a></li>
+            <li><a href="/en/blog/does-turnitin-detect-ai.html">Does Turnitin Detect AI Writing? What Students Need to Know</a></li>
+        </ul>
+    </section>
+</article>
+
+<footer>
+    <div style="margin-bottom: 16px;">
+        <a href="/en/">Home</a>
+        <a href="/app">Tool</a>
+        <a href="/en/privacy.html">Privacy</a>
+        <a href="/en/terms.html">Terms</a>
+    </div>
+    <p>&copy; 2026 RealText</p>
+</footer>
+
+</body>
+</html>
