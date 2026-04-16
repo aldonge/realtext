@@ -533,7 +533,7 @@ function main() {
   log(`/sitemap.xml (${sitemapUrls.length + 1} URLs)`);
 
   // ─── robots.txt ──────────────────────────────────────────────────────────
-  const robotsTxt = `User-agent: *\nAllow: /\nSitemap: ${BASE_URL}/sitemap.xml\n`;
+  const robotsTxt = `User-agent: *\nAllow: /\nDisallow: /app\nDisallow: /api\nDisallow: /assets/\n\nSitemap: ${BASE_URL}/sitemap.xml\n`;
   writeFile('robots.txt', robotsTxt);
   log('/robots.txt');
 
